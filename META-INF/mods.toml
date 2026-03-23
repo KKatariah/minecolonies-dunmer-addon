@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="dunmercolonies"
+version="1.0.0"
+displayName="MineColonies Dunmer Addon"
+authors="katariah"
+description='''
+Adds a Dunmer citizen name style and matching citizen texture style for MineColonies.
+'''
+
+[[dependencies.dunmercolonies]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.dunmercolonies]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.dunmercolonies]]
+modId="minecolonies"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
