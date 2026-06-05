@@ -42,6 +42,7 @@ def apply_hue_window_grey(
     protect_radius: float = 0.18,
     blue_tint: float = 0.0,
     darken_amount: float = 0.0,
+    greying_enabled: bool = True,
 ) -> Image.Image:
     """Pixels whose hue is within half_width_deg of center become luminance grey; alpha preserved.
 
@@ -71,20 +72,31 @@ def apply_hue_window_grey(
                     for ph, ps, pv in guards
                 ):
                     continue
-            lum = int(0.299 * r + 0.587 * g + 0.114 * b + 0.5)
-            lum = max(0, min(255, lum))
-            if tint > 0.0:
-                # Keep luminance detail while shifting the greyscale output towards blue.
-                tr = int(lum * (1.0 - 0.55 * tint) + 0.5)
-                tg = int(lum * (1.0 - 0.30 * tint) + 0.5)
-                tb = int(min(255.0, lum * (1.0 + 0.45 * tint)) + 0.5)
-                nr = max(0, min(255, tr))
-                ng = max(0, min(255, tg))
-                nb = max(0, min(255, tb))
+            if greying_enabled:
+                lum = int(0.299 * r + 0.587 * g + 0.114 * b + 0.5)
+                lum = max(0, min(255, lum))
+                if tint > 0.0:
+                    # Keep luminance detail while shifting the greyscale output towards blue.
+                    tr = int(lum * (1.0 - 0.55 * tint) + 0.5)
+                    tg = int(lum * (1.0 - 0.30 * tint) + 0.5)
+                    tb = int(min(255.0, lum * (1.0 + 0.45 * tint)) + 0.5)
+                    nr = max(0, min(255, tr))
+                    ng = max(0, min(255, tg))
+                    nb = max(0, min(255, tb))
+                else:
+                    nr = lum
+                    ng = lum
+                    nb = lum
             else:
-                nr = lum
-                ng = lum
-                nb = lum
+                # Keep the original colour but bias the matched area toward blue.
+                if tint > 0.0:
+                    nr = int(r * (1.0 - 0.45 * tint) + 0.5)
+                    ng = int(g * (1.0 - 0.25 * tint) + 0.5)
+                    nb = int(min(255.0, b * (1.0 + 0.60 * tint) + 18.0 * tint) + 0.5)
+                else:
+                    nr = r
+                    ng = g
+                    nb = b
 
             if darken > 0.0:
                 factor = 1.0 - darken
@@ -118,6 +130,7 @@ class SkinGreyApp(tk.Tk):
         self.protect_radius = tk.DoubleVar(value=0.18)
         self.blue_tint = tk.DoubleVar(value=0.12)
         self.darken_amount = tk.DoubleVar(value=0.33)
+        self.greying_enabled = tk.BooleanVar(value=True)
         self.protect_list: list[tuple[float, float, float]] = []
 
         top = ttk.Frame(self, padding=8)
@@ -220,6 +233,14 @@ class SkinGreyApp(tk.Tk):
         )
         self.darken_scale.pack(fill=tk.X, pady=2)
 
+        self.grey_toggle = ttk.Checkbutton(
+            ctrl,
+            text="Enable greying",
+            variable=self.greying_enabled,
+            command=self.refresh_preview,
+        )
+        self.grey_toggle.pack(anchor=tk.W, pady=(6, 0))
+
         btns = ttk.Frame(self, padding=8)
         btns.pack(fill=tk.BOTH, expand=True)
         approve = ttk.Button(btns, text="APPROVE", command=self.approve)
@@ -313,6 +334,7 @@ class SkinGreyApp(tk.Tk):
         self.protect_scale.state(["!disabled"] if on else ["disabled"])
         self.blue_tint_scale.state(["!disabled"] if on else ["disabled"])
         self.darken_scale.state(["!disabled"] if on else ["disabled"])
+        self.grey_toggle.state(["!disabled"] if on else ["disabled"])
         self.clear_protect_btn.state(["!disabled"] if on else ["disabled"])
         self._approve_btn.state(["!disabled"] if on else ["disabled"])
         self._skip_btn.state(["!disabled"] if on else ["disabled"])
@@ -356,14 +378,23 @@ class SkinGreyApp(tk.Tk):
         darken = float(self.darken_amount.get())
         n = len(self.protect_list)
         extra = f"   ·   Protect: {n} colour{'s' if n != 1 else ''}" if n else "   ·   Protect: none"
+        mode = "on" if self.greying_enabled.get() else "off"
         self.readout.config(
             text=(
                 f"Center: {center:.1f}°   Range: ±{half:.1f}°   "
-                f"Blue tint: {int(round(tint * 100))}%   Darken: {int(round(darken * 100))}%{extra}"
+                f"Blue tint: {int(round(tint * 100))}%   Darken: {int(round(darken * 100))}%"
+                f"{extra}   ·   Greying: {mode}"
             )
         )
         processed = apply_hue_window_grey(
-            self.original, center, half, self.protect_list, rad, tint, darken
+            self.original,
+            center,
+            half,
+            self.protect_list,
+            rad,
+            tint,
+            darken,
+            self.greying_enabled.get(),
         )
         w, h = processed.size
 
@@ -420,7 +451,14 @@ class SkinGreyApp(tk.Tk):
         tint = float(self.blue_tint.get())
         darken = float(self.darken_amount.get())
         img = apply_hue_window_grey(
-            self.original, center, half, self.protect_list, rad, tint, darken
+            self.original,
+            center,
+            half,
+            self.protect_list,
+            rad,
+            tint,
+            darken,
+            self.greying_enabled.get(),
         )
         try:
             img.save(dest, format="PNG")
