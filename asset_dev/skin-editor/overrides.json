@@ -1,31 +1,62 @@
 {
-  "_help": "Per-skin fixes the model can't learn. grey: colours (hex) to grey as skin; keep: colours never to grey; hair: false to skip hair toning.",
+  "_help": "Per-skin fixes the model can't learn. Key = skin name (e.g. cookfemale1_b) or outfit name (e.g. cookfemale1, applies to all its variants). grey: colours (hex) to grey as skin; keep: colours never to grey; keep_area: [x0, y0, x1, y1] pixel boxes (inclusive) never to change; hair_colours: colours (hex) always toned as hair, never greyed; hair: false to skip hair toning; dark_hair_rule: false when greyed dark areas on the head are really skin (e.g. shaved sides).",
   "childmale1_w": {
-    "grey": [
-      "#ec847d",
-      "#e1716b",
-      "#e06f6b",
-      "#e06f6a",
-      "#e3726f"
-    ]
+    "grey": ["#ec847d", "#e1716b", "#e06f6b", "#e06f6a", "#e3726f"]
   },
   "knightfemale1_d": {
-    "grey": [
-      "#73251b",
-      "#54170d",
-      "#571711"
-    ],
+    "grey": ["#73251b", "#54170d", "#571711"],
     "hair": false
   },
   "cookfemale1_b": {
-    "grey": [
-      "#cc5311",
-      "#cf561b",
-      "#d95612",
-      "#e25f16",
-      "#e56424",
-      "#e3612d",
-      "#e76424"
+    "grey": ["#cc5311", "#cf561b", "#d95612", "#e25f16", "#e56424", "#e3612d", "#e76424"]
+  },
+  "cookfemale1_d": {
+    "grey": ["#77513d"]
+  },
+  "cookfemale1_w": {
+    "grey": ["#bea39a", "#bba097"]
+  },
+  "cookfemale1": {
+    "keep_area": [
+      [40, 22, 55, 26],
+      [32, 54, 47, 58]
     ]
+  },
+  "citizenfemale1_d": {
+    "keep": ["#010000", "#020000", "#040202", "#050303", "#060000", "#070101", "#100202"],
+    "keep_area": [
+      [16, 48, 47, 63],
+      [64, 48, 87, 55]
+    ]
+  },
+  "fletcherfemale1_d": {
+    "keep": ["#010000", "#020000", "#040000", "#050000", "#050100", "#060000", "#060100", "#070101", "#070201", "#0b0301", "#0b0909", "#0c0201", "#0c0301", "#0c0909", "#0d0301", "#0e0301", "#120502", "#120602"]
+  },
+  "druidfemale1_d": {
+    "keep": ["#060100", "#0c0301", "#0c0909", "#0d0301", "#0d0401", "#0d0a0a", "#130502", "#130602", "#140602", "#140603"]
+  },
+  "childfemale1_d": {
+    "keep": ["#010000", "#020000", "#040202", "#050000", "#050303", "#060000", "#070101", "#0f0101", "#100202", "#100302", "#110302", "#180402", "#190503", "#190603", "#241d1d", "#251e1e", "#330b09"]
+  },
+  "smeltermale1_w": {
+    "grey": ["#95755a"]
+  },
+  "druidmale1_a": {
+    "grey": ["#a57557", "#a67358", "#b37660", "#b59e64"]
+  },
+  "childmale3_d": {
+    "grey": ["#441e17"]
+  },
+  "netherworkermale1_d": {
+    "dark_hair_rule": false
+  },
+  "blacksmithfemale1_d": {
+    "keep": ["#010000", "#020000", "#050000", "#060000", "#060100", "#0b0301", "#0c0301", "#0c0909", "#0c0a0a", "#130603", "#140703", "#140704", "#1a0b05"]
+  },
+  "undertakermale1_d": {
+    "keep": ["#432b25", "#442c26", "#462e28", "#472e28", "#472f29", "#482f29"]
+  },
+  "dyerfemale1_d": {
+    "grey": ["#5e2121", "#623024"]
   }
 }

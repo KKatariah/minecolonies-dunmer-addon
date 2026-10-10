@@ -1,0 +1,15 @@
+ 1. citizenfemale1_d       grey speckles in dark hair (from your pass 1)
+ 2. fletcherfemale1_d      grey speckles in dark hair (from your pass 1)
+ 3. druidfemale1_d         grey speckles in dark hair (from your pass 1)
+ 4. childfemale1_d         grey speckles in dark hair (from your pass 1)
+ 5. dyermale1_d            dark crown hair greyed blue (model)
+ 6. blacksmithmale1_w      red side hair greyed (your pass 1)
+ 7. noblemale3_w           red hair greyed (your pass 1)
+ 8. crafterfemale1_d       reddish hair greyed (your pass 1)
+ 9. smeltermale1_w         brown hair partly greyed
+10. childmale3_d           reddish arms/legs greyed: bare skin or shirt? (model)
+11. forestermale1_d        chest greyed: bare chest or shirt? (model)
+12. netherworkermale1_b    your pass 1 missed the face, so the model decided this one
+13. composterfemale1_b     face was missed, now greyed by the face fallback
+14. glassblowermale1_d     face was missed, now greyed by the face fallback
+15. druidmale1_a           robes: your pass 1 greyed them, the tool leaves them (same for druid/dyer)

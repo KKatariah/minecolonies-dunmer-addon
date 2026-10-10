@@ -15,3 +15,6 @@ venv/
 
 # Auto-dunmer experiment output (regenerate with skin-editor/auto_dunmer.py)
 asset_dev/4.*/
+
+# Built mod jars (regenerate with skin-editor/build_mod.py)
+dist/

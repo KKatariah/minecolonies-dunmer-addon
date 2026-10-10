@@ -1,0 +1,32 @@
+29 of 310 hand-edited skins differ from your pass 1 by more than 40 visible pixels.
+missed = you greyed it, the tool didn't; extra = the tool greyed it, you didn't.
+
+druidmale1_a                 missed  815  extra  333
+dyerfemale1_a                missed  811  extra  170
+druidmale1_d                 missed  814  extra   59
+dyermale1_a                  missed  602  extra  213
+dyermale1_d                  missed  642  extra   24
+dyerfemale1_d                missed  449  extra    0
+chickenfarmerfemale1_d       missed  170  extra   20
+undertakermale1_d            missed  175  extra    0
+undertakermale1_w            missed  141  extra    0
+studentmale2_b               missed  124  extra    0
+aristocratmale2_w            missed  123  extra    0
+netherworkermale1_b          missed  108  extra    8
+aristocratmale1_w            missed  105  extra    0
+childmale2_b                 missed   91  extra    0
+blacksmithmale1_w            missed   84  extra    0
+cookmale1_d                  missed   84  extra    0
+compostermale1_a             missed   78  extra    0
+craftermale1_w               missed   75  extra    0
+knightmale1_d                missed   73  extra    0
+citizenmale2_b               missed   57  extra    0
+minermale1_b                 missed   55  extra    0
+settlermale2_b               missed   55  extra    0
+farmerfemale1_w              missed   53  extra    0
+couriermale1_w               missed   52  extra    0
+aristocratmale2_b            missed   50  extra    0
+cookfemale1_b                missed   50  extra    0
+knightmale1_b                missed   45  extra    0
+smeltermale1_b               missed   44  extra    0
+childmale3_d                 missed   42  extra    1
