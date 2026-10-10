@@ -12,3 +12,6 @@ venv/
 .idea/
 .vscode/
 *.swp
+
+# Auto-dunmer experiment output (regenerate with skin-editor/auto_dunmer.py)
+asset_dev/4.*/

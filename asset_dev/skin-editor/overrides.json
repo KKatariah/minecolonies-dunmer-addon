@@ -1,0 +1,31 @@
+{
+  "_help": "Per-skin fixes the model can't learn. grey: colours (hex) to grey as skin; keep: colours never to grey; hair: false to skip hair toning.",
+  "childmale1_w": {
+    "grey": [
+      "#ec847d",
+      "#e1716b",
+      "#e06f6b",
+      "#e06f6a",
+      "#e3726f"
+    ]
+  },
+  "knightfemale1_d": {
+    "grey": [
+      "#73251b",
+      "#54170d",
+      "#571711"
+    ],
+    "hair": false
+  },
+  "cookfemale1_b": {
+    "grey": [
+      "#cc5311",
+      "#cf561b",
+      "#d95612",
+      "#e25f16",
+      "#e56424",
+      "#e3612d",
+      "#e76424"
+    ]
+  }
+}
