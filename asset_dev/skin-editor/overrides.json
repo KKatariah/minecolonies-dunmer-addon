@@ -1,5 +1,5 @@
 {
-  "_help": "Per-skin fixes the model can't learn. Key = skin name (e.g. cookfemale1_b) or outfit name (e.g. cookfemale1, applies to all its variants). grey: colours (hex) to grey as skin; keep: colours never to grey; keep_area: [x0, y0, x1, y1] pixel boxes (inclusive) never to change; hair_colours: colours (hex) always toned as hair, never greyed; hair: false to skip hair toning; dark_hair_rule: false when greyed dark areas on the head are really skin (e.g. shaved sides).",
+  "_help": "Per-skin fixes the model can't learn. Key = skin name (e.g. cookfemale1_b) or outfit name (e.g. cookfemale1, applies to all its variants). grey: colours (hex) to grey as skin; keep: colours never to grey; keep_area: [x0, y0, x1, y1] pixel boxes (inclusive) never to change; hair_colours: colours (hex) always toned as hair, never greyed; hair: false to skip hair toning; dark_hair_rule: false when greyed dark areas on the head are really skin (e.g. shaved sides); hand: false to ignore your pass-1 edit for this skin and let the model decide; ears: true / false / \"left\" / \"right\" to force where add_ears.py paints elf ears.",
   "childmale1_w": {
     "grey": ["#ec847d", "#e1716b", "#e06f6b", "#e06f6a", "#e3726f"]
   },
@@ -58,5 +58,8 @@
   },
   "dyerfemale1_d": {
     "grey": ["#5e2121", "#623024"]
+  },
+  "noblefemale2_d": {
+    "hand": false
   }
 }

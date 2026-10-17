@@ -1,0 +1,428 @@
+Ears added to 5.auto_full_v10
+both sides: 324, one side: 11, none: 89
+* = also painted on the head overlay layer, over hair
+
+alchemistfemale1_a           right*+left* 
+alchemistfemale1_b           right*+left* 
+alchemistfemale1_d           right*+left* 
+alchemistfemale1_w           right+left   
+alchemistmale1_a             right+left   
+alchemistmale1_b             right*+left* 
+alchemistmale1_d             right*+left* 
+alchemistmale1_w             right+left   
+archerfemale1_a              right+left   
+archerfemale1_b              right*       left: hood or hat there
+archerfemale1_d              right*+left* 
+archerfemale1_w              right*       left: hood or hat there
+archermale1_a                right+left   
+archermale1_b                right*+left* 
+archermale1_d                right*+left* 
+archermale1_w                right*       left: hood or hat there
+aristocratfemale1_a          right        left: covered by the model (6/9 pixels)
+aristocratfemale1_b          right*+left* 
+aristocratfemale1_d          -            right: not skin or hair there; left: not skin or hair there
+aristocratfemale1_w          right+left*  
+aristocratfemale2_a          right*       left: covered by the model (6/9 pixels)
+aristocratfemale2_b          right*+left* 
+aristocratfemale2_d          right+left   
+aristocratfemale2_w          right*+left* 
+aristocratfemale3_a          right*       left: covered by the model (6/9 pixels)
+aristocratfemale3_b          right*+left* 
+aristocratfemale3_d          right+left   
+aristocratfemale3_w          right*+left* 
+aristocratmale1_a            -            right: not skin or hair there; left: not skin or hair there
+aristocratmale1_b            right*+left* 
+aristocratmale1_d            right*+left* 
+aristocratmale1_w            right+left   
+aristocratmale2_a            right+left   
+aristocratmale2_b            right*+left* 
+aristocratmale2_d            right*+left  
+aristocratmale2_w            left         right: hood or hat there
+aristocratmale3_a            right*+left* 
+aristocratmale3_b            right*+left* 
+aristocratmale3_d            right+left   
+aristocratmale3_w            right*+left  
+bakerfemale1_a               right+left*  
+bakerfemale1_b               right*+left* 
+bakerfemale1_d               right+left*  
+bakerfemale1_w               -            right: not skin or hair there; left: hood or hat there
+bakermale1_a                 right+left*  
+bakermale1_b                 -            right: hood or hat there; left: hood or hat there
+bakermale1_d                 right+left*  
+bakermale1_w                 right*+left* 
+beekeeperfemale1_a           -            right: not skin or hair there; left: not skin or hair there
+beekeeperfemale1_b           -            right: not skin or hair there; left: not skin or hair there
+beekeeperfemale1_d           -            right: not skin or hair there; left: not skin or hair there
+beekeeperfemale1_w           -            right: not skin or hair there; left: not skin or hair there
+beekeepermale1_a             right+left   
+beekeepermale1_b             -            right: not skin or hair there; left: not skin or hair there
+beekeepermale1_d             right+left   
+beekeepermale1_w             right+left   
+blacksmithfemale1_a          right+left   
+blacksmithfemale1_b          right+left   
+blacksmithfemale1_d          -            right: hood or hat there; left: hood or hat there
+blacksmithfemale1_w          right+left   
+blacksmithmale1_a            right+left   
+blacksmithmale1_b            right*+left* 
+blacksmithmale1_d            right+left   
+blacksmithmale1_w            right*+left* 
+builderfemale1_a             right*+left* 
+builderfemale1_b             -            right: hood or hat there; left: hood or hat there
+builderfemale1_d             -            right: hood or hat there; left: hood or hat there
+builderfemale1_w             -            right: hood or hat there; left: hood or hat there
+buildermale1_a               right+left   
+buildermale1_b               right*+left* 
+buildermale1_d               right*+left* 
+buildermale1_w               right+left   
+chickenfarmerfemale1_a       right*+left* 
+chickenfarmerfemale1_b       right*+left* 
+chickenfarmerfemale1_d       right*+left* 
+chickenfarmerfemale1_w       right+left   
+chickenfarmermale1_a         right*+left* 
+chickenfarmermale1_b         right*+left* 
+chickenfarmermale1_d         -            right: hood or hat there; left: hood or hat there
+chickenfarmermale1_w         -            right: hood or hat there; left: hood or hat there
+childfemale1_a               right+left   
+childfemale1_b               right+left   
+childfemale1_d               -            right: not skin or hair there; left: not skin or hair there
+childfemale1_w               right+left   
+childfemale2_a               right+left   
+childfemale2_b               right+left   
+childfemale2_d               -            right: not skin or hair there; left: not skin or hair there
+childfemale2_w               right+left   
+childfemale3_a               -            right: not skin or hair there; left: not skin or hair there
+childfemale3_b               -            right: not skin or hair there; left: not skin or hair there
+childfemale3_d               -            right: not skin or hair there; left: not skin or hair there
+childfemale3_w               right+left   
+childmale1_a                 -            right: not skin or hair there; left: not skin or hair there
+childmale1_b                 right*+left* 
+childmale1_d                 right+left   
+childmale1_w                 right*+left* 
+childmale2_a                 right+left   
+childmale2_b                 right+left   
+childmale2_d                 right*+left* 
+childmale2_w                 right*+left* 
+childmale3_a                 right*+left* 
+childmale3_b                 right*+left* 
+childmale3_d                 right*+left* 
+childmale3_w                 right*+left  
+citizenfemale1_a             right+left   
+citizenfemale1_b             right*+left* 
+citizenfemale1_d             -            right: hood or hat there; left: hood or hat there
+citizenfemale1_w             -            right: hood or hat there; left: hood or hat there
+citizenfemale2_a             right*+left* 
+citizenfemale2_b             right*+left* 
+citizenfemale2_d             right*+left* 
+citizenfemale2_w             right*+left* 
+citizenfemale3_a             right*+left* 
+citizenfemale3_b             -            right: hood or hat there; left: hood or hat there
+citizenfemale3_d             -            right: hood or hat there; left: hood or hat there
+citizenfemale3_w             right+left   
+citizenmale1_a               -            right: not skin or hair there; left: not skin or hair there
+citizenmale1_b               right*+left* 
+citizenmale1_d               right*+left* 
+citizenmale1_w               -            right: hood or hat there; left: hood or hat there
+citizenmale2_a               right+left   
+citizenmale2_b               right*+left* 
+citizenmale2_d               right*+left  
+citizenmale2_w               right+left   
+citizenmale3_a               right*+left* 
+citizenmale3_b               right*+left* 
+citizenmale3_d               right*+left* 
+citizenmale3_w               right*+left* 
+composterfemale1_a           right*+left* 
+composterfemale1_b           right*+left* 
+composterfemale1_d           right*+left* 
+composterfemale1_w           -            right: hood or hat there; left: hood or hat there
+compostermale1_a             right*+left* 
+compostermale1_b             right*+left* 
+compostermale1_d             right*+left* 
+compostermale1_w             right*+left* 
+concretemixerfemale1_a       right+left   
+concretemixerfemale1_b       right+left   
+concretemixerfemale1_d       right*+left* 
+concretemixerfemale1_w       right+left   
+concretemixermale1_a         right+left   
+concretemixermale1_b         right*+left* 
+concretemixermale1_d         right*+left  
+concretemixermale1_w         right+left   
+cookfemale1_a                right*+left* 
+cookfemale1_b                -            right: hood or hat there; left: hood or hat there
+cookfemale1_d                right+left   
+cookfemale1_w                right+left   
+cookmale1_a                  right+left   
+cookmale1_b                  right*+left* 
+cookmale1_d                  right+left   
+cookmale1_w                  right+left   
+courierfemale1_a             right+left   
+courierfemale1_b             right+left   
+courierfemale1_d             right+left   
+courierfemale1_w             right+left   
+couriermale1_a               right+left   
+couriermale1_b               right+left   
+couriermale1_d               right+left   
+couriermale1_w               right+left   
+cowfarmerfemale1_a           right+left   
+cowfarmerfemale1_b           right*+left* 
+cowfarmerfemale1_d           right+left   
+cowfarmerfemale1_w           -            right: not skin or hair there; left: not skin or hair there
+cowfarmermale1_a             right*+left* 
+cowfarmermale1_b             right*+left* 
+cowfarmermale1_d             right*+left* 
+cowfarmermale1_w             left*        right: hood or hat there
+crafterfemale1_a             right+left   
+crafterfemale1_b             right+left   
+crafterfemale1_d             right+left   
+crafterfemale1_w             right+left   
+craftermale1_a               right*+left* 
+craftermale1_b               right*+left* 
+craftermale1_d               right*+left* 
+craftermale1_w               right*+left* 
+deliverymanfemale1_a         right+left   
+deliverymanfemale1_b         right+left   
+deliverymanfemale1_d         right+left   
+deliverymanfemale1_w         right+left   
+deliverymanmale1_a           right*+left* 
+deliverymanmale1_b           right*+left* 
+deliverymanmale1_d           right*+left* 
+deliverymanmale1_w           right*+left* 
+druidfemale1_a               -            right: hood or hat there; left: hood or hat there
+druidfemale1_b               -            right: hood or hat there; left: hood or hat there
+druidfemale1_d               -            right: hood or hat there; left: hood or hat there
+druidfemale1_w               -            right: hood or hat there; left: hood or hat there
+druidmale1_a                 right+left   
+druidmale1_b                 right*+left* 
+druidmale1_d                 right+left   
+druidmale1_w                 right+left   
+dyerfemale1_a                right+left   
+dyerfemale1_b                right+left   
+dyerfemale1_d                right+left   
+dyerfemale1_w                right+left   
+dyermale1_a                  -            right: not skin or hair there; left: not skin or hair there
+dyermale1_b                  right+left   
+dyermale1_d                  right*+left* 
+dyermale1_w                  right+left   
+enchanterfemale1_a           right*+left* 
+enchanterfemale1_b           right*+left* 
+enchanterfemale1_d           right*+left* 
+enchanterfemale1_w           right*+left* 
+enchantermale1_a             right+left*  
+enchantermale1_b             -            right: hood or hat there; left: hood or hat there
+enchantermale1_d             right*+left* 
+enchantermale1_w             right+left*  
+farmerfemale1_a              right*+left* 
+farmerfemale1_b              right*+left* 
+farmerfemale1_d              -            right: hood or hat there; left: hood or hat there
+farmerfemale1_w              right+left   
+farmermale1_a                right+left   
+farmermale1_b                -            right: hood or hat there; left: hood or hat there
+farmermale1_d                right+left   
+farmermale1_w                right*+left* 
+fishermanfemale1_a           right+left   
+fishermanfemale1_b           right*+left* 
+fishermanfemale1_d           -            right: hood or hat there; left: hood or hat there
+fishermanfemale1_w           right*+left  
+fishermanmale1_a             right+left   
+fishermanmale1_b             right*+left* 
+fishermanmale1_d             right*+left* 
+fishermanmale1_w             -            right: hood or hat there; left: hood or hat there
+fletcherfemale1_a            right+left   
+fletcherfemale1_b            right*+left* 
+fletcherfemale1_d            -            right: not skin or hair there; left: not skin or hair there
+fletcherfemale1_w            right+left   
+fletchermale1_a              right+left   
+fletchermale1_b              right+left   
+fletchermale1_d              right+left   
+fletchermale1_w              right+left   
+floristfemale1_a             -            right: hood or hat there; left: hood or hat there
+floristfemale1_b             -            right: hood or hat there; left: hood or hat there
+floristfemale1_d             -            right: hood or hat there; left: hood or hat there
+floristfemale1_w             -            right: hood or hat there; left: hood or hat there
+floristmale1_a               right+left   
+floristmale1_b               right+left   
+floristmale1_d               right+left   
+floristmale1_w               right+left   
+foresterfemale1_a            right+left   
+foresterfemale1_b            right*+left* 
+foresterfemale1_d            right*+left* 
+foresterfemale1_w            -            right: not skin or hair there; left: not skin or hair there
+forestermale1_a              right+left   
+forestermale1_b              right*+left* 
+forestermale1_d              right+left   
+forestermale1_w              right+left   
+glassblowerfemale1_a         right*+left* 
+glassblowerfemale1_b         right+left   
+glassblowerfemale1_d         -            right: hood or hat there; left: hood or hat there
+glassblowerfemale1_w         right*+left  
+glassblowermale1_a           right+left   
+glassblowermale1_b           -            right: hood or hat there; left: hood or hat there
+glassblowermale1_d           right*+left* 
+glassblowermale1_w           right+left   
+healerfemale1_a              -            right: hood or hat there; left: hood or hat there
+healerfemale1_b              -            right: hood or hat there; left: hood or hat there
+healerfemale1_d              right*+left* 
+healerfemale1_w              -            right: hood or hat there; left: hood or hat there
+healermale1_a                -            right: hood or hat there; left: hood or hat there
+healermale1_b                -            right: hood or hat there; left: hood or hat there
+healermale1_d                -            right: hood or hat there; left: hood or hat there
+healermale1_w                left*        right: covered by the model (3/9 pixels)
+knightfemale1_a              right+left   
+knightfemale1_b              right+left   
+knightfemale1_d              -            right: not skin or hair there; left: not skin or hair there
+knightfemale1_w              right+left   
+knightmale1_a                right+left   
+knightmale1_b                right*+left* 
+knightmale1_d                right*+left* 
+knightmale1_w                right*+left* 
+mechanistfemale1_a           right*+left* 
+mechanistfemale1_b           right*+left* 
+mechanistfemale1_d           right*+left* 
+mechanistfemale1_w           right*+left* 
+mechanistmale1_a             right*+left* 
+mechanistmale1_b             right*+left* 
+mechanistmale1_d             right*+left* 
+mechanistmale1_w             right*+left* 
+minerfemale1_a               right*+left* 
+minerfemale1_b               right+left   
+minerfemale1_d               right*+left* 
+minerfemale1_w               right*+left* 
+minermale1_a                 right*+left* 
+minermale1_b                 right*+left* 
+minermale1_d                 right*+left* 
+minermale1_w                 right*+left* 
+netherworkerfemale1_a        right*+left* 
+netherworkerfemale1_b        right+left   
+netherworkerfemale1_d        right*+left* 
+netherworkerfemale1_w        right*+left* 
+netherworkermale1_a          right+left   
+netherworkermale1_b          right*+left* 
+netherworkermale1_d          right+left   
+netherworkermale1_w          right+left   
+noblefemale1_a               right+left   
+noblefemale1_b               right+left   
+noblefemale1_d               -            right: hood or hat there; left: hood or hat there
+noblefemale1_w               -            right: hood or hat there; left: hood or hat there
+noblefemale2_a               right*+left* 
+noblefemale2_b               right*+left* 
+noblefemale2_d               -            right: hood or hat there; left: hood or hat there
+noblefemale2_w               right*+left* 
+noblefemale3_a               right*+left* 
+noblefemale3_b               right*+left* 
+noblefemale3_d               right*+left* 
+noblefemale3_w               -            right: hood or hat there; left: hood or hat there
+noblemale1_a                 right*+left  
+noblemale1_b                 right*+left  
+noblemale1_d                 right*+left* 
+noblemale1_w                 left         right: hood or hat there
+noblemale2_a                 -            right: hood or hat there; left: hood or hat there
+noblemale2_b                 right*+left* 
+noblemale2_d                 right*+left  
+noblemale2_w                 right+left   
+noblemale3_a                 right*+left* 
+noblemale3_b                 right*+left* 
+noblemale3_d                 right*+left* 
+noblemale3_w                 right*+left* 
+pigfarmerfemale1_a           right*+left* 
+pigfarmerfemale1_b           right*+left* 
+pigfarmerfemale1_d           right+left   
+pigfarmerfemale1_w           right+left*  
+pigfarmermale1_a             right*+left* 
+pigfarmermale1_b             right*+left* 
+pigfarmermale1_d             right*+left* 
+pigfarmermale1_w             right*+left* 
+planterfemale1_a             -            right: hood or hat there; left: hood or hat there
+planterfemale1_b             right*+left* 
+planterfemale1_d             right*+left* 
+planterfemale1_w             -            right: hood or hat there; left: hood or hat there
+plantermale1_a               -            right: hood or hat there; left: hood or hat there
+plantermale1_b               right*+left* 
+plantermale1_d               right*+left* 
+plantermale1_w               right*+left* 
+rabbitherderfemale1_a        right*+left* 
+rabbitherderfemale1_b        right*+left* 
+rabbitherderfemale1_d        right*+left* 
+rabbitherderfemale1_w        right*+left* 
+rabbitherdermale1_a          right*+left* 
+rabbitherdermale1_b          right*+left* 
+rabbitherdermale1_d          right*+left* 
+rabbitherdermale1_w          right*+left* 
+settlerfemale1_a             -            right: hood or hat there; left: hood or hat there
+settlerfemale1_b             right+left   
+settlerfemale1_d             right*+left* 
+settlerfemale1_w             right+left   
+settlerfemale2_a             -            right: hood or hat there; left: hood or hat there
+settlerfemale2_b             -            right: hood or hat there; left: hood or hat there
+settlerfemale2_d             -            right: hood or hat there; left: hood or hat there
+settlerfemale2_w             -            right: hood or hat there; left: hood or hat there
+settlerfemale3_a             -            right: hood or hat there; left: hood or hat there
+settlerfemale3_b             -            right: hood or hat there; left: hood or hat there
+settlerfemale3_d             -            right: hood or hat there; left: hood or hat there
+settlerfemale3_w             right*+left* 
+settlermale1_a               -            right: hood or hat there; left: hood or hat there
+settlermale1_b               right*+left* 
+settlermale1_d               right*+left* 
+settlermale1_w               -            right: hood or hat there; left: hood or hat there
+settlermale2_a               -            right: hood or hat there; left: hood or hat there
+settlermale2_b               right*+left* 
+settlermale2_d               left*        right: hood or hat there
+settlermale2_w               -            right: hood or hat there; left: hood or hat there
+settlermale3_a               right*+left* 
+settlermale3_b               right*+left* 
+settlermale3_d               right*+left* 
+settlermale3_w               right*+left* 
+sheepfarmerfemale1_a         right+left   
+sheepfarmerfemale1_b         right+left   
+sheepfarmerfemale1_d         -            right: not skin or hair there; left: not skin or hair there
+sheepfarmerfemale1_w         -            right: not skin or hair there; left: not skin or hair there
+sheepfarmermale1_a           right+left   
+sheepfarmermale1_b           right*+left* 
+sheepfarmermale1_d           right*+left* 
+sheepfarmermale1_w           right*+left* 
+smelterfemale1_a             right+left   
+smelterfemale1_b             right*+left* 
+smelterfemale1_d             right*+left* 
+smelterfemale1_w             -            right: hood or hat there; left: not skin or hair there
+smeltermale1_a               right+left   
+smeltermale1_b               right*+left* 
+smeltermale1_d               right*+left* 
+smeltermale1_w               right*+left* 
+studentfemale1_a             right*+left* 
+studentfemale1_b             -            right: hood or hat there; left: hood or hat there
+studentfemale1_d             right*+left* 
+studentfemale1_w             -            right: hood or hat there; left: hood or hat there
+studentfemale2_a             -            right: hood or hat there; left: hood or hat there
+studentfemale2_b             -            right: hood or hat there; left: hood or hat there
+studentfemale2_d             right*+left* 
+studentfemale2_w             -            right: hood or hat there; left: hood or hat there
+studentfemale3_a             right*+left* 
+studentfemale3_b             -            right: hood or hat there; left: hood or hat there
+studentfemale3_d             right*+left* 
+studentfemale3_w             -            right: hood or hat there; left: hood or hat there
+studentmale1_a               right*+left* 
+studentmale1_b               right*+left* 
+studentmale1_d               right*+left* 
+studentmale1_w               right*+left* 
+studentmale2_a               right+left   
+studentmale2_b               right+left   
+studentmale2_d               right+left   
+studentmale2_w               right+left   
+studentmale3_a               right*+left* 
+studentmale3_b               right*+left* 
+studentmale3_d               right*+left* 
+studentmale3_w               right*+left* 
+teacherfemale1_a             right+left   
+teacherfemale1_b             -            right: hood or hat there; left: hood or hat there
+teacherfemale1_d             -            right: hood or hat there; left: hood or hat there
+teacherfemale1_w             -            right: hood or hat there; left: hood or hat there
+teachermale1_a               right+left   
+teachermale1_b               right*+left* 
+teachermale1_d               right+left   
+teachermale1_w               right*+left* 
+undertakerfemale1_a          right*+left* 
+undertakerfemale1_b          right*+left* 
+undertakerfemale1_d          -            right: hood or hat there; left: hood or hat there
+undertakerfemale1_w          right*+left* 
+undertakermale1_a            right+left   
+undertakermale1_b            right*+left* 
+undertakermale1_d            right*+left* 
+undertakermale1_w            right+left   

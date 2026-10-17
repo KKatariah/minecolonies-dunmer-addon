@@ -1,7 +1,7 @@
 """Package the add-on jar from the repo plus a folder of Dunmer skins.
 
 Usage (from the repo root):
-    python asset_dev/skin-editor/build_mod.py                      # newest asset_dev/5.auto_full*
+    python asset_dev/skin-editor/build_mod.py                      # newest 6.ears*, else 5.auto_full*
     python asset_dev/skin-editor/build_mod.py --skins asset_dev/5.auto_full_v9
 
 Writes dist/dunmercolonies-<version>.jar. Nothing in the repo is changed: the skins
@@ -29,12 +29,22 @@ MOD_PARTS = ("META-INF", "pack.mcmeta", "data", "assets")
 SKIP_NAMES = (".DS_Store",)
 
 
-def newest_full_run():
-    runs = [p for p in ASSET_DEV.glob("5.auto_full*") if p.is_dir()]
-    if not runs:
-        raise SystemExit("no asset_dev/5.auto_full* folder; run auto_dunmer.py --all first")
+def newest_run(pattern):
+    runs = [p for p in ASSET_DEV.glob(pattern) if p.is_dir()]
     version = lambda p: int(m.group(1)) if (m := re.search(r"_v(\d+)$", p.name)) else 1
-    return max(runs, key=version)
+    return max(runs, key=version) if runs else None
+
+
+def newest_full_run():
+    run = newest_run("5.auto_full*")
+    if not run:
+        raise SystemExit("no asset_dev/5.auto_full* folder; run auto_dunmer.py --all first")
+    return run
+
+
+def newest_finished_run():
+    """The newest skins with ears (6.ears*), else the newest full Dunmer run."""
+    return newest_run("6.ears*") or newest_full_run()
 
 
 def mod_version():
@@ -58,11 +68,11 @@ def make_icon(skin):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--skins", type=Path, help="folder of finished skins (default: newest 5.auto_full*)")
+    parser.add_argument("--skins", type=Path, help="folder of finished skins (default: newest 6.ears*, else 5.auto_full*)")
     parser.add_argument("--out", type=Path, default=REPO / "dist")
     args = parser.parse_args()
 
-    skins_dir = (args.skins or newest_full_run()).resolve()
+    skins_dir = (args.skins or newest_finished_run()).resolve()
     skins = sorted(p for p in skins_dir.glob("*.png") if not p.name.startswith("_"))
     if not skins:
         raise SystemExit(f"no skins in {skins_dir}")

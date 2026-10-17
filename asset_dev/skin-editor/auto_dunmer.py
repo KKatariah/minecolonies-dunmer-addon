@@ -144,6 +144,26 @@ def load_rgba(path: Path) -> np.ndarray:
     return np.array(Image.open(path).convert("RGBA")).astype(float)
 
 
+def frame(a: np.ndarray) -> np.ndarray:
+    """The standard 128x64 citizen layout from a texture of any size.
+
+    Bigger textures (nobles, aristocrats, the female deliveryman) put the usual layout in their
+    top-left corner and dress or cart parts outside it; the 64x32 deliveryman is the top-left
+    quarter of it. Anything outside the frame is left as it is.
+    """
+    framed = np.zeros((*TEX_SIZE, 4))
+    h, w = min(a.shape[0], TEX_SIZE[0]), min(a.shape[1], TEX_SIZE[1])
+    framed[:h, :w] = a[:h, :w]
+    return framed
+
+
+def unframe(a: np.ndarray, framed: np.ndarray) -> np.ndarray:
+    out = a.copy()
+    h, w = min(a.shape[0], TEX_SIZE[0]), min(a.shape[1], TEX_SIZE[1])
+    out[:h, :w] = framed[:h, :w]
+    return out
+
+
 def hsv(a: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     r, g, b = a[..., 0] / 255, a[..., 1] / 255, a[..., 2] / 255
     mx = np.maximum(np.maximum(r, g), b)
@@ -652,6 +672,7 @@ def hand_greyed(name: str, a: np.ndarray) -> np.ndarray | None:
     manual = load_rgba(path)
     if manual.shape != a.shape:
         return None
+    manual, a = frame(manual), frame(a)
     greyed = (np.abs(manual - a)[..., :3].max(-1) > 0) & (a[..., 3] > 0)
     return greyed if TRAIN_MIN_PIXELS <= greyed.sum() <= TRAIN_MAX_PIXELS else None
 
@@ -765,7 +786,7 @@ def comparison_sheet(names: list[str], out_dir: Path, scale: int = 4) -> None:
         for col, path in enumerate((ORIGINALS / name, out_dir / name, manual)):
             tile = Image.new("RGBA", (w, h), (255, 255, 255, 255))
             if path.exists():
-                img = Image.open(path).convert("RGBA").resize((w, h), Image.Resampling.NEAREST)
+                img = to_img(frame(load_rgba(path))).resize((w, h), Image.Resampling.NEAREST)
                 tile.alpha_composite(img)
             sheet.paste(tile, (gap + col * (w + gap), gap + row * (h + gap)))
     sheet.save(out_dir / "_comparison.png")
@@ -779,6 +800,7 @@ def manual_check(name: str, a: np.ndarray, out: np.ndarray, skin: np.ndarray):
     manual = load_rgba(path)
     if manual.shape != a.shape:
         return None
+    manual, a, out = frame(manual), frame(a), frame(out)
     vis = a[..., 3] > 0
     eyes = np.zeros(TEX_SIZE, bool)
     eyes[11:16, 9:15] = True
@@ -833,15 +855,15 @@ def main() -> None:
     out_dir = new_output_dir(args.out)
     checked, flagged, used_hand = 0, [], 0
     for name in names:
-        a = load_rgba(ORIGINALS / name)
-        if a.shape[:2] != TEX_SIZE:
-            print(f"skip {name}: size {a.shape[1]}x{a.shape[0]} not supported yet")
-            continue
-        by_hand = None if args.no_hand else hand_greyed(name, a)
-        out, skin, _ = dunmerify_with_masks(a, model, hair_model, override_for(overrides, name[:-4]), by_hand)
-        save(out, out_dir / name)
+        full = load_rgba(ORIGINALS / name)
+        a = frame(full)
+        override = override_for(overrides, name[:-4])
+        use_hand = not args.no_hand and override.get("hand", True)
+        by_hand = hand_greyed(name, full) if use_hand else None
+        out, skin, _ = dunmerify_with_masks(a, model, hair_model, override, by_hand)
+        save(unframe(full, out), out_dir / name)
         used_hand += by_hand is not None
-        check = manual_check(name, a, out, skin)
+        check = manual_check(name, full, unframe(full, out), skin)
         if check:
             checked += 1
             missed, extra, manual = check
