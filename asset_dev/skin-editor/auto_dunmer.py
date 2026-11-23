@@ -291,7 +291,7 @@ class Colours:
             return out
 
         h, s, v = hsv(a)
-        yy, xx = np.mgrid[0 : TEX_SIZE[0], 0 : TEX_SIZE[1]]
+        yy, xx = np.mgrid[0: TEX_SIZE[0], 0: TEX_SIZE[1]]
         head = np.zeros(TEX_SIZE)
         head[:16, :32] = 1
         face = (prior > FACE_PRIOR)[self.vis]
@@ -404,7 +404,7 @@ def hair_features(a: np.ndarray, skin: np.ndarray):
         return np.bincount(inv, q[vis], minlength=len(cols)) / count
 
     h, s, v = hsv(a)
-    yy, xx = np.mgrid[0 : TEX_SIZE[0], 0 : TEX_SIZE[1]]
+    yy, xx = np.mgrid[0: TEX_SIZE[0], 0: TEX_SIZE[1]]
     head = ((yy < 16) & (xx < 64)).astype(float)
     head_top = ((yy < 8) & (xx >= 8) & (xx < 16)).astype(float)
     f = np.column_stack(
@@ -558,7 +558,7 @@ def keep_hair_palette(a: np.ndarray, hair: np.ndarray) -> np.ndarray:
     # Count shades where hair shows around the face and nape: hats and turbans sit higher up, so a
     # big hat doesn't become "the hair colour".
     seed = np.zeros(TEX_SIZE, bool)
-    seed[HAIR_SEED_ROWS[0] : HAIR_SEED_ROWS[1], :32] = True
+    seed[HAIR_SEED_ROWS[0]: HAIR_SEED_ROWS[1], :32] = True
     in_seed = seed[hair]
     if in_seed.sum() < HAIR_MIN_SEED:
         in_seed[:] = True
@@ -746,21 +746,21 @@ def override_for(overrides: dict, name: str) -> dict:
 def area_mask(areas: list[list[int]]) -> np.ndarray:
     mask = np.zeros(TEX_SIZE, bool)
     for x0, y0, x1, y1 in areas:
-        mask[y0 : y1 + 1, x0 : x1 + 1] = True
+        mask[y0: y1 + 1, x0: x1 + 1] = True
     return mask
 
 
 def colour_mask(a: np.ndarray, hexes: list[str]) -> np.ndarray:
     mask = np.zeros(TEX_SIZE, bool)
     for h in hexes:
-        rgb = [int(h.lstrip("#")[i : i + 2], 16) for i in (0, 2, 4)]
+        rgb = [int(h.lstrip("#")[i: i + 2], 16) for i in (0, 2, 4)]
         mask |= (a[..., :3] == rgb).all(-1) & (a[..., 3] > 0)
     return mask
 
 
 def face_middle(a: np.ndarray) -> np.ndarray:
     middle = np.zeros(TEX_SIZE, bool)
-    middle[max(find_eye_rows(a)) + 1 : 16, 9:15] = True
+    middle[max(find_eye_rows(a)) + 1: 16, 9:15] = True
     return middle & (a[..., 3] > 0)
 
 
@@ -789,7 +789,7 @@ def missed_face_colours(a: np.ndarray, skin: np.ndarray, prior: np.ndarray) -> n
     # Whole face from the eyes down (front and sides), not just the middle, so the face comes out even.
     h, s, v = hsv(a)
     face = np.zeros(TEX_SIZE, bool)
-    face[min(find_eye_rows(a)) - 1 : 16, :32] = True
+    face[min(find_eye_rows(a)) - 1: 16, :32] = True
     face &= (a[..., 3] > 0) & ((h < 50) | (h > 330)) & (s > 0.2) & (v > 0.25)
     middle_lightness = np.median(to_lab(a[..., :3])[..., 0][skin_like_face(a)])
     face &= np.abs(to_lab(a[..., :3])[..., 0] - middle_lightness) < 25
@@ -806,7 +806,7 @@ def claim_skin(a: np.ndarray, skin: np.ndarray, hair: np.ndarray, prior: np.ndar
     face_colours = np.unique(lab[face].round(1), axis=0)
     eyes = np.zeros(TEX_SIZE, bool)
     for y in find_eye_rows(a):
-        eyes[y, EYE_XS[0] - 1 : EYE_XS[1] + 2] = True
+        eyes[y, EYE_XS[0] - 1: EYE_XS[1] + 2] = True
     head_and_neck = np.zeros(TEX_SIZE, bool)
     head_and_neck[:16, :32] = True
     head_and_neck[16:20, 16:40] = True  # top of the torso, around the neck
@@ -839,7 +839,7 @@ def ungrey_dark_hair(a: np.ndarray, skin: np.ndarray, prior: np.ndarray) -> np.n
 def brow_area(a: np.ndarray) -> np.ndarray:
     area = np.zeros(TEX_SIZE, bool)
     top = min(find_eye_rows(a))
-    area[max(top - 2, 8) : top, 8:16] = True
+    area[max(top - 2, 8): top, 8:16] = True
     return area
 
 
@@ -942,8 +942,8 @@ def cube_faces(u: int, v: int, w: float, h: float, d: float) -> np.ndarray:
     """Texture pixels a model cube's six faces use (vanilla box UV layout)."""
     w, h, d = (int(np.ceil(n)) for n in (w, h, d))
     mask = np.zeros(TEX_SIZE, bool)
-    mask[v : v + d, u + d : u + d + 2 * w] = True  # top, bottom
-    mask[v + d : v + d + h, u : u + 2 * d + 2 * w] = True  # sides
+    mask[v: v + d, u + d: u + d + 2 * w] = True  # top, bottom
+    mask[v + d: v + d + h, u: u + 2 * d + 2 * w] = True  # sides
     return mask
 
 
@@ -987,7 +987,8 @@ def prop_mask(name: str | None) -> np.ndarray:
     return _accessory_mask(name)[1] if name else np.zeros(TEX_SIZE, bool)
 
 
-HATS = Path(__file__).resolve().parent / "hats"  # hat templates: a hat-layer hat (x 32-63, y 0-15), transparent elsewhere
+# hat templates: a hat-layer hat (x 32-63, y 0-15), transparent elsewhere
+HATS = Path(__file__).resolve().parent / "hats"
 HAT_MATCH = 2  # max RGB difference for a pixel to count as the same hat
 HAT_SHARE = 0.5  # share of a template that must match for the skin to be wearing that hat
 
@@ -1040,7 +1041,7 @@ def overlay_on_clothes(a: np.ndarray, skin: np.ndarray) -> np.ndarray:
     face = lab[8:16, 8:16][skin[8:16, 8:16]]
     out = np.zeros(TEX_SIZE, bool)
     for (x, y, w, h), (bx, by) in OVERLAYS:
-        out[y : y + h, x : x + w] = skin[y : y + h, x : x + w] & ~skin[by : by + h, bx : bx + w]
+        out[y: y + h, x: x + w] = skin[y: y + h, x: x + w] & ~skin[by: by + h, bx: bx + w]
     for y, x in np.argwhere(out):
         if len(face) and np.linalg.norm(face - lab[y, x], axis=1).min() <= OVERLAY_SKIN_DIST:
             out[y, x] = False
@@ -1064,10 +1065,12 @@ def dunmerify_with_masks(a: np.ndarray, model: SkinModel, hair_model: HairModel,
     override = override or {}
     a, borrowed = borrow_areas(a, override.get("borrow_area", []))
     out = a.copy()
-    forced_grey = colour_mask(a, override.get("grey", [])) | (area_mask(override.get("grey_area", [])) & (a[..., 3] > 0))
+    forced_grey = colour_mask(a, override.get("grey", [])) | (
+        area_mask(override.get("grey_area", [])) & (a[..., 3] > 0))
     forced_grey |= borrowed & (a[..., 3] > 0)
     forced_grey |= paint_mask(a, override.get("face_paint", []))
-    forced_hair = colour_mask(a, override.get("hair_colours", [])) | (area_mask(override.get("hair_area", [])) & (a[..., 3] > 0))
+    forced_hair = colour_mask(a, override.get("hair_colours", [])) | (
+        area_mask(override.get("hair_area", [])) & (a[..., 3] > 0))
     keep = colour_mask(a, override.get("keep", []))
     untouched = area_mask(override.get("keep_area", [])) | colour_mask(a, override.get("untouched", [])) | known_hats(a)
     model_skin = model.skin_mask(a)
@@ -1122,7 +1125,7 @@ def dunmerify_with_masks(a: np.ndarray, model: SkinModel, hair_model: HairModel,
     torso_bottom = override.get("torso_bottom", "legs")
     if torso_bottom == "original":
         for x, y in TORSO_BOTTOM:
-            out[y : y + 4, x : x + 8] = a[y : y + 4, x : x + 8]
+            out[y: y + 4, x: x + 8] = a[y: y + 4, x: x + 8]
     elif torso_bottom != "keep":
         torso_bottom_from_legs(out, torso_bottom if torso_bottom in ("left", "right") else None)
     return out, skin, hair
@@ -1228,7 +1231,7 @@ def tint_outside(full: np.ndarray, tints: list[dict]) -> None:
     for t in tints:
         mask = np.zeros(full.shape[:2], bool)
         for x0, y0, x1, y1 in t["area"]:
-            mask[y0 : y1 + 1, x0 : x1 + 1] = True
+            mask[y0: y1 + 1, x0: x1 + 1] = True
         mask &= full[..., 3] > 0
         if not mask.any():
             continue
@@ -1304,7 +1307,8 @@ def slim_arms(a: np.ndarray, out: np.ndarray, name: str | None) -> None:
         return
     if (a[20:32, 54:56, 3] > 0).mean() <= 0.5:
         return
-    drop = lambda block, keep: np.delete(block, keep, axis=1)
+
+    def drop(block, keep): return np.delete(block, keep, axis=1)
     for u, v in ARM_BLOCKS:
         old = out[v:v + 16, u:u + 16].copy()
         new = np.zeros_like(old)
@@ -1326,10 +1330,10 @@ def torso_bottom_from_legs(out: np.ndarray, only: str | None = None) -> None:
     see-through when it would be solid all over: a full outer-layer underside shows as an extra slab
     hanging below the torso. Skins whose leg tops are see-through (the unused deliveryman textures)
     keep their own underside."""
-    if any((out[y : y + 4, x : x + 4, 3] == 0).any() for x, y in (RIGHT_LEG_TOP[0], LEFT_LEG_TOP[0])):
+    if any((out[y: y + 4, x: x + 4, 3] == 0).any() for x, y in (RIGHT_LEG_TOP[0], LEFT_LEG_TOP[0])):
         return
     for layer, ((tx, ty), (rx, ry), (lx, ly)) in enumerate(zip(TORSO_BOTTOM, RIGHT_LEG_TOP, LEFT_LEG_TOP)):
-        right, left = out[ry : ry + 4, rx : rx + 4].copy(), out[ly : ly + 4, lx : lx + 4].copy()
+        right, left = out[ry: ry + 4, rx: rx + 4].copy(), out[ly: ly + 4, lx: lx + 4].copy()
         if only == "left":
             right = left[:, ::-1]
         elif only == "right":
@@ -1337,10 +1341,10 @@ def torso_bottom_from_legs(out: np.ndarray, only: str | None = None) -> None:
         if layer and not (right[..., 3] > 0).any() and not (left[..., 3] > 0).any():
             continue
         if layer and (right[..., 3] > 0).all() and (left[..., 3] > 0).all():
-            out[ty : ty + 4, tx : tx + 8] = 0
+            out[ty: ty + 4, tx: tx + 8] = 0
             continue
-        out[ty : ty + 4, tx : tx + 4] = right
-        out[ty : ty + 4, tx + 4 : tx + 8] = left
+        out[ty: ty + 4, tx: tx + 4] = right
+        out[ty: ty + 4, tx + 4: tx + 8] = left
 
 
 def paint_eyes(a: np.ndarray, out: np.ndarray, rows: list[int]) -> None:
