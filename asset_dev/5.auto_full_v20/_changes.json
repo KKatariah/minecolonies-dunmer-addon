@@ -1,0 +1,2637 @@
+{
+ "builderfemale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  {
+   "at": "2026-11-21T13:20:18.682094Z",
+   "note": "Ponytail removed"
+  }
+ ],
+ "builderfemale1_d": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  {
+   "at": "2026-11-21T13:20:18.682094Z",
+   "note": "Skin under the chin lightened"
+  }
+ ],
+ "builderfemale1_w": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "buildermale1_d": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+ ],
+ "buildermale1_w": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Pants-layer leg tops given the same split (back half shirt colour from the torso underside), so it is no longer hidden",
+  "Pants-layer leg tops removed (see-through) so the split base leg tops show",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "compostermale1_w": [
+  "Leg tops and torso underside back to how they were in v19 (split removed): same as v19 again",
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated"
+ ],
+ "craftermale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Pants-layer leg tops given the same split (back half shirt colour from the torso underside), so it is no longer hidden",
+  "Pants-layer leg tops removed (see-through) so the split base leg tops show; no green overlay on top of the legs"
+ ],
+ "craftermale1_d": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Pants-layer leg tops given the same split (back half shirt colour from the torso underside), so it is no longer hidden",
+  "Pants-layer leg tops removed (see-through) so the split base leg tops show",
+  "Black hair toned as hair instead of greyed (same head as buildermale1_d)"
+ ],
+ "dyerfemale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Eyes moved down one row (swapped with the skin pixels below them)",
+  "11 skin pixels on the sides of the head greyed (were toned as hair) and lifted to match the skin around them"
+ ],
+ "buildermale1_a": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Torso underside no longer kept as its own texture, so the split applies"
+ ],
+ "compostermale1_d": [
+  "8 sleeve-stripe pixels (front, back, sides) no longer greyed",
+  "Leg tops and torso underside back to how they were in v19 (split removed)"
+ ],
+ "buildermale1_b": [
+  "Leg tops now use the original torso underside's texture",
+  "Torso underside put back to the original texture",
+  "Moustache pixels kept as painted (same face as enchantermale1_b)",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Moustache: 4 pixels that were kept as painted (copied from enchantermale1_b) now toned like the rest of the moustache."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Brows and moustache darkened toward the head hair's colour."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Eyebrows (both layers) now copy the head hair colour"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark hair detail on the outer head layer now toned"
+  },
+  {
+   "at": "2026-11-21T13:34:02.264279Z",
+   "note": "Cap colour on the base head layer (top and the band around the head) no longer toned as hair"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Cap brim shadow across the forehead (base layer) and 1 cap px on the outer head layer no longer toned as hair"
+  }
+ ],
+ "chickenfarmerfemale1_a": [
+  "Leg tops now use the original torso underside's texture",
+  "Torso underside put back to the original texture",
+  "Remaining skin pixels on the legs greyed; the darkest ones lifted from near-black to dark grey; overall skin tone kept"
+ ],
+ "chickenfarmerfemale1_d": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale1_a": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale1_b": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale1_d": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale1_w": [
+  "Leg tops now use the original torso underside's texture",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:44:22Z",
+   "note": "Eyebrows lightened"
+  }
+ ],
+ "childfemale2_d": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale3_a": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale3_b": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "childfemale3_d": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "courierfemale1_a": [
+  "Leg tops now use the original torso underside's texture",
+  "Red pixel of the left eye made black like the hair, so the hair covers that eye"
+ ],
+ "courierfemale1_b": [
+  "Leg tops now use the original torso underside's texture",
+  "Yellowy pixel on the back of each arm greyed (borrowed from the skin pixel below it)",
+  "Orange dot on the back of the torso made green like the shirt",
+  "Dark orange pixel on the front of the torso made green like the shirt",
+  "Brown skin pixels on the legs above the shoes greyed (lifted so they are not black)",
+  "Feet: skin-coloured pixels (ankle band, toes, back of the feet) greyed; the brown shoe kept as painted"
+ ],
+ "courierfemale1_d": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "crafterfemale1_b": [
+  "Leg tops now use the original torso underside's texture"
+ ],
+ "dyerfemale1_a": [
+  "Leg tops now use the original torso underside's texture",
+  "Floating grey pixel on the face overlay removed",
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops (replaces the leg tops from the torso underside)"
+ ],
+ "chickenfarmerfemale1_w": [
+  "Leg tops now use the original torso underside's texture",
+  "Near-black skin shadows lifted (soft_shadows 12)",
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:19:55Z",
+   "note": "Near-black skin px under the chin and on the hands lightened"
+  },
+  {
+   "at": "2026-11-23T11:24:54Z",
+   "note": "Lips lightened"
+  },
+  {
+   "at": "2026-11-23T11:44:22Z",
+   "note": "Near-black skin px on the head (chin underside, sides, cheeks) lightened"
+  },
+  {
+   "at": "2026-11-23T11:46:57Z",
+   "note": "Skin lightened significantly (skin_darker -10)"
+  }
+ ],
+ "childfemale3_w": [
+  "Leg tops now use the original torso underside's texture",
+  "Near-black skin shadows lifted (soft_shadows 12)",
+  "Skin shadow row under each sleeve lightened (4 L*)",
+  "Leg tops now use the skirt texture from the leg overlay instead of the torso underside"
+ ],
+ "childmale3_w": [
+  "Near-black skin shadows lifted (soft_shadows 12)",
+  "2 pixels on the back of the hair layer now toned as hair"
+ ],
+ "citizenmale3_a": [
+  "Near-black skin shadows lifted (soft_shadows 12)"
+ ],
+ "composterfemale1_w": [
+  "Near-black skin shadows lifted (soft_shadows 12)",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "cookfemale1_a": [
+  "Near-black skin shadows lifted (soft_shadows 12)"
+ ],
+ "citizenfemale1_b": [
+  "Hair toning off: nun hood keeps its brown, no longer desaturated"
+ ],
+ "citizenfemale2_b": [
+  "Hair toning off: nun habit hood no longer greyed/darkened"
+ ],
+ "citizenfemale2_a": [
+  "Hair toning off: treated as no hair, nothing desaturated as hair"
+ ],
+ "citizenmale3_d": [
+  "Hair toning off and forced hair area removed: turban keeps its colour"
+ ],
+ "citizenfemale3_w": [
+  "Dark brown hat pixels on the head kept as they were (no longer darkened); orange hair still toned",
+  "5 hair pixels on the chest now toned like the rest of the hair",
+  "1 more hair pixel on the bust and 9 hair-strand pixels on the torso front toned as hair"
+ ],
+ "citizenfemale1_d": [
+  "Left leg skin strip (bottom row) now greyed like the right leg",
+  "Slight purple tint on the dark grey tops of the shirt sleeves (shoulders and upper sleeve)"
+ ],
+ "citizenmale1_a": [
+  "Toes now greyed; only the sandal pixels are kept",
+  "1 skin pixel at the bottom back of the head's right side greyed (borrowed from its neighbour); hair toning limited to the head so the shirt stays as it was"
+ ],
+ "citizenmale3_w": [
+  "Both hand bottoms replaced with the hand's own grey skin (were glove texture)",
+  {
+   "at": "2026-11-21T14:09:52.973043Z",
+   "note": "Hand undersides now taken from knightmale1_w instead of its own wrists"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Beard (stubble rows 14-15) lightened a bit"
+  },
+  {
+   "at": "2026-11-23T09:51:49Z",
+   "note": "Beard lightened more (-6 -> -11)"
+  },
+  {
+   "at": "2026-11-23T09:54:47Z",
+   "note": "Near-black skin px on the sides of the head lightened"
+  },
+  {
+   "at": "2026-11-23T09:56:11Z",
+   "note": "Base-layer brow px under the overlay brows lightened"
+  }
+ ],
+ "composterfemale1_b": [
+  "2 face pixels between the eyes and 2 neck pixels greyed",
+  "Arms kept as originally painted (4 px wide, no re-laying onto the 3 px arm model), which also removes the brown shoulder row",
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated"
+ ],
+ "cookfemale1_d": [
+  "1 pixel on the back right of the torso no longer greyed"
+ ],
+ "composterfemale1_d": [
+  "Leg tops back to the original texture (reverse split removed); torso underside follows them again",
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Face: lightened the dark patch under the model's left eye (3 pixels)."
+  }
+ ],
+ "cookmale1_w": [
+  "Bald head replacement undone: original head texture (with its mohawk) used again, skin greyed, lightening removed",
+  "Whole back of the head made grey skin (hair rows filled from the skin row below them, back of the hair layer cleared)"
+ ],
+ "cowfarmerfemale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+ ],
+ "cowfarmerfemale1_w": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Dark skin spots on the sides of the head (4 px) and on the hands (1 px each) lightened",
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:51:05Z",
+   "note": "Near-black skin px under the chin lightened"
+  },
+  {
+   "at": "2026-11-23T11:52:02Z",
+   "note": "Back half of the leg tops (and torso underside) all one dark grey like the pants"
+  },
+  {
+   "at": "2026-11-23T11:54:14Z",
+   "note": "Skin on the sides of the head lightened (darker px more)"
+  }
+ ],
+ "druidmale1_a": [
+  "Two hair pins on the back of the hair layer kept their original colour (no longer desaturated)"
+ ],
+ "druidmale1_w": [
+  "Dark skin shading on the bottom two rows of the face lightened (12 L*)"
+ ],
+ "dyermale1_a": [
+  "Hair pins on the back of the head kept their original colour",
+  "Torso underside put back to the original texture",
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops (replaces the leg tops from the torso underside)"
+ ],
+ "dyermale1_d": [
+  "Legs and shoes kept as painted (no longer greyed)",
+  "8 brown skin pixels on the sides of the head greyed",
+  "Skin lightened slightly (3 L*) to keep the same tone after the shoe pixels stopped counting as skin",
+  "7 skin pixels on the back of the head greyed (were toned as hair)",
+  "Torso underside put back to the original texture",
+  "Apron pixels near the neckline (both layers) kept as painted",
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops (replaces the leg tops from the torso underside)"
+ ],
+ "enchantermale1_a": [
+  "All outer layers kept exactly as painted (gold decor no longer changed)",
+  "Dark grey skin on the hands lightened (28 px)",
+  "Legs kept exactly as painted (nothing greyed)"
+ ],
+ "enchantermale1_b": [
+  "Red pixel on the back of the turban replaced with the turban purple",
+  "2 brownish pixels on the shirt front made white like the rest of the shirt",
+  "4 moustache pixels kept their colour (no longer greyed to near-black)",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T12:08:50Z",
+   "note": "Dark skin px on the hands lightened"
+  }
+ ],
+ "enchantermale1_d": [
+  "Red pixel on the back of the turban replaced with the turban purple",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  }
+ ],
+ "enchantermale1_w": [
+  "Legs and all outer layers kept exactly as painted",
+  "Dark grey skin on the hands lightened (46 px)",
+  "Skin darkened slightly (4 L*) to keep the same tone after the leg speckles stopped counting as skin",
+  "Remaining dark skin on the arms lightened further (all now L* 36 or more)",
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T12:09:57Z",
+   "note": "Blonde hair on the head overlay now toned like the base hair (hat overlay still kept)"
+  },
+  {
+   "at": "2026-11-23T12:12:59Z",
+   "note": "Near-black skin px on the sides of the head lightened"
+  },
+  {
+   "at": "2026-11-23T13:53:10Z",
+   "note": "Skin lightened (skin_darker 4 -> -1)"
+  }
+ ],
+ "farmerfemale1_a": [
+  "Dark patches of greyed skin (58 px, mostly ankles and arms) lightened to about the skin around them",
+  "Leg tops from the original torso underside; torso underside kept original",
+  "Hair at the bottom of the front torso toned as hair (same as farmerfemale1_b)",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Face: lightened the left-most mouth pixel (the model's right) so the lips are 2 wide, and the dark pixel under the model's right eye."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Mouth: put the left-most pixel back and lightened the right-most instead, so the 2px mouth is centred."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Torso below the belt: 5 brown clothing pixels no longer toned as hair (that came from farmerfemale1_b, where they're hair)."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Pale px under the eye darkened"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Very dark px on the front/back of the right arm and back/inside of the left arm lightened"
+  }
+ ],
+ "farmerfemale1_b": [
+  "All hair colours toned as hair everywhere (right side and bottom of the torso were missed)",
+  "4 clothes pixels on the legs no longer greyed",
+  "6 white hat pixels no longer greyed",
+  "5 near-black hair-tip pixels at the bottom of the torso front toned as hair",
+  "Brown skin bits under the sleeves on both arms greyed (28 px, lifted to a soft shadow)",
+  "Leg tops from the original torso underside; torso underside kept original",
+  "Darkest grey skin spots on the arms lightened",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Hair tie: the 3 purple pixels kept as painted."
+  },
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Arms: lightened the dark skin blotches on both forearms to match the surrounding skin."
+  },
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Left leg: the skin pixel between pants and boot is greyed now; the boot pixel next to it, greyed by mistake, is back to brown."
+  }
+ ],
+ "farmerfemale1_d": [
+  "Brown skin bits under the sleeves on both arms greyed (lifted to a soft shadow)",
+  "3 clothes pixels on the inner side of each leg kept as painted",
+  "Leg tops from the original torso underside; torso underside kept original"
+ ],
+ "farmerfemale1_w": [
+  "Gold hair braid on the torso front toned as hair (25 px)",
+  "Dark grey bits on the sides of the head and on the hands lightened (25 px)",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T12:47:35Z",
+   "note": "Skin lightened (skin_darker -5)"
+  }
+ ],
+ "fishermanfemale1_a": [
+  "Skin-coloured band under the sleeves greyed (as a soft shadow)"
+ ],
+ "fishermanfemale1_b": [
+  "Grey band under the sleeves lightened",
+  "Dark brown patch on the lower front of the shirt kept as painted"
+ ],
+ "fishermanfemale1_d": [
+  "Soles changed from bare feet to the shoe texture"
+ ],
+ "fishermanmale1_d": [
+  "2 skin pixels at the bottom back corner of the head greyed (were toned as hair)",
+  "One white hair pixel on the back of the head layer toned as hair"
+ ],
+ "fletcherfemale1_b": [
+  "Hair toned less (keeps more of its red) so it stands out from the hat"
+ ],
+ "fletcherfemale1_d": [
+  "Darkest grey pixels on the hands lightened toward the rest of the hand (20 px)",
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Hands: lightened the darkest skin pixels on both hands to the hand's usual tone."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Face: lightened the dark patch under the eye (3 pixels)."
+  }
+ ],
+ "foresterfemale1_b": [
+  "Belt kept as painted (no longer greyed/desaturated as hair)",
+  "Dark grey spots on the hands lightened",
+  "Hat on the back and sides of the head kept as painted (not toned as hair)",
+  "1 fringe pixel toned as hair"
+ ],
+ "forestermale1_w": [
+  "Greyed beard lightened by 12 L* (face bottom rows, under the chin, sides)"
+ ],
+ "glassblowerfemale1_d": [
+  "Slight purple tint on the teal dress and sleeves for contrast with the grey skin",
+  "Shirt and sleeves tinted clearly purple instead of blue-grey (tint strength 0.3 to 0.65)",
+  "Dark leg pixels above the boots given the purple tint too",
+  "Leg tops / torso underside split (back half from the original torso underside, front half from the original leg tops), then tinted purple",
+  "Front half of the leg tops / torso underside left untinted (original black)"
+ ],
+ "glassblowermale1_d": [
+  "10 brown skin pixels on the neck (V-neck on the torso front) greyed",
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Grey-brown facial hair toned as hair instead of greyed as skin; overall skin tone kept"
+ ],
+ "studentfemale1_a": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted"
+ ],
+ "studentfemale1_b": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair slightly redder"
+  },
+  {
+   "at": "2026-11-23T09:44:04Z",
+   "note": "Near-black mouth px (12,14) lightened"
+  }
+ ],
+ "studentfemale1_d": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Black hair on the head no longer greyed as skin"
+  },
+  {
+   "at": "2026-11-23T09:45:19Z",
+   "note": "Hair no longer toned/desaturated (hair: false); keeps its original colours"
+  }
+ ],
+ "studentfemale1_w": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Grey headscarf pixels beside the eyes keep their original colour"
+ ],
+ "studentfemale2_a": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Grey headscarf pixels beside the eyes keep their original colour"
+ ],
+ "studentfemale2_b": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Grey headscarf pixels beside the eyes keep their original colour"
+ ],
+ "studentfemale2_d": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Hanging part of the nun scarf no longer toned as hair"
+ ],
+ "studentfemale2_w": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted"
+ ],
+ "studentfemale3_a": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Grey headscarf pixels beside the eyes kept as painted (no longer darkened)"
+ ],
+ "studentfemale3_b": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Grey headscarf pixels beside the eyes kept as painted (no longer darkened)"
+ ],
+ "studentfemale3_d": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Skin darkened 8 L* to keep the same tone after the toes started counting as skin"
+ ],
+ "studentfemale3_w": [
+  "Toes greyed (6 per foot); rest of the shoes kept as painted",
+  "Skin darkened 19 L* to keep the same tone after the toes started counting as skin",
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Skin lightened (skin_darker 19 -> 14)"
+  },
+  {
+   "at": "2026-11-23T13:53:10Z",
+   "note": "Skin lightened (skin_darker 14 -> 9)"
+  }
+ ],
+ "studentmale1_a": [
+  "Hood no longer toned as hair (hair toning off; skin has no visible hair)",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows, which also lifts the dark shadow at the top of the face"
+  }
+ ],
+ "sheepfarmerfemale1_w": [
+  "Braid and hair on front, back and sides of the torso toned as hair; 1 skin pixel on each side of the head greyed",
+  "Hair on the bust/chest piece toned as hair",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Hair: less desaturated so it keeps a bit more red."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Braid: the whole 2px checkered column on the chest is now toned as hair"
+  },
+  {
+   "at": "2026-11-21T14:07:56.227417Z",
+   "note": "Hair toning on the torso moved to the braid down the left of the chest; the side/back torso px are no longer toned"
+  },
+  {
+   "at": "2026-11-21T14:28:58.463088Z",
+   "note": "Leg tops back to the original texture"
+  },
+  {
+   "at": "2026-11-21T14:30:53.935619Z",
+   "note": "Dark vest edge on the left of the chest (rows 23-30) no longer toned as hair"
+  },
+  {
+   "at": "2026-11-21T14:46:32.738509Z",
+   "note": "Rest of the braid on the front of the bust (3 px) now toned as hair"
+  },
+  {
+   "at": "2026-11-21T14:49:06.474183Z",
+   "note": "Hair on the back of the torso (and the band round the right side) toned as hair again"
+  }
+ ],
+ "smelterfemale1_w": [
+  "Shoe buckle kept as painted; dark grey spots on the arms lightened",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Soot spots on the face (and hands) made neutral grey and a touch darker so they read as soot"
+  }
+ ],
+ "dyermale1_w": [
+  "Torso underside put back to the original texture",
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops (replaces the leg tops from the torso underside)",
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T12:02:12Z",
+   "note": "Hair slightly more brown (darker, tinted towards brown); brows follow; skin compensated so it stays the same"
+  },
+  {
+   "at": "2026-11-23T14:05:26Z",
+   "note": "Hair slightly more brown (tint 20% -> 35%, hair_darker 8 -> 10); skin compensated"
+  }
+ ],
+ "fishermanmale1_w": [
+  "Darker grey band under the sleeves lightened",
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T12:50:03Z",
+   "note": "Grey hair darkened (hair_darker 6)"
+  },
+  {
+   "at": "2026-11-23T12:53:33Z",
+   "note": "Forehead px (11,9),(12,9) no longer filled with hair grey; greyed as skin like the original"
+  },
+  {
+   "at": "2026-11-23T12:55:11Z",
+   "note": "Forehead px (11,9),(12,9) slightly lighter"
+  },
+  {
+   "at": "2026-11-23T12:59:32Z",
+   "note": "Dark skin px on the hands/forearms lightened slightly"
+  }
+ ],
+ "settlerfemale1_a": [
+  "See-through grey pixel on the face layer made solid black",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Leg tops from the original torso underside, and the torso underside put back to the original."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops now uses the dress front of the leg tops (mirrored)"
+  },
+  {
+   "at": "2026-11-21T12:37:59.431815Z",
+   "note": "Back 2 rows of the leg tops now dress-coloured all the way to the inner edge (between the legs)"
+  }
+ ],
+ "settlerfemale1_b": [
+  "Braid pixels at the bottom of the front torso toned as hair",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Bust: 7 brown hair pixels on the top of the bust toned as hair."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair toned ginger (keeps much more red)"
+  }
+ ],
+ "noblefemale1_w": [
+  "Grey pixel on the left edge of the face layer made headscarf white",
+  "2 skin pixels on the back of the neck greyed",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Neck: the 2 gold necklace pixels at the back are gold again."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Face: the grey hood pixels at both edges of the face kept as painted."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Brows: lightened."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Shading under the chin, lips and neck lifted back to how it was (keeping the hood pixels shifted the grey ramp)."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Right eyebrow now copies the left one (the gold hair on the outer layer)"
+  },
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T12:15:48Z",
+   "note": "Skin lightened moderately (skin_darker -6)"
+  },
+  {
+   "at": "2026-11-23T12:19:10Z",
+   "note": "Skin lightened more (skin_darker -11)"
+  }
+ ],
+ "noblefemale2_a": [
+  "Lips greyed",
+  "1 skin pixel on the front of each hand greyed",
+  "Pale yellow trim pixels on the torso and skirt kept as painted",
+  "Overall skin tone kept the same"
+ ],
+ "noblefemale3_a": [
+  "Yellow sleeve lining and eyebrow piercing kept as painted",
+  "Overall skin tone kept the same",
+  "2 yellow eyeshadow pixels on the face desaturated (sleeve lining still yellow)",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Brow piercings: now the same grey as the skin next to them."
+  }
+ ],
+ "healermale1_b": [
+  "Moustache toned as hair",
+  "Bottom 4 moustache pixels toned as hair"
+ ],
+ "healermale1_w": [
+  "Grey moustache darkened more",
+  "Moustache darkened a little more"
+ ],
+ "smeltermale1_b": [
+  "Hat pixel on the right edge of the face layer kept as painted",
+  "Leg tops / torso underside: back half from the original torso underside, front half from the original leg tops."
+ ],
+ "studentmale3_a": [
+  "Stray pale pixel on the back of the head replaced with hair",
+  "Dark grey pixels on the hands and wrists lightened",
+  "Dark grey pixels on the neck (front, top and back) lightened"
+ ],
+ "studentmale2_w": [
+  "Grey highlight pixels in the black hair darkened (both layers)"
+ ],
+ "studentmale3_d": [
+  "Lighter grey pixels in the black hair darkened slightly (both layers)"
+ ],
+ "settlermale3_a": [
+  "Skin pixel above the eye greyed (matches the other eye)"
+ ],
+ "sheepfarmerfemale1_b": [
+  "Hair on the bust/chest piece toned as hair",
+  "2 hair pixels at the bottom of the front torso toned as hair",
+  "Brown dress and belt pixels on the torso (front, sides and back) no longer toned as hair"
+ ],
+ "knightfemale1_a": [
+  "See-through grey pixel on the face layer made solid black like the hair",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  },
+  {
+   "at": "2026-11-22T11:51:11Z",
+   "note": "Eyebrows given the grey undertone (were still brown)"
+  }
+ ],
+ "knightfemale1_b": [
+  "Chainmail around the face kept as painted (was toned as hair)",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  }
+ ],
+ "knightfemale1_w": [
+  "Chainmail around the face kept as painted (was toned as hair)",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  },
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Eyebrows lightened"
+  }
+ ],
+ "knightmale1_b": [
+  "Light chainmail links on the arms and head layer kept as painted",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  }
+ ],
+ "mechanistfemale1_b": [
+  "2 hair pixels on the bust piece toned as hair",
+  "1 hair pixel just below the belt on the front torso toned as hair"
+ ],
+ "mechanistfemale1_d": [
+  "Darkest grey skin pixels lightened to just under the skin tone (mouth left as is)",
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)"
+ ],
+ "dyerfemale1_d": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)"
+ ],
+ "dyerfemale1_w": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+ ],
+ "dyermale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Dark brown hair toned as hair (same head as citizenmale1_b)"
+ ],
+ "glassblowermale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops",
+  "Dark brown hair toned as hair (was left untouched)"
+ ],
+ "smelterfemale1_d": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+ ],
+ "healerfemale1_a": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops; same split on the pants-layer leg tops",
+  "Pants-layer leg tops removed (see-through) so the split base leg tops show"
+ ],
+ "healerfemale1_b": [
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops; same split on the pants-layer leg tops",
+  "Pants-layer leg tops removed (see-through) so the split base leg tops show",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Face: the 2 hair pixels peeking out under the hood toned as hair."
+  }
+ ],
+ "bakerfemale1_w": [
+  "Leg tops from the original torso underside; torso underside kept original",
+  "Dark skin shadow band under the sleeves lightened",
+  "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops (replaces the full torso-underside leg tops)"
+ ],
+ "undertakerfemale1_b": [
+  "Leg tops from the original torso underside; torso underside kept original",
+  "Super dark greyed skin pixels lightened (soft shadows)",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Face: the 2 brown hair pixels under the hood and the black hood pixels next to them kept as painted."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Leg tops: front half from the top 2 rows of the leg fronts (the white stripe)."
+  }
+ ],
+ "settlermale3_b": [
+  "Super dark greyed skin pixels lightened (soft shadows)"
+ ],
+ "smeltermale1_a": [
+  "Super dark greyed skin pixels lightened (soft shadows)",
+  "Face: lightened the 4 darkest skin pixels under the brows and 1 at the bottom right of the face slightly.",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Face: lifted the very dark pixels on the bottom half of the face and head sides, and the darker part under the chin; mouth left alone."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark chest px lightened"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Bottom-left face px lightened more (mouth left alone)"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Grey hair tie on top of the head kept"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Glove patch no longer toned"
+  },
+  {
+   "at": "2026-11-23T12:14:53Z",
+   "note": "Leg tops / torso underside split: back half from the original torso underside, front half from the original leg tops"
+  }
+ ],
+ "noblefemale2_d": [
+  "Blue on the sleeves recoloured lilac"
+ ],
+ "noblemale1_a": [
+  "Hat no longer toned as hair (hair toning off; hair is black)",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Under the chin: lifted the dark grey band."
+  }
+ ],
+ "noblemale2_d": [
+  "Hat no longer toned as hair (hair toning off; hair is black)",
+  "Black dot on the yellow shirt made yellow"
+ ],
+ "noblemale3_d": [
+  "Turban no longer toned as hair (hair toning off)",
+  "Eyelashes, moustache and beard pixels kept as painted",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Beard overlay: 4 pixels that had turned dark grey are black again like the rest."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Mouth (2px between the beard) now grey-toned"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Very dark px on the outer side of each eye now skin coloured"
+  },
+  {
+   "at": "2026-11-23T13:44:43Z",
+   "note": "Near-black skin px on the hands lightened"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Near-black skin px on the hands lightened"
+  }
+ ],
+ "knightmale1_d": [
+  "Light chainmail links on the sleeves kept as painted",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Head overlay (chainmail): kept as painted everywhere; 3 chainmail pixels under the chin and at the back were being darkened."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back of the leg tops: the back row of red/yellow now covers the back 2 rows"
+  }
+ ],
+ "mechanistfemale1_w": [
+  "Braid hair on the chest toned as hair",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Bust: 4 more hair pixels toned as hair."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hat px on the back of the head no longer turned black"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Eyebrows lightened"
+  },
+  {
+   "at": "2026-11-23T04:44:48Z",
+   "note": "Eyebrows now in the hair's gold (test of brow_style \"hair\"), outer px darker than inner"
+  },
+  {
+   "at": "2026-11-23T04:50:50Z",
+   "note": "Eyebrows: less contrast between the outer and inner px"
+  },
+  {
+   "at": "2026-11-23T04:52:13Z",
+   "note": "Eyebrows: outer/inner px contrast made more subtle"
+  },
+  {
+   "at": "2026-11-23T07:48:06Z",
+   "note": "Eyebrows: outer/inner px contrast between the last two tries"
+  },
+  {
+   "at": "2026-11-23T08:01:19Z",
+   "note": "Skin lightened slightly (skin_darker -3)"
+  },
+  {
+   "at": "2026-11-23T08:05:50Z",
+   "note": "Skin lightened more (skin_darker -7)"
+  }
+ ],
+ "mechanistmale1_a": [
+  "A few hat pixels on the head layer kept as painted",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Hands and neck: lifted the darkest skin pixels slightly."
+  }
+ ],
+ "mechanistmale1_b": [
+  "Hood pixels on the head layer (back and sides) kept as painted",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Hood overlay: the 2 brow pixels toned as hair (the earlier hood fix had kept them)."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark skin px either side of the beard lightened slightly"
+  }
+ ],
+ "mechanistmale1_d": [
+  "2 skin pixels by the mouth greyed (lifted from near-black)"
+ ],
+ "minerfemale1_d": [
+  "Hood (top of head, band and the bottom on the back of the head layer) kept as painted",
+  "Black hair toned as hair instead of greyed as skin; overall skin tone kept",
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated"
+ ],
+ "minermale1_d": [
+  "Hood on the head layer (back of head) kept as painted"
+ ],
+ "archerfemale1_b": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  "Fringe: 7 brown hair pixels on the face overlay were wrongly kept by the earlier hood fix; they're toned as hair now. Kept 6 single clothing pixels (orange on each leg, grey on each arm) that would otherwise have been greyed as skin."
+ ],
+ "archerfemale1_w": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated"
+ ],
+ "archermale1_w": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Shoulders: the top row of the black shirt on each arm kept as painted (it was darkened slightly)."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Leg tops / torso underside: the front half copied onto the back half too."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair no longer toned at all (black hair, treated as bald), so shoulders/arms aren't toned"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Pink neck px at (23,18) greyed"
+  }
+ ],
+ "composterfemale1_a": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated"
+ ],
+ "compostermale1_a": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-22T12:38:47Z",
+   "note": "Light band on the leg tops (and torso underside) extended one row forward"
+  }
+ ],
+ "compostermale1_b": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Overlay: 2 hair pixels next to the hood and 4 beard pixels were wrongly kept by the earlier hood fix; toned as hair now."
+  },
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Head side: 2 skin pixels at the top of the side of the head greyed."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops: the whiteish back row is now 2 rows deep (torso underside follows)."
+  }
+ ],
+ "rabbitherdermale1_d": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Belt on the torso kept as painted (it was greyed to near-black); shading elsewhere kept as before."
+  },
+  {
+   "at": "2026-11-12T07:50:39Z",
+   "note": "At-work strap: the front strap's last pixel was see-through in the original texture; filled with the strap colour."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Very light skin px on the legs and arms darkened to match the rest"
+  }
+ ],
+ "settlerfemale1_d": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Black hair no longer greyed as skin and no longer toned"
+  }
+ ],
+ "settlerfemale3_w": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  "Fringe hair darkened back to its previous tone (hood no longer counted as hair)",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Back half of the leg tops now the dress colour (were near-black on the right leg)"
+  },
+  {
+   "at": "2026-11-23T10:07:29Z",
+   "note": "Hair strands on the torso, shoulders and bust now toned like the rest of the hair"
+  },
+  {
+   "at": "2026-11-23T11:06:24Z",
+   "note": "Hat brim (rows 8-9 all round the head) keeps its original colours"
+  },
+  {
+   "at": "2026-11-23T11:09:39Z",
+   "note": "Dress px on the torso/bust that went black (hair-toned) and the cream shirt on the shoulders/sleeves keep their original colours"
+  },
+  {
+   "at": "2026-11-23T11:09:39Z",
+   "note": "Grey skirt given a cream undertone (tint to #6d6355, shading kept)"
+  },
+  {
+   "at": "2026-11-23T11:32:13Z",
+   "note": "Orange hair px on the bust (73,54) now toned"
+  }
+ ],
+ "settlermale2_w": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark px under the mouth lightened (no drool)"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hand undersides now skin (taken from its own wrists)"
+  },
+  {
+   "at": "2026-11-21T14:07:56.227417Z",
+   "note": "Hand undersides now taken from minermale1_w (greyed as skin)"
+  },
+  {
+   "at": "2026-11-21T14:07:56.227417Z",
+   "note": "Greenish-black eyebrows made neutral black"
+  }
+ ],
+ "settlermale3_d": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "No hair toning (bald): the dark red shirt at the neckline and arm tops was being toned as hair."
+  },
+  {
+   "at": "2026-11-23T09:12:32Z",
+   "note": "Back of feet: outer px of the 2nd row from the bottom kept original (not greyed)"
+  },
+  {
+   "at": "2026-11-23T09:14:25Z",
+   "note": "Red px on the back of the feet greyed again; only the dark brown px stay original"
+  }
+ ],
+ "undertakermale1_b": [
+  "Hood (same hood as minermale1_d) kept as painted where it was being desaturated",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Face: lifted the very dark pixels on the left and right edges of the lower face."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark px on the left/right edges of the lower face lightened more"
+  },
+  {
+   "at": "2026-11-23T09:11:22Z",
+   "note": "Hand undersides (both arms) borrowed from alchemistmale1_b bare hands and greyed, replacing the glove"
+  },
+  {
+   "at": "2026-11-23T09:37:37Z",
+   "note": "Beige px on the right arm outer side (42,23) replaced with the sleeve colour"
+  }
+ ],
+ "aristocratmale3_d": [
+  "Eyelashes and moustache kept as painted (same face as noblemale3_d)",
+  "Lips: no longer kept as painted (the keep copied from noblemale3_d's beard covered them); greyed and lifted so they're dark grey, not black.",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Re-rendered with the full training set, so the side of the head and beard overlay match the original v20 again (lips fix kept)."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Head: lifted the dark skin all over the head (scalp, sides, back, under the chin) toward the face's tone; mouth, eyes and lashes left alone."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Leg tops / torso underside: the front half copied onto the back half too."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "The dark px on the outer side of each eye lightened"
+  }
+ ],
+ "concretemixerfemale1_w": [
+  "Braid hair on the chest toned as hair (same torso as mechanistfemale1_w)",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Bust: 4 more hair pixels on the bust toned as hair."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Face: eyes moved down 1px (swapped with the skin row below)."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Brows moved down 1px to sit on the eyes; the row above is forehead skin now."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Flat hair block under the head replaced with hair texture from the top of the head"
+  },
+  {
+   "at": "2026-11-21T14:00:12.144028Z",
+   "note": "Under-head hair: undid the base-layer change; the hair lock hanging under the back of the head now has the hair texture from the top of the head"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "netherworkermale1_a": [
+  "Hair pins on the head layer kept as painted (same as druidmale1_a)"
+ ],
+ "noblefemale1_d": [
+  "2 skin pixels on the back of the neck greyed to match the neck (same as noblefemale1_w)",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Neck: the 2 gold necklace pixels at the back are gold again."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "All skin slightly lighter"
+  }
+ ],
+ "settlermale2_b": [
+  "2 skin pixels on the side of the head greyed (same head as citizenmale2_b)"
+ ],
+ "beekeepermale1_b": [
+  "Dark brown hair toned as hair (same head as glassblowermale1_b)"
+ ],
+ "farmermale1_b": [
+  "Dark brown hair toned as hair (same head as glassblowermale1_b)",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Hair overlay: 72 dark brown hair pixels that were left untouched are toned as hair now."
+  }
+ ],
+ "cowfarmermale1_b": [
+  "Dark brown hair toned as hair (same head as citizenmale1_b)",
+  {
+   "at": "2026-11-11T12:00:00Z",
+   "note": "Hair overlay: 17 dark brown hair pixels that were left untouched are toned as hair now."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops / torso underside: back half from the original torso underside, front half from the original leg tops; leg overlay tops cleared so the base shows."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Brows darkened slightly to match the hair."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Eyebrows (both layers) now copy the head hair colour"
+  }
+ ],
+ "settlermale1_b": [
+  "Dark brown hair toned as hair (same head as citizenmale1_b)",
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Brows darkened slightly."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark skin px lightened slightly"
+  }
+ ],
+ "aristocratfemale1_d": [
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)"
+ ],
+ "blacksmithfemale1_d": [
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)"
+ ],
+ "druidfemale1_d": [
+  "Black hair under the chin toned as hair instead of greyed (same head as minerfemale1_d)",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Face paint: changed from red-pink to purple (like druidfemale1_w) so it no longer reads as a wound."
+  }
+ ],
+ "netherworkerfemale1_a": [
+  "Leg tops: swapped the green and red stripes so each leg top matches its own leg (green on the right leg, red on the left); the torso underside follows.",
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops: back half now solid (green on the right leg, red on the left), grey split kept on the front half."
+  }
+ ],
+ "netherworkerfemale1_d": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops: swapped so the right leg's top is green and the left's red; back half solid, grey split kept on the front half."
+  }
+ ],
+ "pigfarmerfemale1_a": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops and torso underside: green from the original torso underside instead of white."
+  }
+ ],
+ "pigfarmerfemale1_b": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops and torso underside: brown from the original torso underside instead of white."
+  }
+ ],
+ "pigfarmermale1_a": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Hat: kept as painted (it was being toned as hair)."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops / torso underside: back half from the original torso underside, front half from the original leg tops."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Darker neck px lightened slightly"
+  }
+ ],
+ "pigfarmermale1_b": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Hat: kept as painted (12 pixels were being toned as hair)."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows: the near-black skin pixels are lifted to dark grey"
+  }
+ ],
+ "pigfarmermale1_d": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Hat: kept as painted; no hair toning (bald)."
+  },
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Leg tops / torso underside: back half from the original torso underside, front half from the original leg tops."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Darker neck px (and under the chin) lightened slightly"
+  }
+ ],
+ "pigfarmermale1_w": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Hat: kept as painted (it was being toned as hair)."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair no longer toned (black hair)"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "2 brown px on the back of the head and 1 beard px on the face now greyed as skin"
+  }
+ ],
+ "plantermale1_d": [
+  {
+   "at": "2026-11-12T08:00:00Z",
+   "note": "Pants: 1 dark pixel on each leg kept as painted; no hair toning (bald)."
+  }
+ ],
+ "rabbitherdermale1_w": [
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Beard: lightened the dark grey bits (bottom corners of the face, under the chin)."
+  },
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Left glove: 7 dark pixels kept as painted."
+  },
+  {
+   "at": "2026-11-12T07:50:39Z",
+   "note": "At-work strap: the front strap's last pixel was see-through in the original texture; filled with the strap colour."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hat on the outer layer no longer toned; red hair px under it still toned"
+  },
+  {
+   "at": "2026-11-21T14:01:58.781123Z",
+   "note": "Dark skin at the bottom corners of the face (front and side) lightened; mouth left alone"
+  }
+ ],
+ "settlerfemale2_a": [
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Leg tops from the original torso underside, and the torso underside put back to the original."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops now uses the grey dress front of the leg tops (mirrored)"
+  },
+  {
+   "at": "2026-11-22T12:30:03Z",
+   "note": "Light px on the inner edge of the back of the leg tops (looked like a gap) now dark like the rest"
+  }
+ ],
+ "settlerfemale2_w": [
+  {
+   "at": "2026-11-12T07:49:05Z",
+   "note": "Leg tops / torso underside: back half now the dress green; front half unchanged."
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Torso underside: the dress is now on the base layer of the underside instead of the outer layer"
+  }
+ ],
+ "rabbitherdermale1_b": [
+  {
+   "at": "2026-11-12T07:50:39Z",
+   "note": "At-work strap: the front strap's last pixel was see-through in the original texture; filled with the strap colour."
+  }
+ ],
+ "craftermale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops (the solid leg overlay tops are cleared so it shows)"
+  },
+  {
+   "at": "2026-11-21T13:20:18.682094Z",
+   "note": "3 brown hat px on the side of the head no longer toned as hair"
+  }
+ ],
+ "glassblowerfemale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-21T13:20:18.682094Z",
+   "note": "Back half of the leg tops and the back half of the torso underside now use the brown of the dress (from the back of the legs)"
+  }
+ ],
+ "glassblowerfemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair toned slightly redder so the work glasses stand out"
+  },
+  {
+   "at": "2026-11-21T13:28:21.315413Z",
+   "note": "Hair given a clearer red tint"
+  },
+  {
+   "at": "2026-11-21T13:36:00.887681Z",
+   "note": "Pale back 2 rows of the leg tops (and back half of the torso underside) now use the dress colour from the back of the legs"
+  }
+ ],
+ "glassblowerfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Grey hair is now toned as hair and darkened slightly for more contrast with the skin"
+  },
+  {
+   "at": "2026-11-21T13:28:21.315413Z",
+   "note": "Hair darkened a bit more for contrast with the skin"
+  },
+  {
+   "at": "2026-11-21T13:36:00.887681Z",
+   "note": "Pale back 2 rows of the leg tops (and back half of the torso underside) now use the dress colour from the back of the legs"
+  }
+ ],
+ "knightfemale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  }
+ ],
+ "knightmale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  }
+ ],
+ "knightmale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now the front half mirrored, so it is all one colour"
+  },
+  {
+   "at": "2026-11-22T11:10:32Z",
+   "note": "Hair darkened slightly towards light brown"
+  },
+  {
+   "at": "2026-11-22T11:27:38Z",
+   "note": "Beard stubble px on the jaw and chin lightened"
+  },
+  {
+   "at": "2026-11-22T11:29:36Z",
+   "note": "Two remaining dark beard px on the chin lightened"
+  },
+  {
+   "at": "2026-11-22T11:44:36Z",
+   "note": "Beard lift toned down so it reads as a beard again (a bit darker than the skin, no longer near-black)"
+  },
+  {
+   "at": "2026-11-22T11:56:53Z",
+   "note": "Skin lightened slightly overall"
+  },
+  {
+   "at": "2026-11-22T12:05:42Z",
+   "note": "Bald spot on top of the head lightened"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Skin lightened slightly (skin_darker -6.5)"
+  },
+  {
+   "at": "2026-11-23T13:09:15Z",
+   "note": "Dark hand px, mouth and bald spot lightened"
+  },
+  {
+   "at": "2026-11-23T13:12:09Z",
+   "note": "Bald spot on the back of the head lightened to match the top"
+  }
+ ],
+ "minerfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Removed the 2 px on the bottom row of the face overlay"
+  }
+ ],
+ "netherworkerfemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops fixed like netherworkerfemale1_a: sides swapped, back half solid colour, grey split kept on the front"
+  }
+ ],
+ "netherworkerfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back half of the leg tops is now all red, no grey; grey split kept on the front"
+  }
+ ],
+ "netherworkermale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Beard lightened slightly"
+  },
+  {
+   "at": "2026-11-22T11:13:50Z",
+   "note": "Last brown skin px on the face (near the hairline and on the left side) greyed"
+  },
+  {
+   "at": "2026-11-23T13:17:47Z",
+   "note": "Very light skin px (above L* 50) darkened"
+  },
+  {
+   "at": "2026-11-23T13:24:02Z",
+   "note": "Light skin darkened gradually (everything above L* 44 compressed) so the shading steps are kept instead of flattening into the next tone"
+  },
+  {
+   "at": "2026-11-23T13:26:17Z",
+   "note": "Two ungreyed skin px on top of the head (10,0),(10,2) now grey"
+  }
+ ],
+ "netherworkermale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "2 dark skin px on the back of the head lightened"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "noblefemale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Eyeshadow px recoloured purple"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Eyeshadow purple desaturated and blended toward the skin"
+  },
+  {
+   "at": "2026-11-23T08:48:58Z",
+   "note": "Brow px next to the purple eyeshadow darkened"
+  },
+  {
+   "at": "2026-11-23T08:50:17Z",
+   "note": "Brow px next to the eyeshadow now a light black to match the hair"
+  }
+ ],
+ "noblefemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "1 dark px on the front of each hand lightened"
+  }
+ ],
+ "noblefemale2_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "All hair on the outer layer now toned (purple ribbon left alone)"
+  }
+ ],
+ "noblefemale2_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Blackish px in the hair recoloured from the hair next to them"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "3 blackish px in the hair lock on the bust now hair coloured"
+  }
+ ],
+ "noblefemale3_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Nun hood no longer toned"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Lips greyed"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Blue dress tinted greenish"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Skirt (dress in the lower half of the texture) tinted green to match the shirt"
+  }
+ ],
+ "noblefemale3_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Silver necklace recoloured gold"
+  }
+ ],
+ "noblemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Back 2 rows of leg tops / torso underside now blue, no red"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hat strap no longer toned"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair on the outer head layer now toned"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Grey sleeve stripes recoloured to a dark cream"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Back half of the leg tops (and torso underside) now copies the blue front half (mirrored)"
+  }
+ ],
+ "noblemale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "No hair toning: the face px that were toned as hair are now greyed as skin"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Light spots on the face darkened slightly"
+  },
+  {
+   "at": "2026-11-21T14:00:12.144028Z",
+   "note": "Red headband across the forehead no longer greyed (skin shading shifts slightly as a result)"
+  },
+  {
+   "at": "2026-11-22T11:48:55Z",
+   "note": "Overlay eyebrows and beard px greyed to match the base layer; beard under the chin given the grey undertone; beard darkened slightly"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Beard and eyebrows darkened"
+  },
+  {
+   "at": "2026-11-23T09:18:25Z",
+   "note": "Beard and eyebrows now neutral grey (no blue skin undertone) and a bit darker, so they stand out from the skin"
+  },
+  {
+   "at": "2026-11-23T09:20:41Z",
+   "note": "Beard slightly darker"
+  }
+ ],
+ "noblemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair and beard desaturated more"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Eyebrows lightened (the near-black ends most)"
+  },
+  {
+   "at": "2026-11-22T11:13:50Z",
+   "note": "Beard, moustache and eyebrows darkened slightly"
+  },
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "noblemale2_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair no longer toned (black hair), so the hat keeps its colour"
+  }
+ ],
+ "noblemale2_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hat no longer toned as hair (no hair toning at all)"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "2 px on the back of the head now greyed"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Brown hat band all around the head no longer greyed"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Dark skin across the back of the head (and 1 px on the side) now greyed"
+  },
+  {
+   "at": "2026-11-22T11:13:50Z",
+   "note": "Skin px left brown on the sides of the head greyed"
+  }
+ ],
+ "noblemale2_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark skin px lightened slightly (face, chest, hands)"
+  },
+  {
+   "at": "2026-11-22T11:15:42Z",
+   "note": "Black px on the chest replaced with the cream shirt colour"
+  }
+ ],
+ "noblemale3_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Very dark px around the beard lightened"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Hat (top of the head and the band, both layers) no longer toned as hair"
+  },
+  {
+   "at": "2026-11-22T11:19:49Z",
+   "note": "Filled the hole (transparent px, from the original) on the bottom of the left side of the head"
+  },
+  {
+   "at": "2026-11-22T11:24:52Z",
+   "note": "Super dark skin px under the chin lightened"
+  }
+ ],
+ "noblemale3_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair desaturated a bit more and eyebrows darkened"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark px on the sides of the head lightened slightly"
+  },
+  {
+   "at": "2026-11-21T13:56:27.160868Z",
+   "note": "Eyebrows on the outer head layer now match the base layer brows"
+  },
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Hair redder and browner (hair_tone sat 0.7->0.85, val 0.65->0.6)"
+  },
+  {
+   "at": "2026-11-23T14:00:49Z",
+   "note": "Hair more brown (hair_tint 35% towards #6b4a2e)"
+  },
+  {
+   "at": "2026-11-23T14:04:07Z",
+   "note": "Hair more brown (hair_tint 35% -> 60% towards #6b4a2e)"
+  }
+ ],
+ "pigfarmerfemale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Brown sleeve column removed from the underside of both hands (now skin)"
+  },
+  {
+   "at": "2026-11-22T11:56:00Z",
+   "note": "Greyish px on the back edge of the right leg top now match the dress (copied from the original torso underside)"
+  }
+ ],
+ "pigfarmerfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Orange hair on the chest and bust now toned as hair"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark mouth px lightened slightly"
+  },
+  {
+   "at": "2026-11-22T11:56:00Z",
+   "note": "Last hair px on the bust toned; all hair darkened slightly (skin kept as it was)"
+  },
+  {
+   "at": "2026-11-22T11:59:29Z",
+   "note": "Hair desaturated slightly (skin kept as it was)"
+  }
+ ],
+ "planterfemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hat keeps its colour"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair slightly redder"
+  }
+ ],
+ "planterfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair on the chest and bust now toned"
+  },
+  {
+   "at": "2026-11-21T14:00:12.144028Z",
+   "note": "Remaining hair px on the front of the torso and the bust now toned as hair"
+  },
+  {
+   "at": "2026-11-23T09:24:04Z",
+   "note": "Bright pink px on the front torso desaturated"
+  },
+  {
+   "at": "2026-11-23T09:26:39Z",
+   "note": "Pink px on the front torso recoloured to the hair brown"
+  },
+  {
+   "at": "2026-11-23T09:29:04Z",
+   "note": "Hair slightly redder (hair_tint 25% towards #8a3a22); torso px kept matching the hair"
+  }
+ ],
+ "plantermale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows: the near-black skin pixels are lifted to dark grey"
+  }
+ ],
+ "plantermale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hat keeps its colour; dark hair px on the outer layer now toned"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Eyebrows (base and overlay) desaturated"
+  },
+  {
+   "at": "2026-11-23T09:57:57Z",
+   "note": "Eyebrows (base and overlay) slightly darker"
+  }
+ ],
+ "rabbitherderfemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair slightly redder"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Darkest lip px lightened"
+  },
+  {
+   "at": "2026-11-21T12:33:46.650419Z",
+   "note": "The 2 hair px touching the belt now toned as hair"
+  },
+  {
+   "at": "2026-11-21T12:33:46.650419Z",
+   "note": "Hair redder"
+  }
+ ],
+ "rabbitherderfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Bow on the back of the head toned green"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Black px next to the hair on the torso replaced with dress green"
+  },
+  {
+   "at": "2026-11-21T12:33:46.650419Z",
+   "note": "Red hair px on the bust that weren't toned now are"
+  },
+  {
+   "at": "2026-11-21T12:33:46.650419Z",
+   "note": "Near-black hair px on the bust replaced with the hair next to them"
+  }
+ ],
+ "rabbitherdermale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair no longer toned (black hair), so the hat keeps its colour"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "At-work strap px filled (same fix as _b/_d/_w)"
+  }
+ ],
+ "settlerfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair on the chest and bust now toned"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Skin slightly lighter"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  }
+ ],
+ "settlerfemale2_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Belt px right of the hair (more than 3px from the left) no longer toned"
+  }
+ ],
+ "settlerfemale2_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows: the near-black skin pixels are lifted to dark grey"
+  }
+ ],
+ "settlerfemale3_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T14:07:56.227417Z",
+   "note": "Leg tops and torso underside now use the dark green overlay dress colour"
+  }
+ ],
+ "settlerfemale3_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Back half of the leg tops now the dress colour; mouth lightened slightly"
+  }
+ ],
+ "settlerfemale3_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Torso underside and leg tops now the brown of the skirt"
+  }
+ ],
+ "settlermale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Outer head layer (hair accessory and hood) kept as painted"
+  }
+ ],
+ "settlermale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Shirt px above the belt (and 1 on the side) no longer greyed"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hand undersides now skin (taken from its own wrists)"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Lips lightened slightly"
+  },
+  {
+   "at": "2026-11-21T14:09:52.973043Z",
+   "note": "Hand undersides now taken from studentmale2_d instead of its own wrists"
+  },
+  {
+   "at": "2026-11-23T12:14:53Z",
+   "note": "Leg-top px that share a colour with skin (were greyed) keep their original colour"
+  }
+ ],
+ "settlermale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows: the near-black skin pixels are lifted to dark grey"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Light hair px darkened slightly (gradual, shading kept)"
+  },
+  {
+   "at": "2026-11-23T13:51:30Z",
+   "note": "Hand/arm skin lightened slightly (3 L*)"
+  },
+  {
+   "at": "2026-11-23T14:00:49Z",
+   "note": "Dark skin px on the hands lightened slightly"
+  }
+ ],
+ "settlermale2_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows: the near-black skin pixels are lifted to dark grey"
+  }
+ ],
+ "sheepfarmerfemale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Eyebrows now toned as hair"
+  }
+ ],
+ "sheepfarmermale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Very light skin px darkened slightly"
+  }
+ ],
+ "sheepfarmermale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Grey hair px that were greyed as skin are now toned as hair, and hair darkened a bit"
+  },
+  {
+   "at": "2026-11-23T09:33:07Z",
+   "note": "Hair darkened (hair_darker 5 -> 11)"
+  }
+ ],
+ "smelterfemale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Very dark face px lifted (mouth left alone) and dark arm skin lifted"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Soot spots on the face (and hands) lightened slightly and made neutral grey so they read as soot"
+  },
+  {
+   "at": "2026-11-23T10:08:10Z",
+   "note": "Coal stains (face and hands) now neutral dark grey, no blue undertone, and darker"
+  },
+  {
+   "at": "2026-11-23T10:11:27Z",
+   "note": "Coal stains slightly less dark"
+  }
+ ],
+ "smelterfemale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair on the chest, side and bust now toned"
+  },
+  {
+   "at": "2026-11-23T09:36:21Z",
+   "note": "Hat (top, band all round, side flap, overlay brim) keeps its original colours instead of being toned as hair"
+  },
+  {
+   "at": "2026-11-23T09:39:33Z",
+   "note": "Hair px on the face overlay (47,14) now toned like the rest of the hair"
+  },
+  {
+   "at": "2026-11-23T09:42:08Z",
+   "note": "Leg tops / torso underside split: back half from the original torso underside, front half from the original leg tops"
+  }
+ ],
+ "smeltermale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Hat (top, band, side flap and brim) keeps its original colours; no hair toning (bald)"
+  }
+ ],
+ "smeltermale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Split underside: back half of leg tops and torso underside from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "2 light px under the chin now greyed"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Dark beard px on the face lifted slightly"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Beard lightened slightly"
+  },
+  {
+   "at": "2026-11-23T10:15:16Z",
+   "note": "Beard lightened more (and the darker beard px evened up); mouth made dark"
+  },
+  {
+   "at": "2026-11-23T10:16:57Z",
+   "note": "Beard lightened a bit more"
+  },
+  {
+   "at": "2026-11-23T10:17:45Z",
+   "note": "Mouth given two tones like the original (left px lighter); last two dark beard px evened up"
+  }
+ ],
+ "studentmale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Hair on the outer layer and eyebrows now toned"
+  },
+  {
+   "at": "2026-11-21T14:07:56.227417Z",
+   "note": "Eyebrows now copy the black hair colour"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Overlay eyebrows now the dark hair colour"
+  }
+ ],
+ "studentmale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Skin px on the sides/back of the head now greyed"
+  },
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Lightest face px darkened slightly"
+  }
+ ],
+ "studentmale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Softer skin shadows: the near-black skin pixels are lifted to dark grey"
+  },
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Hair slightly darker (hair_darker 5)"
+  }
+ ],
+ "studentmale2_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Darkest patch on top of the head, the band at the top of the face and the back of the head lightened slightly"
+  },
+  {
+   "at": "2026-11-23T08:58:46Z",
+   "note": "Lightest skin px darkened a bit (above L* 48, by 0.6x the excess) for a more even skin"
+  },
+  {
+   "at": "2026-11-23T09:02:41Z",
+   "note": "Mouth darkened so it stands out again"
+  },
+  {
+   "at": "2026-11-23T09:04:05Z",
+   "note": "Dark px beside the mouth (14,14) lightened to the mouth tone"
+  },
+  {
+   "at": "2026-11-23T09:06:03Z",
+   "note": "Mouth back to 2 px wide: (13,14) and (14,14) no longer darkened/lightened"
+  }
+ ],
+ "teacherfemale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Skin undertone a bit bluer so it stands apart from the grey glasses"
+  },
+  {
+   "at": "2026-11-23T10:20:06Z",
+   "note": "Skin slightly darker (skin_darker 4) and a little less blue (undertone strength 1.6 -> 1.4)"
+  },
+  {
+   "at": "2026-11-23T10:22:51Z",
+   "note": "Skin now dark like teacherfemale1_d (skin_darker 13, normal undertone instead of the extra blue)"
+  },
+  {
+   "at": "2026-11-23T10:53:41Z",
+   "note": "Skin less flat: pink blush/lip/nose shading of the original turned into shadows (skin_redness 1.2) and a little more contrast (skin_contrast 1.3)"
+  },
+  {
+   "at": "2026-11-23T10:56:01Z",
+   "note": "Skin shading taken from settlermale1_d (its original skin pixels borrowed where both skins have skin, then greyed); redness/contrast/darker overrides removed"
+  },
+  {
+   "at": "2026-11-23T10:57:52Z",
+   "note": "Hand undersides borrowed from sheepfarmermale1_d (settlermale1_d has none); fixes brown/white hand bottoms"
+  }
+ ],
+ "teachermale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Skin darkened slightly"
+  }
+ ],
+ "teachermale1_b": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Hair on the outer head layer now toned to match the base hair"
+  },
+  {
+   "at": "2026-11-22T12:57:28Z",
+   "note": "Super dark skin px by the mouth/chin lightened"
+  },
+  {
+   "at": "2026-11-23T11:10:32Z",
+   "note": "Hair slightly redder (hair_tint 15% to #8a3a22) and a little darker (hair_darker 4)"
+  },
+  {
+   "at": "2026-11-23T11:34:50Z",
+   "note": "Dark spots on the hands lightened"
+  },
+  {
+   "at": "2026-11-23T13:47:32Z",
+   "note": "Hand dark-spot lightening halved (was too much)"
+  }
+ ],
+ "teachermale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  }
+ ],
+ "teachermale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "Leg tops now use the original torso underside; torso underside put back to the original"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Near-black skin px on the cheeks and by the mouth lightened"
+  },
+  {
+   "at": "2026-11-22T14:08:23Z",
+   "note": "Lightened the 10 near-black skin pixels on the lower face/jaw to the surrounding shadow tone."
+  },
+  {
+   "at": "2026-11-22T14:16:41Z",
+   "note": "Bottom 2 px of the beard (10,15),(13,15) greyed"
+  },
+  {
+   "at": "2026-11-23T04:30:13Z",
+   "note": "Bottom 2 beard px darkened to match the rest of the beard bottom row"
+  },
+  {
+   "at": "2026-11-23T04:34:03Z",
+   "note": "Outer eyebrow px darkened so the brows keep their two tones"
+  },
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  }
+ ],
+ "undertakerfemale1_a": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "White skirt stripe carried up onto the front edge of the leg tops so it connects"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Dark skin on the forehead lightened slightly"
+  }
+ ],
+ "undertakerfemale1_d": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "White skirt stripe carried up onto the front edge of the leg tops so it connects"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Shoes (bottom of the legs and soles) keep their original colour, no longer greyed"
+  },
+  {
+   "at": "2026-11-23T11:11:30Z",
+   "note": "Near-black skin px above the eyes and on the nose bridge lightened"
+  },
+  {
+   "at": "2026-11-23T11:15:45Z",
+   "note": "Leg tops and torso underside now the dark grey of the back of the legs (grey stripe on the front row kept)"
+  }
+ ],
+ "undertakerfemale1_w": [
+  {
+   "at": "2026-11-21T11:40:58.662726Z",
+   "note": "White skirt stripe carried up onto the front edge of the leg tops so it connects"
+  },
+  {
+   "at": "2026-11-21T13:48:13.841854Z",
+   "note": "Dark skin on the forehead lightened slightly"
+  },
+  {
+   "at": "2026-11-23T11:12:32Z",
+   "note": "Leg tops and torso underside now the green of the back of the legs (grey stripe on the front row kept)"
+  }
+ ],
+ "builderfemale1_a": [],
+ "chickenfarmerfemale1_b": [
+  {
+   "at": "2026-11-21T13:28:21.315413Z",
+   "note": "Near-black shaded skin bits on the legs lightened"
+  },
+  {
+   "at": "2026-11-21T13:28:21.315413Z",
+   "note": "Outer head layer hair now matches the base hair toning (darker, less saturated)"
+  }
+ ],
+ "chickenfarmermale1_a": [],
+ "chickenfarmermale1_b": [],
+ "chickenfarmermale1_d": [],
+ "chickenfarmermale1_w": [],
+ "craftermale1_a": [],
+ "teacherfemale1_b": [],
+ "teacherfemale1_d": [],
+ "teacherfemale1_w": [],
+ "alchemistmale1_w": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:15:45Z",
+   "note": "Darkest skin px on the hands lightened slightly"
+  }
+ ],
+ "archermale1_b": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T11:15:45Z",
+   "note": "Back two rows of the leg tops (and torso underside) now brown, chainmail texture removed"
+  },
+  {
+   "at": "2026-11-23T11:25:43Z",
+   "note": "Chainmail px beside the eyes keep their original colour (were darkened as brows)"
+  }
+ ],
+ "aristocratmale1_d": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T11:15:45Z",
+   "note": "Back two rows of the leg tops (and torso underside) now the same purple"
+  }
+ ],
+ "bakermale1_w": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T11:17:21Z",
+   "note": "Leg tops / torso underside split: back half from the original torso underside, front half from the original leg tops"
+  },
+  {
+   "at": "2026-11-23T11:18:14Z",
+   "note": "Hair slightly redder (hair_tint 20% to #8a3a22); brows follow"
+  },
+  {
+   "at": "2026-11-23T11:38:46Z",
+   "note": "Darkest skin px (chest/neck opening, face, arms, hands) lightened slightly"
+  },
+  {
+   "at": "2026-11-23T11:40:57Z",
+   "note": "All skin lightened a bit (skin_darker -4); brows held at their previous tones"
+  }
+ ],
+ "beekeeperfemale1_w": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T08:47:43Z",
+   "note": "Blonde-style brows undone (brow_style default): she has black brows; hood px beside the brows back to grey"
+  },
+  {
+   "at": "2026-11-23T11:19:00Z",
+   "note": "Hair now very dark brown; hair px beside the brows toned like the rest of the hair (not darkened as brows); hood px beside the eyes keep their grey"
+  }
+ ],
+ "citizenmale1_w": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:46:57Z",
+   "note": "Darkest skin px (chest opening, hands, hand undersides) lightened"
+  }
+ ],
+ "undertakermale1_w": [
+  {
+   "at": "2026-11-23T04:40:59Z",
+   "note": "Eyebrows keep their light/dark shading (no longer flattened to one colour)"
+  },
+  {
+   "at": "2026-11-23T13:49:11Z",
+   "note": "Hair darkened (hair_darker 5); darkest beard px lightened; skin compensated so it stays the same"
+  },
+  {
+   "at": "2026-11-23T13:53:10Z",
+   "note": "Grey shirt (torso and sleeves) given a cream undertone, lightness kept"
+  },
+  {
+   "at": "2026-11-23T13:56:02Z",
+   "note": "Grey bits on the pants given the same cream undertone"
+  },
+  {
+   "at": "2026-11-23T13:57:57Z",
+   "note": "Inner front corner of the left leg top now the cream like the right leg (mirrored)"
+  }
+ ],
+ "aristocratfemale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:15:45Z",
+   "note": "Blush and lips lightened"
+  },
+  {
+   "at": "2026-11-23T11:27:15Z",
+   "note": "Skin lightened (skin_darker -5)"
+  },
+  {
+   "at": "2026-11-23T11:31:22Z",
+   "note": "Skin lightened a bit more (skin_darker -8)"
+  }
+ ],
+ "aristocratmale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:17:21Z",
+   "note": "Back two rows of the leg tops (and torso underside) now the same blue; darkest skin px on the hands lightened slightly"
+  }
+ ],
+ "citizenfemale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:44:22Z",
+   "note": "All skin lightened (skin_darker -4)"
+  },
+  {
+   "at": "2026-11-23T11:46:57Z",
+   "note": "Skin lightened more (skin_darker -8)"
+  },
+  {
+   "at": "2026-11-23T12:42:20Z",
+   "note": "Skin lightened a bit more (skin_darker -11)"
+  }
+ ],
+ "crafterfemale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:56:32Z",
+   "note": "Two cream px at the bottom of the torso front (23-24,30) keep their original colour"
+  },
+  {
+   "at": "2026-11-23T11:57:24Z",
+   "note": "Dark skin px on the sides of the head lightened"
+  }
+ ],
+ "druidfemale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T11:59:53Z",
+   "note": "Two dark purple face paint px slightly lightened"
+  }
+ ],
+ "glassblowermale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T13:01:13Z",
+   "note": "Two skin-coloured px at the bottom of the moustache (9,15),(14,15) now grey; hair tinted slightly red (hair_tint 20%)"
+  },
+  {
+   "at": "2026-11-23T13:02:45Z",
+   "note": "Head hair (not brows/moustache/beard) slightly darker"
+  },
+  {
+   "at": "2026-11-23T13:04:40Z",
+   "note": "Skin a bit lighter (skin_darker -4); hair less red (hair_tint 20% -> 10%)"
+  }
+ ],
+ "mechanistmale1_w": [
+  {
+   "at": "2026-11-23T07:57:15Z",
+   "note": "Eyebrows now in the hair's colour (blonde brows), outer px slightly darker"
+  },
+  {
+   "at": "2026-11-23T08:43:14Z",
+   "note": "Skin lightened (skin_darker -5)"
+  },
+  {
+   "at": "2026-11-23T13:14:20Z",
+   "note": "Mouth lightened"
+  },
+  {
+   "at": "2026-11-23T13:15:09Z",
+   "note": "Dark skin px on the hands lightened"
+  }
+ ],
+ "plantermale1_w": [
+  {
+   "at": "2026-11-23T12:21:11Z",
+   "note": "Near-black beard px lightened; lone dark px sticking out at (19,12) lightened extra"
+  },
+  {
+   "at": "2026-11-23T12:29:56Z",
+   "note": "Beard darkest px lightened less; dark px sticking up at (18,11) lightened, (19,12) toned down"
+  },
+  {
+   "at": "2026-11-23T12:32:23Z",
+   "note": "Dark px sticking off the beard U at (9,15) lightened; (18,11) back as it was, (19,12) lightened like the other dark beard px"
+  },
+  {
+   "at": "2026-11-23T12:35:03Z",
+   "note": "(9,15) now copies its neighbour (8,15) so it matches in hue"
+  },
+  {
+   "at": "2026-11-23T12:37:03Z",
+   "note": "Whole beard lightened slightly"
+  }
+ ]
+}
