@@ -109,6 +109,12 @@ def make_icon(skin):
     return out.getvalue()
 
 
+def shown(path):
+    """A path relative to the repo when it's inside it, for printing."""
+    path = path.resolve()
+    return path.relative_to(REPO) if path.is_relative_to(REPO) else path
+
+
 def build_jar(target, skins, out):
     jar = out / f"dunmercolonies-{mod_version()}-{target}.jar"
     neoforge = target.startswith("neoforge")
@@ -148,8 +154,7 @@ def main():
     args.out.mkdir(parents=True, exist_ok=True)
     for target in TARGETS if args.target == "all" else (args.target,):
         jar = build_jar(target, skins, args.out)
-        show = lambda p: p.relative_to(REPO) if p.resolve().is_relative_to(REPO) else p
-        print(f"{len(skins)} skins from {show(skins_dir)} -> {show(jar)}")
+        print(f"{len(skins)} skins from {shown(skins_dir)} -> {shown(jar)}")
 
 
 if __name__ == "__main__":
