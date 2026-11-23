@@ -1,0 +1,1557 @@
+{
+  "run": "5.auto_full_v11",
+  "exported": "2026-10-20T05:46:17.936Z",
+  "reviews": {
+    "alchemistfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:27:42.986Z"
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:09:05.842Z"
+    },
+    "alchemistfemale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:28:30.419Z"
+      },
+      "status": "edits",
+      "at": "2026-10-18T03:09:21.637Z",
+      "issues": [
+        "accessory"
+      ],
+      "comment": "necklace greyed"
+    },
+    "alchemistfemale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:28:59.335Z"
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:09:50.606Z"
+    },
+    "alchemistfemale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:29:50.622Z"
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:09:58.623Z"
+    },
+    "alchemistmale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:30:45.663Z"
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:10:08.072Z"
+    },
+    "alchemistmale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:31:46.673Z"
+      },
+      "status": "edits",
+      "at": "2026-10-18T03:10:44.042Z",
+      "comment": "1 px on either side of the head part of the beard not greyed"
+    },
+    "alchemistmale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:32:07.356Z"
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:13:51.685Z"
+    },
+    "alchemistmale1_w": {
+      "status": "edits",
+      "at": "2026-10-17T06:32:35.847Z",
+      "comment": "one pixel of the hair at the back of the head is greyed",
+      "issues": [
+        "hair_uneven"
+      ]
+    },
+    "archerfemale1_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:33:20.495Z",
+        "comment": "not super important but the headband around the head is desaturated when it shouldnt be",
+        "issues": [
+          "headwear"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-18T03:14:36.570Z",
+      "comment": "headband grey",
+      "issues": [
+        "headwear"
+      ]
+    },
+    "archerfemale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:34:02.385Z",
+        "comment": "one pixel on each leg of shoe buckle is greyed when it shouldnt be",
+        "issues": [
+          "accessory"
+        ]
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:15:14.468Z"
+    },
+    "archerfemale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:34:38.797Z",
+        "comment": "one pixel on the face next to the right eye isnt greyed (or has a red tint? cant tell)",
+        "issues": [
+          "skin_missed"
+        ]
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:15:51.616Z"
+    },
+    "archerfemale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:35:15.622Z"
+      },
+      "status": "approved",
+      "at": "2026-10-18T03:16:06.266Z"
+    },
+    "archermale1_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:36:00.318Z",
+        "comment": "headband around head is greyed when it shouldnt be, one pixel of skinon one side of the head isnt greyed",
+        "issues": [
+          "headwear",
+          "skin_missed"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-18T03:16:35.039Z",
+      "comment": "headband desat"
+    },
+    "archermale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:36:26.256Z"
+      },
+      "status": "approved",
+      "at": "2026-10-19T07:00:37.209Z"
+    },
+    "archermale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:36:38.889Z"
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:00:50.039Z",
+      "comment": "maybe darken skin a lil"
+    },
+    "archermale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:37:01.173Z"
+      },
+      "status": "approved",
+      "at": "2026-10-19T07:01:02.276Z"
+    },
+    "aristocratfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:38:22.923Z"
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:01:55.653Z",
+      "issues": [
+        "accessory"
+      ],
+      "comment": "hair accessory on side of head desat"
+    },
+    "aristocratfemale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:40:10.415Z",
+        "comment": "the rings on the bottom of the arms look out of place even though they are correct. Same with the earrings. so need to either change the colour of them or remove them. also on the headband/crown there are two pixels that are greyed when they shouldnt.",
+        "issues": [
+          "headwear",
+          "looks_off"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:03:09.870Z",
+      "comment": "the rings on the bottom of the arms look out of place even though they are correct. Same with the earrings. so need to either change the colour of them or remove them. also on the headband/crown there are two pixels that are greyed when they shouldnt."
+    },
+    "aristocratfemale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:41:51.845Z",
+        "comment": "some of the red pixels on the hood are desaturated when they shouldnt be. same as some of the black hair is lightened to look kinda blue/grey and blend with skin when shouldnt. two pixels on the back of each arm that are skin arent greyed.",
+        "issues": [
+          "headwear",
+          "skin_missed",
+          "hair_uneven"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:03:29.136Z",
+      "comment": "some of the red pixels on the hood are desaturated when they shouldnt be. same as some of the black hair is lightened to look kinda blue/grey and blend with skin when shouldnt. two pixels on the back of each arm that are skin arent greyed."
+    },
+    "aristocratfemale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:42:26.479Z",
+        "comment": "one pixel of pink blush on cheeks isnt greyed, and headband is destarurated  when it shouldnt be",
+        "issues": [
+          "headwear",
+          "blush"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:03:47.814Z",
+      "comment": "one pixel of pink blush on cheeks isnt greyed, and headband is destarurated when it shouldnt be"
+    },
+    "aristocratfemale2_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:43:56.965Z",
+        "comment": "technically all correct but the orange bits on the sleeve look weird so should change those",
+        "issues": [
+          "looks_off"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:04:28.880Z",
+      "comment": "technically all correct but the orange bits on the sleeve look weird so should change those. also eyeshadow is desat but shouldnt"
+    },
+    "aristocratfemale2_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:44:39.796Z",
+        "comment": "headband and hat desaturated, rings on hands look weird, some parts of hair desaturated and others arent",
+        "issues": [
+          "headwear",
+          "hair_uneven",
+          "looks_off"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:05:20.834Z",
+      "comment": "hair is FUCKED UP. headband and hat desaturated, rings on hands look weird, some parts of hair desaturated and others arent"
+    },
+    "aristocratfemale2_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:45:38.937Z",
+        "comment": "parts of hadband and hat desaturated. one pixel on the back of each arm of skin not desaturated. same issue with rings looking weird.",
+        "issues": [
+          "headwear",
+          "skin_missed",
+          "looks_off"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-19T07:06:12.246Z",
+      "comment": "parts of hadband and hat desaturated. one pixel on the back of each arm of skin not desaturated. same issue with rings looking weird"
+    },
+    "aristocratfemale2_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:47:35.857Z",
+        "comment": "cheek blush not greyed. headband greyed. rings look weird. some hair pixels on the chest turned almost black? part of upper sleeve (yellow band) is greyed when shouldnt be.",
+        "issues": [
+          "headwear",
+          "clothing",
+          "blush",
+          "hair_uneven",
+          "looks_off"
+        ]
+      }
+    },
+    "aristocratfemale3_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:48:31.960Z",
+        "comment": "headband greyed",
+        "issues": [
+          "headwear"
+        ]
+      }
+    },
+    "aristocratfemale3_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:49:03.808Z",
+        "comment": "rings look weird",
+        "issues": [
+          "looks_off"
+        ]
+      }
+    },
+    "aristocratfemale3_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:49:28.175Z",
+        "comment": "headband and earrings greyed",
+        "issues": [
+          "headwear",
+          "accessory"
+        ]
+      }
+    },
+    "aristocratfemale3_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:50:27.289Z",
+        "comment": "hood is desaturated, cheeks not greyed, rings look weird, line of pixels above eyes on face look all black for some reason",
+        "issues": [
+          "headwear",
+          "brow_band",
+          "blush",
+          "looks_off"
+        ]
+      }
+    },
+    "aristocratmale1_a": {
+      "status": "approved",
+      "at": "2026-10-17T06:51:02.382Z"
+    },
+    "aristocratmale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:51:13.432Z"
+      }
+    },
+    "aristocratmale1_d": {
+      "previous": {
+        "at": "2026-10-17T06:52:30.297Z",
+        "comment": "parts of shirt are greyed when shouldnt be. can just manual override anything below 2 or so px of neck. if possible adjust contrast between hair/facial hair and skin colour",
+        "status": "edits",
+        "issues": [
+          "clothing",
+          "contrast"
+        ]
+      }
+    },
+    "aristocratmale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T06:53:27.799Z"
+      }
+    },
+    "aristocratmale2_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:54:40.369Z",
+        "comment": "hair tie on back of head greyed.",
+        "issues": [
+          "accessory"
+        ]
+      }
+    },
+    "aristocratmale2_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:56:30.245Z",
+        "comment": "one pixel of skin on front of face not grey. eyebrow piercing on face greyed. if possible maybe change colour of grey bit of sleeve as it blends into skin",
+        "issues": [
+          "accessory",
+          "skin_missed",
+          "contrast"
+        ]
+      }
+    },
+    "aristocratmale2_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:56:45.162Z",
+        "comment": "eyebrow piercing greyed.",
+        "issues": [
+          "accessory"
+        ]
+      }
+    },
+    "aristocratmale2_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:58:03.091Z",
+        "comment": "part of green hat is greyed (line two px above eyes), one px of red ring on the bottom of arms is greyed.",
+        "issues": [
+          "headwear",
+          "brow_band",
+          "accessory"
+        ]
+      }
+    },
+    "aristocratmale3_a": {
+      "status": "edits",
+      "at": "2026-10-17T06:58:14.402Z",
+      "comment": "headband is desturated",
+      "issues": [
+        "headwear"
+      ]
+    },
+    "aristocratmale3_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:59:22.907Z",
+        "comment": "redish ring on bottom of hand is greyed. two px of back of neck on body not greyed",
+        "issues": [
+          "accessory",
+          "skin_missed"
+        ]
+      }
+    },
+    "aristocratmale3_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T06:59:46.069Z",
+        "comment": "eyebrow ring greyed. red ring greyed",
+        "issues": [
+          "accessory"
+        ]
+      }
+    },
+    "aristocratmale3_w": {
+      "status": "approved",
+      "at": "2026-10-17T07:00:26.054Z"
+    },
+    "bakerfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:00:45.870Z"
+      },
+      "status": "approved",
+      "at": "2026-10-17T08:29:58.307Z"
+    },
+    "bakerfemale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:01:14.615Z"
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:30:05.083Z",
+      "comment": "some hair not desat"
+    },
+    "bakerfemale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:01:59.480Z",
+        "comment": "some of the white flour pixels on hand are greyed and some arent, some are slightly pink. just needs to be uniform.",
+        "issues": [
+          "uneven_detail"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:30:29.369Z",
+      "comment": "some of the white flour pixels on hand are greyed and some arent, some are slightly pink. just needs to be uniform.”"
+    },
+    "bakerfemale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:02:16.384Z"
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:31:04.531Z",
+      "comment": "1 px on back of arms right below sleeve isnt grey"
+    },
+    "bakermale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:02:27.401Z"
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:31:34.878Z",
+      "comment": "hair tie on back of headdesat"
+    },
+    "bakermale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:02:50.314Z",
+        "comment": "some pixels on the belt turned black",
+        "issues": [
+          "blackened"
+        ]
+      },
+      "status": "approved",
+      "at": "2026-10-17T08:32:03.419Z"
+    },
+    "bakermale1_d": {
+      "status": "edits",
+      "at": "2026-10-17T07:03:25.671Z",
+      "comment": "border of apron is blackened and parts of belt",
+      "issues": [
+        "blackened"
+      ]
+    },
+    "bakermale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:03:57.607Z",
+        "comment": "maybe see what looks like with lighter skin for better contrast",
+        "issues": [
+          "contrast"
+        ]
+      }
+    },
+    "beekeeperfemale1_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:05:13.002Z",
+        "comment": "some of the white hood is greyed on pixels next to eyes. this character has no hair which is intended",
+        "issues": [
+          "headwear",
+          "brow_band"
+        ]
+      }
+    },
+    "beekeeperfemale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:05:07.326Z",
+        "comment": "some pixels near eyes are greyed. this character has no hair which is intended.",
+        "issues": [
+          "brow_band"
+        ]
+      }
+    },
+    "beekeeperfemale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:05:36.145Z",
+        "comment": "some pixels near eyes are greyed. this character has no hair which is intended. some parts of gloves are greyed.",
+        "issues": [
+          "brow_band",
+          "clothing"
+        ]
+      }
+    },
+    "beekeeperfemale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:06:05.595Z",
+        "comment": "band of 2 pixels above eyes are greyed. ",
+        "issues": [
+          "brow_band"
+        ]
+      }
+    },
+    "beekeepermale1_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:06:24.942Z",
+        "comment": "hair band is greyed",
+        "issues": [
+          "headwear"
+        ]
+      }
+    },
+    "beekeepermale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:06:37.469Z"
+      }
+    },
+    "beekeepermale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:06:54.606Z",
+        "comment": "skin might need to be darkened slightly",
+        "issues": [
+          "contrast"
+        ]
+      }
+    },
+    "beekeepermale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:07:23.741Z",
+        "comment": "4 px of skin on face not greyed. eyebrow ring greyed. on both side of head 1px skin not grey",
+        "issues": [
+          "accessory",
+          "skin_missed"
+        ]
+      }
+    },
+    "blacksmithfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:07:45.085Z"
+      }
+    },
+    "blacksmithfemale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:07:52.985Z"
+      }
+    },
+    "blacksmithfemale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:08:21.970Z"
+      }
+    },
+    "blacksmithfemale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:08:28.451Z"
+      }
+    },
+    "blacksmithmale1_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:08:56.363Z",
+        "comment": "some bits of hat are greyed",
+        "issues": [
+          "headwear"
+        ]
+      }
+    },
+    "blacksmithmale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:09:11.141Z",
+        "comment": "bits on hat/turban are greyed",
+        "issues": [
+          "headwear"
+        ]
+      }
+    },
+    "blacksmithmale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:09:31.136Z"
+      }
+    },
+    "blacksmithmale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:09:52.996Z",
+        "comment": "3d overlay on beard not desaturated to match beard",
+        "issues": [
+          "beard"
+        ]
+      }
+    },
+    "builderfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:10:37.136Z"
+      }
+    },
+    "builderfemale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:11:05.719Z"
+      }
+    },
+    "builderfemale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:11:19.193Z",
+        "comment": "some pixels near eyes are greyed. this character has no hair which is intended.",
+        "issues": [
+          "brow_band"
+        ]
+      }
+    },
+    "builderfemale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:11:47.002Z"
+      }
+    },
+    "buildermale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:12:07.702Z"
+      }
+    },
+    "buildermale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:12:26.969Z"
+      }
+    },
+    "buildermale1_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:12:39.466Z",
+        "comment": "bits of hat are greyed",
+        "issues": [
+          "headwear"
+        ]
+      }
+    },
+    "buildermale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:13:01.101Z"
+      }
+    },
+    "chickenfarmerfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:13:28.803Z"
+      }
+    },
+    "chickenfarmerfemale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:14:37.362Z",
+        "comment": "some bits of hair arent desaturated but tbh i think hair doesnt need to be desaturated. some bits of tassels on back of leg arent greyed/desaturated but some are and it doesnt look too bad. so need to either all or none of them.",
+        "issues": [
+          "hair_uneven",
+          "uneven_detail"
+        ]
+      }
+    },
+    "chickenfarmerfemale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:14:55.769Z"
+      }
+    },
+    "chickenfarmerfemale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:19:53.659Z",
+        "comment": "some hair on the base layer is greyed and super dark for some reason. one pixel on each side of head near ear of skin isnt greyed. also one pixel on the inside of arm isnt greyed",
+        "issues": [
+          "skin_missed",
+          "hair_uneven"
+        ]
+      }
+    },
+    "chickenfarmermale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:20:08.303Z"
+      }
+    },
+    "chickenfarmermale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:20:13.685Z"
+      }
+    },
+    "chickenfarmermale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:20:19.230Z"
+      }
+    },
+    "chickenfarmermale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:21:11.535Z",
+        "comment": "the weird lighter colour floating pixels on the beard look weird, can prob get rid of these. also four pixels of skin not greyed at top of face.",
+        "issues": [
+          "skin_missed",
+          "beard"
+        ]
+      }
+    },
+    "childfemale1_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:21:40.104Z"
+      }
+    },
+    "childfemale1_b": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:21:50.002Z"
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:27:39.473Z",
+      "comment": "some hair not desat on back"
+    },
+    "childfemale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:21:59.720Z"
+      }
+    },
+    "childfemale1_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:22:12.194Z",
+        "comment": "weird band of grey hair above eyes 2px tall",
+        "issues": [
+          "brow_band"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:28:16.384Z",
+      "comment": "one eyebrow darker than the other?"
+    },
+    "childfemale2_a": {
+      "status": "approved",
+      "at": "2026-10-17T07:22:25.886Z"
+    },
+    "childfemale2_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:24:12.866Z",
+        "comment": "hair above eyes weirdly grey. also bits of skin on arms not greyed",
+        "issues": [
+          "brow_band",
+          "skin_missed"
+        ]
+      },
+      "status": "approved",
+      "at": "2026-10-17T08:29:07.070Z"
+    },
+    "childfemale2_d": {
+      "status": "edits",
+      "at": "2026-10-17T07:23:24.865Z",
+      "comment": "skin needs to be lightened to not blend with sleeves",
+      "issues": [
+        "contrast"
+      ]
+    },
+    "childfemale2_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:23:55.081Z",
+        "comment": "some bits of hair not darkened, weird band around eyes of dark hair",
+        "issues": [
+          "brow_band",
+          "hair_uneven"
+        ]
+      },
+      "status": "edits",
+      "at": "2026-10-17T08:29:33.332Z",
+      "comment": "some hair not desat on torso"
+    },
+    "childfemale3_a": {
+      "status": "edits",
+      "at": "2026-10-17T07:24:25.211Z",
+      "comment": "bits of skin on arms below sleeve not greyed",
+      "issues": [
+        "skin_missed"
+      ]
+    },
+    "childfemale3_b": {
+      "status": "edits",
+      "at": "2026-10-17T07:24:58.241Z",
+      "comment": "might need to try and darken skin for more contrast with shirt",
+      "issues": [
+        "contrast"
+      ]
+    },
+    "childfemale3_d": {
+      "status": "approved",
+      "at": "2026-10-17T07:25:15.602Z"
+    },
+    "childfemale3_w": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:25:36.213Z",
+        "comment": "weird band around eyes of dark hair",
+        "issues": [
+          "brow_band"
+        ]
+      }
+    },
+    "childmale1_a": {
+      "status": "approved",
+      "at": "2026-10-17T07:25:52.435Z"
+    },
+    "childmale1_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:26:07.139Z",
+        "comment": "bits of hair not desaturated",
+        "issues": [
+          "hair_uneven"
+        ]
+      }
+    },
+    "childmale1_d": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:26:25.969Z"
+      }
+    },
+    "childmale1_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:26:34.085Z"
+      }
+    },
+    "childmale2_a": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:26:51.658Z",
+        "comment": "hair tie grey",
+        "issues": [
+          "accessory"
+        ]
+      }
+    },
+    "childmale2_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:27:22.526Z",
+        "comment": "bits of pink skin around waist not grey, one px skin on face not grey",
+        "issues": [
+          "skin_missed"
+        ]
+      }
+    },
+    "childmale2_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:28:03.928Z",
+        "comment": "character has no hair just turbin so dont need darkened hair",
+        "issues": [
+          "hair_none"
+        ]
+      }
+    },
+    "childmale2_w": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:28:18.151Z"
+      }
+    },
+    "childmale3_a": {
+      "previous": {
+        "status": "approved",
+        "at": "2026-10-17T07:28:36.384Z"
+      }
+    },
+    "childmale3_b": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:28:56.497Z",
+        "comment": "some bits of hair not grey",
+        "issues": [
+          "hair_uneven"
+        ]
+      }
+    },
+    "childmale3_d": {
+      "previous": {
+        "status": "edits",
+        "at": "2026-10-17T07:29:46.392Z",
+        "comment": "no hair just turban, some skin around waist not greyed, as well as around shorts",
+        "issues": [
+          "skin_missed",
+          "hair_none"
+        ]
+      }
+    },
+    "childmale3_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:06:49.446Z",
+      "comment": "hat is desat"
+    },
+    "citizenfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:08:43.448Z",
+      "comment": "hairtye desat on back"
+    },
+    "citizenfemale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T07:09:14.588Z"
+    },
+    "citizenfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T07:09:45.497Z",
+      "comment": "one side of legs/arms skin not grey. skirt greyed when shouldnt"
+    },
+    "citizenfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:11:07.541Z",
+      "comment": "eyebrow is too desat/dark"
+    },
+    "citizenfemale2_a": {
+      "status": "approved",
+      "at": "2026-10-19T07:11:27.294Z"
+    },
+    "citizenfemale2_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:11:40.201Z",
+      "comment": "1px side of head hair not desat"
+    },
+    "citizenfemale2_d": {
+      "status": "approved",
+      "at": "2026-10-19T07:12:32.078Z"
+    },
+    "citizenfemale2_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:12:53.451Z",
+      "comment": "1px on front of both hands not grey"
+    },
+    "citizenfemale3_a": {
+      "status": "approved",
+      "at": "2026-10-19T07:13:11.578Z"
+    },
+    "citizenfemale3_b": {
+      "status": "approved",
+      "at": "2026-10-19T07:13:27.232Z"
+    },
+    "citizenfemale3_d": {
+      "status": "approved",
+      "at": "2026-10-19T07:13:39.677Z"
+    },
+    "citizenfemale3_w": {
+      "status": "approved",
+      "at": "2026-10-19T07:14:01.643Z"
+    },
+    "citizenmale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:14:19.149Z",
+      "comment": "some bits on clothes lightened weirdly?"
+    },
+    "citizenmale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:15:08.080Z",
+      "comment": "1px each eyebrow desat but nothing else. hair not desat"
+    },
+    "citizenmale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T07:15:54.446Z",
+      "comment": "1px on face not greyed, ~3 on side of head and 2 on back. all missed skin"
+    },
+    "citizenmale1_w": {
+      "status": "approved",
+      "at": "2026-10-19T07:16:47.536Z"
+    },
+    "citizenmale2_a": {
+      "status": "approved",
+      "at": "2026-10-19T07:17:01.022Z"
+    },
+    "citizenmale2_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:17:45.562Z",
+      "comment": "1 or 2 px of skin not greyed around hairline, some px greyed on pants, 1 on back each leg 2 on sides, 1px on front sleeves"
+    },
+    "citizenmale2_d": {
+      "status": "approved",
+      "at": "2026-10-19T07:18:36.370Z"
+    },
+    "citizenmale2_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:19:26.335Z",
+      "comment": "correct but 1 px below mouth dark which makes it look like he's drooling"
+    },
+    "citizenmale3_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:20:13.199Z",
+      "comment": "bottom of shoe desat"
+    },
+    "citizenmale3_b": {
+      "status": "approved",
+      "at": "2026-10-19T07:20:49.454Z"
+    },
+    "citizenmale3_d": {
+      "status": "edits",
+      "at": "2026-10-19T07:20:55.417Z",
+      "comment": "turban desat"
+    },
+    "citizenmale3_w": {
+      "status": "approved",
+      "at": "2026-10-19T07:21:41.144Z"
+    },
+    "composterfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:22:26.798Z",
+      "comment": "changes say they changed the bottom of shoe? but why that should be the same."
+    },
+    "composterfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:23:35.553Z",
+      "comment": "between eyes not grey, neck not grey, bottom of shoe changed,"
+    },
+    "composterfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T07:24:25.222Z",
+      "comment": "bottom of shoe edited, 1px next to eyes not desat and 1px on neck"
+    },
+    "composterfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:26:03.507Z",
+      "comment": "bottom of shoe edited"
+    },
+    "compostermale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:26:49.720Z",
+      "comment": "bottom of shoe edited?"
+    },
+    "compostermale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:27:27.205Z",
+      "comment": "bottom of shoe edited?"
+    },
+    "compostermale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T07:28:32.067Z",
+      "comment": "1px front +back sleeve grey 2px side grey. sole changed?"
+    },
+    "compostermale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:30:01.053Z",
+      "comment": "2px below right eye not grey, i px in bottom right of face needs to be darkened. sole edited."
+    },
+    "concretemixerfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:30:55.260Z",
+      "comment": "some of hair on top of head edited but shouldnt"
+    },
+    "concretemixerfemale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T07:31:32.608Z"
+    },
+    "concretemixerfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T07:32:28.730Z"
+    },
+    "concretemixerfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:32:52.754Z",
+      "comment": "maybe some hair on front torso not desat??"
+    },
+    "concretemixermale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:34:43.897Z",
+      "comment": "hairtie desat"
+    },
+    "concretemixermale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T07:47:30.464Z"
+    },
+    "concretemixermale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T07:47:49.088Z"
+    },
+    "concretemixermale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T07:48:12.750Z",
+      "comment": "same as other guy all correct but mouth looks like he's drooling"
+    },
+    "cookfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:48:35.893Z",
+      "comment": "eyeshadow desat"
+    },
+    "cookfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:49:25.386Z",
+      "comment": "correct but i think the og skin was fked up so should prob make the sleeve orange bit more green-ish and paler"
+    },
+    "cookfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T07:51:26.204Z"
+    },
+    "cookfemale1_w": {
+      "status": "approved",
+      "at": "2026-10-19T07:51:59.099Z",
+      "comment": "ALL GOOD! sleeves here are good use these as a reference for the other cook with fucked up sleeves."
+    },
+    "cookmale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T07:53:10.547Z",
+      "comment": "1px skin side of head not grey"
+    },
+    "cookmale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T07:54:12.872Z",
+      "comment": "few px of skin on head not grey, 1px top of hair layer not desat"
+    },
+    "cookmale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:01:05.928Z",
+      "comment": "skin along hairline not grey"
+    },
+    "cookmale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:02:56.599Z",
+      "comment": "idk wtf happened but hair is fucked up bruh, also some skin along hairline not greyed. i think its meant to be a mowkawk? also beard some patched grey and some desat"
+    },
+    "courierfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:04:20.435Z",
+      "comment": "1px of skin not grey on back of arms. model render is fked up the tprso is attached to the head"
+    },
+    "courierfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:06:17.651Z",
+      "comment": "torso is rendered inside head??? some px on side of torso not grey, one on front of body. the orangey ones."
+    },
+    "courierfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:06:32.649Z",
+      "comment": "torso rendering in head"
+    },
+    "cowfarmerfemale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:09:00.845Z"
+    },
+    "cowfarmerfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:09:09.547Z",
+      "comment": "some bits hair not desat"
+    },
+    "cowfarmerfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:14:58.493Z"
+    },
+    "cowfarmerfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:15:30.447Z",
+      "comment": "hair on body not desat. "
+    },
+    "cowfarmermale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:16:01.825Z",
+      "comment": "why did his eyebrows go black"
+    },
+    "cowfarmermale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:17:10.294Z",
+      "comment": "half of eyebrow not desat. hair not desat evenly (i think?)"
+    },
+    "cowfarmermale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:17:33.825Z",
+      "comment": "a bunch of skin not grey including bald spot on head and around back of hairline"
+    },
+    "cowfarmermale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:17:48.556Z",
+      "comment": "beard looking weird af and bald spot not grey"
+    },
+    "crafterfemale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:18:32.361Z"
+    },
+    "crafterfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:19:10.232Z",
+      "comment": "hair braid not desat, 1 px skin in side of head not grey, headband is desat"
+    },
+    "crafterfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:19:41.825Z"
+    },
+    "crafterfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:20:26.182Z",
+      "comment": "some bits on face super dark and fked up, hair braid not desat, 2px on side of head not grey"
+    },
+    "craftermale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:21:58.865Z",
+      "comment": "hairband desat"
+    },
+    "craftermale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T08:23:40.358Z"
+    },
+    "craftermale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:24:24.726Z",
+      "comment": "~2px above right eye not grey, might need to change colour of shirt to contrast skin"
+    },
+    "craftermale1_w": {
+      "status": "approved",
+      "at": "2026-10-19T08:24:58.027Z"
+    },
+    "druidfemale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:25:41.611Z"
+    },
+    "druidfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:26:01.024Z",
+      "comment": "need to edit the purple bit to change undertone from orange to blue"
+    },
+    "druidfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:26:42.964Z",
+      "comment": "add back colour to face paint that has been greyed, but withblue undertone. red potion has been greyed"
+    },
+    "deliverymanmale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:27:08.965Z",
+      "comment": "bits pf backpack have been desat, some skin pixels missing, not rendering in renderer"
+    },
+    "druidfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:28:05.449Z",
+      "comment": "need to redo face paint with blue undertone and fix it getting rlly dark above eyes. eyebrows disappeared and went grey??"
+    },
+    "druidmale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:28:42.927Z",
+      "comment": "1px skin not grey on arm side, ~3px on other side arm, 2px or so on back"
+    },
+    "druidmale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:29:30.542Z",
+      "comment": "a few px of skin not grey on arms around shirt overlay, also some px on torso not grey"
+    },
+    "druidmale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:29:51.228Z"
+    },
+    "druidmale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:30:28.914Z",
+      "comment": "bald spot not grey. weird black px above eyebrows, 1px on back right of head not grey around hairline"
+    },
+    "dyerfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:30:46.624Z",
+      "comment": "white headband turned grey on front"
+    },
+    "dyerfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:31:11.666Z",
+      "comment": "bits of skin on head not grey"
+    },
+    "dyerfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:31:47.126Z",
+      "comment": "skin looks kinda green, which blends weirdly with clothes"
+    },
+    "dyerfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:32:40.790Z",
+      "comment": "skin on side of head not grey"
+    },
+    "undertakermale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:33:30.236Z",
+      "comment": "contrast with skin and hair too low, not sure how to fix look at later, also grey shirt blends too much"
+    },
+    "undertakerfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:34:21.825Z",
+      "comment": "greyed fringe on face which is supposed to be hair. also greyed shoes."
+    },
+    "teachermale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:34:43.078Z"
+    },
+    "teachermale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:35:23.092Z",
+      "comment": "some px of hair not desat, bald spot not grey, 2px of beard are black??"
+    },
+    "teacherfemale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:35:50.474Z",
+      "comment": "some px on headband greyed, character is bald/hair is covered"
+    },
+    "studentmale3_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:37:57.942Z",
+      "comment": "some parts of shoes greyed when shouldnt be. it shold only be 2px on back of each foot, and 1px on side of each foot in bottom back corner. prob needs manual fixing?"
+    },
+    "studentmale3_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:36:49.561Z",
+      "comment": "bits of hair not desat on hair overlayer"
+    },
+    "studentmale3_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:38:12.214Z",
+      "comment": "hair overlayer not desat fully, bald spot not grey"
+    },
+    "studentfemale3_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:38:26.046Z",
+      "comment": "greyed some bits of dress"
+    },
+    "smelterfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:39:09.935Z",
+      "comment": "some bits of shoes turned black?"
+    },
+    "smelterfemale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:39:22.276Z",
+      "comment": "hat was desat"
+    },
+    "sheepfarmermale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:39:32.834Z",
+      "comment": "hair tie desat"
+    },
+    "sheepfarmerfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:40:23.920Z"
+    },
+    "sheepfarmerfemale1_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:40:32.398Z",
+      "comment": "some hair not desat on fringe"
+    },
+    "settlermale3_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:40:49.549Z",
+      "comment": "bald spot not grey"
+    },
+    "settlermale3_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:41:00.649Z",
+      "comment": "hood is desat"
+    },
+    "settlermale3_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:41:17.336Z"
+    },
+    "settlermale1_b": {
+      "status": "edits",
+      "at": "2026-10-19T08:41:30.383Z",
+      "comment": "only 1 px eyebrow is desat"
+    },
+    "settlerfemale3_b": {
+      "status": "approved",
+      "at": "2026-10-19T08:41:48.082Z"
+    },
+    "settlerfemale2_w": {
+      "status": "edits",
+      "at": "2026-10-19T08:42:02.184Z",
+      "comment": "some hair not desat on side of head and chest"
+    },
+    "settlerfemale2_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:42:21.366Z"
+    },
+    "rabbitherdermale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T08:42:36.959Z"
+    },
+    "rabbitherdermale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:42:47.582Z"
+    },
+    "rabbitherdermale1_w": {
+      "status": "approved",
+      "at": "2026-10-19T08:42:59.591Z"
+    },
+    "settlerfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:43:10.578Z",
+      "comment": "hairtie was greyed"
+    },
+    "rabbitherderfemale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:43:42.151Z"
+    },
+    "plantermale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:44:01.471Z",
+      "comment": "some bits on pants are blue"
+    },
+    "planterfemale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:44:23.868Z"
+    },
+    "pigfarmermale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:44:37.846Z"
+    },
+    "pigfarmermale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:44:50.311Z",
+      "comment": "hair tie desat"
+    },
+    "pigfarmerfemale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:45:02.065Z"
+    },
+    "pigfarmerfemale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T08:45:14.559Z"
+    },
+    "noblemale3_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:45:31.672Z",
+      "comment": "turban desat"
+    },
+    "noblemale2_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:46:12.918Z"
+    },
+    "noblemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:46:23.896Z",
+      "comment": "desat hat"
+    },
+    "noblefemale3_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:46:51.559Z",
+      "comment": "yellow eyeshadow was desat as well as yellow sleeve cuffs."
+    },
+    "noblefemale2_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:47:32.512Z",
+      "comment": "skin blends in with purple on sleeves."
+    },
+    "noblefemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:48:08.843Z"
+    },
+    "netherworkermale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:48:48.259Z"
+    },
+    "netherworkerfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:49:04.676Z"
+    },
+    "netherworkerfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:49:21.129Z",
+      "comment": "bits of belt buckle desat"
+    },
+    "minermale1_w": {
+      "status": "approved",
+      "at": "2026-10-19T08:49:37.428Z"
+    },
+    "minermale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:49:44.547Z"
+    },
+    "minermale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T08:49:53.532Z"
+    },
+    "minermale1_a": {
+      "status": "approved",
+      "at": "2026-10-19T08:50:01.758Z"
+    },
+    "minerfemale1_d": {
+      "status": "approved",
+      "at": "2026-10-19T08:50:14.574Z"
+    },
+    "mechanistmale1_d": {
+      "status": "edits",
+      "at": "2026-10-19T08:50:38.012Z",
+      "comment": "hat desat, is bald"
+    },
+    "mechanistmale1_b": {
+      "status": "approved",
+      "at": "2026-10-19T08:50:53.203Z"
+    },
+    "knightmale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:51:15.829Z",
+      "comment": "headband desat"
+    },
+    "knightfemale1_a": {
+      "status": "edits",
+      "at": "2026-10-19T08:51:35.626Z",
+      "comment": "headband desat, hairtie grey"
+    }
+  }
+}

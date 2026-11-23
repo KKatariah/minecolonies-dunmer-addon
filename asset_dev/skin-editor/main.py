@@ -194,7 +194,7 @@ class SkinGreyApp(tk.Tk):
         self.status = ttk.Label(top, text="Open a folder of PNG skins.")
         self.status.pack(side=tk.LEFT, padx=12)
 
-        self.readout = ttk.Label(self.body_content, text="Center: —°   Range: ±—°")
+        self.readout = ttk.Label(self.body_content, text="Center: --°   Range: ±--°")
         self.readout.pack(pady=(0, 2))
         ttk.Label(
             self.body_content,

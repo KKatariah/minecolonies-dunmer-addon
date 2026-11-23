@@ -25,7 +25,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import functools
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -42,6 +44,17 @@ MANUAL_PASS2 = ASSET_DEV / "3.mcolonies_skins_p2" / "grey_export"
 PROTECTED = (ORIGINALS, MANUAL_PASS1.parent, MANUAL_PASS2.parent)
 
 OVERRIDES = Path(__file__).resolve().parent / "overrides.json"
+CITIZEN_MODELS = Path(__file__).resolve().parent / "citizen_models.json"  # from extract_models.py
+# Model pieces past the standard layout that can show skin; every other piece is a prop or clothing.
+SKIN_PARTS = {"breast", "foreArm", "leftForeArm", "rightForeArm", "leftShoulder", "rightShoulder", "shoulderArm"}
+# Model pieces that are hair, so may be toned as hair; the rest (hats, potions...) never are.
+HAIR_PARTS = re.compile(r"hair|beard|pony", re.IGNORECASE)
+# Outer-layer areas (x, y, w, h) of the standard layout and the base-layer (x, y) they sit on.
+OVERLAYS = (((32, 0, 32, 16), (0, 0)), ((16, 32, 24, 16), (16, 16)), ((40, 32, 16, 16), (40, 16)),
+            ((0, 32, 16, 16), (0, 16)), ((0, 48, 16, 16), (16, 48)), ((48, 48, 16, 16), (32, 48)))
+# An outer-layer pixel over clothing is only skin (e.g. a leg through a skirt slit) when its colour
+# is within this distance (CIELAB) of the face's skin; otherwise it's a buckle, circlet, trim...
+OVERLAY_SKIN_DIST = 4
 
 # Backup check against your hand edits: a skin is flagged for review when the tool and your pass 1
 # disagree on more than this many visibly-changed pixels. Skins you barely edited by hand
@@ -61,6 +74,17 @@ SKIN_MAX_STRETCH = 1.6
 # Skin must differ from the pixels around it by this much L*, or it blobs into hair/clothing.
 SKIN_MIN_GAP = 12
 SKIN_L_RANGE = (22, 58)
+# The darkest a greyed pixel gets: below this the ramp's bluish shadow hue is all that's left and dark
+# shading (or a dark brow the skin took in) came out near-black blue.
+SKIN_L_FLOOR = 12
+# With the soft_shadows override, skin more than SKIN_SHADOW_KNEE (L*) below the median skin only
+# goes SKIN_SHADOW_SOFT as much darker.
+SKIN_SHADOW_KNEE = 18
+SKIN_SHADOW_SOFT = 0.4
+# Near-black pixels (L* under SKIN_BLACK_L) more than SKIN_BLACK_GAP darker than the face's darkest
+# skin are hair, outlines or clothes, never skin: on the dark-skinned variants they got greyed.
+SKIN_BLACK_L = 10
+SKIN_BLACK_GAP = 10
 # Below the head, colours much darker (L*) than the face's skin are clothing (dark skirts, boots,
 # belts), even when they share its hue.
 SKIN_MAX_DARKER = 35
@@ -92,11 +116,37 @@ HAIR_THRESHOLD = 0.5
 # Hair below the head hangs in connected locks; specks this small there are dress fabric that
 # happens to match the hair colour.
 HAIR_MAX_SPECK = 3
+# Leg faces of the standard layout (right leg and its overlay, left leg and its overlay).
+LEGS = np.zeros(TEX_SIZE, bool)
+LEGS[16:48, 0:16] = True
+LEGS[48:64, 0:32] = True
 # The hair model decides colour by colour and misses some shades of the same hair. On the inner
 # head layer, hair grows into touching untouched pixels within this colour distance (CIELAB) of
 # hair already found. Not on the outer layer (mostly caps and hats), and never into skin: reddish
 # hair and skin are too close to tell apart by colour (use the hair_colours override for those).
 HAIR_GROW_DIST = 10
+HAIR_GROW_STEPS = 2
+# Hair keeps only its own shades: the commonest colours making up this share of the hair, plus any
+# hair colour chained to them by steps under HAIR_PALETTE_DIST (CIELAB). See keep_hair_palette.
+HAIR_PALETTE_SHARE = 0.6
+HAIR_PALETTE_DIST = 15
+# The commonest colours are counted on these rows of the inner head layer (around the face and nape),
+# if at least HAIR_MIN_SEED hair pixels are there; otherwise over all the hair.
+HAIR_SEED_ROWS = (10, 16)
+# When the hair's commonest shades are clearly coloured (median CIELAB chroma above HAIR_COLOURED),
+# black and grey pixels (chroma under HAIR_NEUTRAL) are a hood or hat, not hair.
+HAIR_COLOURED = 12
+HAIR_NEUTRAL = 4
+HAIR_MIN_SEED = 8
+# Pixels on a model's hair pieces this close (CIELAB) to a colour of the head's hair are hair too.
+HAIR_PIECE_DIST = 12
+# A hood: at least HOOD_SHARE of each of the head's top, sides and back (inner layer) is grey or
+# white (chroma under HOOD_CHROMA, L* over HOOD_MIN_L). See hood_hair.
+HOOD_SHARE = 0.85
+HOOD_CHROMA = 6
+HOOD_MIN_L = 40
+# Under a hood, hair this close (CIELAB) to a colour on the head's top, sides or back is a band.
+HOOD_BAND_DIST = 12
 # Reddish hair can be greyed as skin. Where the hand edits almost never greyed (crown, back and
 # upper sides of the head: below this share of skins), small greyed patches touching hair on at
 # least 2 sides go back to hair. Bald scalps are one big patch, so they stay skin; beards sit lower
@@ -131,8 +181,19 @@ GREYED_HAIR_SHARE = 0.5
 SKIN_CLAIM_DIST = 15
 # Eyebrows: non-skin pixels in the two rows above the eyes are drawn this much darker (L*) than the
 # greyed face around them, with muted colour, so they read against grey skin and red eyes.
-BROW_DARKER = 18
-BROW_CHROMA = 0.4
+BROW_DARKER = 12
+BROW_CHROMA = 0.6
+# ...but never more than this much darker than they were (grey faces are dark already, so a fixed
+# offset below the face turned light brows black), and only pixels darker than the original skin
+# by BROW_MIN_DARKER count as brows (light face paint in the brow rows isn't a brow).
+BROW_MAX_DROP = 15
+BROW_MIN_DARKER = 5
+# Brow-row pixels within this colour distance (CIELAB) of the non-skin pixel above them carry on from
+# above (hair fringe, hat brim, headband, hood), so they aren't brows and keep their own toning.
+BROW_SAME_DIST = 12
+# brow_style "hair": brows this much darker (L*) than the toned head hair, outer pixel / the rest.
+BROW_HAIR_OUTER = 14
+BROW_HAIR_INNER = 10.5
 HAIR_MIN_EDITED_PIXELS = 10
 # Hair treatments: (saturation factor, brightness factor, contrast around the hair's mean brightness).
 HAIR_RED = (0.90, 0.65, 1.0)
@@ -384,6 +445,7 @@ class HairModel:
         mask = np.zeros(TEX_SIZE, bool)
         if len(f):
             mask[vis] = (self.model.predict_proba(f)[:, 1] > HAIR_THRESHOLD)[inv]
+        mask &= ~LEGS  # hair never hangs onto the legs; dark soles there can match the hair colour
         body = mask.copy()
         body[:16, :64] = False
         labels, n = ndimage.label(body)
@@ -393,11 +455,14 @@ class HairModel:
         return mask
 
 
-def tone_hair(out: np.ndarray, hair: np.ndarray, sample: np.ndarray | None = None) -> None:
+def tone_hair(out: np.ndarray, hair: np.ndarray, sample: np.ndarray | None = None,
+              treatment: list[float] | None = None) -> str | None:
     """Tone hair down in place; one treatment per skin, picked from the hair's overall colour
-    (from `sample` if given, so grown-in edge shades don't change which treatment is chosen)."""
+    (from `sample` if given, so grown-in edge shades don't change which treatment is chosen).
+    `treatment` ([saturation, value, contrast] factors) overrides the pick.
+    Returns the hair kind the colour picked: "red", "blonde" or "other" (None without hair)."""
     if not hair.any():
-        return
+        return None
     sample = hair if sample is None or not sample.any() else sample
     h, s, v = (c[sample] for c in hsv(out))
     hr = np.radians(h)
@@ -405,26 +470,122 @@ def tone_hair(out: np.ndarray, hair: np.ndarray, sample: np.ndarray | None = Non
     mean_s, mean_v = np.median(s), np.median(v)
     h, s, v = (c[hair] for c in hsv(out))
     if (mean_h < 25 or mean_h >= 330) and mean_s >= 0.55 and mean_v >= 0.4:
-        sat_f, val_f, contrast = HAIR_RED
+        kind, (sat_f, val_f, contrast) = "red", HAIR_RED
     elif 25 <= mean_h < 70 and mean_v > 0.5:
-        sat_f, val_f, contrast = HAIR_BLONDE
+        kind, (sat_f, val_f, contrast) = "blonde", HAIR_BLONDE
     else:
-        sat_f, val_f, contrast = HAIR_OTHER
+        kind, (sat_f, val_f, contrast) = "other", HAIR_OTHER
+    if treatment:
+        sat_f, val_f, contrast = treatment
     v = v * val_f
     v = v.mean() + (v - v.mean()) * contrast
     out[..., :3][hair] = hsv_to_rgb(h, np.clip(s * sat_f, 0, 1), np.clip(v, 0, 1))
+    return kind
 
 
 def grow_hair(a: np.ndarray, skin: np.ndarray, hair: np.ndarray, fixed: np.ndarray) -> np.ndarray:
-    """Grow hair on the inner head layer into similar touching shades; skin and `fixed` pixels are never taken."""
+    """Grow hair into similar touching shades; skin and `fixed` pixels are never taken.
+
+    On the inner head layer it grows as far as the shades reach. Elsewhere (the outer head layer, locks
+    hanging on the body) only HAIR_GROW_STEPS pixels out, to fill gaps in hair already found without
+    flooding into a hat or clothes of a similar colour. Never onto the legs.
+    """
     if hair.sum() < 5:
         return hair
-    lab = to_lab(a[..., :3])
     inner_head = np.zeros(TEX_SIZE, bool)
     inner_head[:16, :32] = True
-    allowed = inner_head & (a[..., 3] > 0) & ~skin & ~fixed
-    hair = hair.copy()
+    usable = (a[..., 3] > 0) & ~skin & ~fixed & ~LEGS
+    hair = _grow(a, hair, inner_head & usable)
+    return _grow(a, hair, usable, steps=HAIR_GROW_STEPS)
+
+
+def in_hue_range(a: np.ndarray, hues: list[float] | None) -> np.ndarray:
+    """Pixels whose CIELAB hue is within [lo, hi] degrees, or that are nearly grey; all pixels if
+    `hues` is None (the hair_hue override: a hat or hood of another colour isn't hair)."""
+    if not hues:
+        return np.ones(TEX_SIZE, bool)
+    lab = to_lab(a[..., :3])
+    hue = np.degrees(np.arctan2(lab[..., 2], lab[..., 1])) % 360
+    lo, hi = hues
+    return (np.hypot(lab[..., 1], lab[..., 2]) <= 8) | ((hue >= lo) & (hue <= hi) if lo <= hi else (hue >= lo) | (hue <= hi))
+
+
+# The inner head layer's top, sides and back.
+HEAD_AROUND = np.zeros(TEX_SIZE, bool)
+HEAD_AROUND[0:8, 8:16] = HEAD_AROUND[8:16, 0:8] = HEAD_AROUND[8:16, 16:32] = True
+
+
+def hood(a: np.ndarray) -> np.ndarray | None:
+    """The grey or white pixels of a hood covering the inner head layer's top, sides and back, or
+    None if there's no hood."""
+    lab = to_lab(a[..., :3])
+    grey = (np.hypot(lab[..., 1], lab[..., 2]) < HOOD_CHROMA) & (lab[..., 0] > HOOD_MIN_L)
+    visible = a[..., 3] > 0
+    for x0, y0 in ((8, 0), (0, 8), (16, 8), (24, 8)):
+        face = visible[y0:y0 + 8, x0:x0 + 8]
+        if face.sum() < 8 or grey[y0:y0 + 8, x0:x0 + 8][face].mean() < HOOD_SHARE:
+            return None
+    return grey
+
+
+def hood_hair(a: np.ndarray, hair: np.ndarray, grey: np.ndarray | None) -> np.ndarray:
+    """Under a hood (`grey`, from hood()), the hood isn't hair, and neither is a band or trim whose
+    colours (or close shades) go round the head on it. Hair on the face or hanging over the hood
+    on the outer layer stays."""
+    if grey is None:
+        return hair
+    lab = to_lab(a[..., :3])
+    band = np.zeros(TEX_SIZE, bool)
+    ring = np.unique(lab[HEAD_AROUND & (a[..., 3] > 0) & ~grey], axis=0)
+    if len(ring) and hair.any():
+        dist = np.linalg.norm(lab[hair][:, None] - ring[None], axis=-1).min(1)
+        band[hair] = dist < HOOD_BAND_DIST
+    return hair & ~HEAD_AROUND & ~grey & ~band
+
+
+def keep_hair_palette(a: np.ndarray, hair: np.ndarray) -> np.ndarray:
+    """Drop hair pixels whose colour isn't part of the hair's own shades.
+
+    The palette starts from the commonest hair colours (HAIR_PALETTE_SHARE of the hair) and takes in
+    every hair colour within HAIR_PALETTE_DIST of it, so shading ramps stay; a gold headband, a hair
+    tie or a bow sitting in the hair is a different colour and is left alone.
+    """
+    if hair.sum() < 5:
+        return hair
+    lab = to_lab(a[..., :3]).round(1)
+    cols, inv = np.unique(lab[hair], axis=0, return_inverse=True)
+    inv = inv.ravel()
+    # Count shades where hair shows around the face and nape: hats and turbans sit higher up, so a
+    # big hat doesn't become "the hair colour".
+    seed = np.zeros(TEX_SIZE, bool)
+    seed[HAIR_SEED_ROWS[0] : HAIR_SEED_ROWS[1], :32] = True
+    in_seed = seed[hair]
+    if in_seed.sum() < HAIR_MIN_SEED:
+        in_seed[:] = True
+    counts = np.bincount(inv[in_seed], minlength=len(cols))
+    order = np.argsort(-counts)
+    inside = np.zeros(len(cols), bool)
+    inside[order[: np.searchsorted(np.cumsum(counts[order]), HAIR_PALETTE_SHARE * counts.sum()) + 1]] = True
+    dist = np.sqrt(((cols[:, None] - cols[None]) ** 2).sum(-1))
     while True:
+        more = ~inside & (dist[:, inside] < HAIR_PALETTE_DIST).any(1)
+        if not more.any():
+            break
+        inside |= more
+    kept = hair.copy()
+    kept[hair] = inside[inv]
+    chroma = np.hypot(lab[..., 1], lab[..., 2])
+    if np.median(chroma[hair][in_seed]) > HAIR_COLOURED:
+        kept &= chroma >= HAIR_NEUTRAL
+    return kept
+
+
+def _grow(a: np.ndarray, hair: np.ndarray, allowed: np.ndarray, steps: int | None = None) -> np.ndarray:
+    lab = to_lab(a[..., :3])
+    hair = hair.copy()
+    step = 0
+    while steps is None or step < steps:
+        step += 1
         near = np.zeros(TEX_SIZE, bool)
         for shift in ((1, 0), (-1, 0), (0, 1), (0, -1)):
             near |= np.roll(hair, shift, (0, 1))
@@ -439,6 +600,14 @@ def grow_hair(a: np.ndarray, skin: np.ndarray, hair: np.ndarray, fixed: np.ndarr
         ys, xs = np.nonzero(cand)
         hair[ys[take], xs[take]] = True
     return hair
+
+
+def nearest(lab: np.ndarray, ref: np.ndarray) -> np.ndarray:
+    """Per pixel, the CIELAB distance to the closest colour among the `ref` pixels (inf if none)."""
+    colours = np.unique(lab[ref].round(1), axis=0)
+    if not len(colours):
+        return np.full(lab.shape[:2], np.inf)
+    return np.sqrt(((lab[..., None, :] - colours[None, None]) ** 2).sum(-1)).min(-1)
 
 
 def reclaim_hair(a: np.ndarray, skin: np.ndarray, hair: np.ndarray, prior: np.ndarray, fixed: np.ndarray,
@@ -458,7 +627,11 @@ def reclaim_hair(a: np.ndarray, skin: np.ndarray, hair: np.ndarray, prior: np.nd
     back = np.isin(labels, patches)
     face = skin & face_middle(a)
     if face.any():
-        lightness = to_lab(a[..., :3])[..., 0]
+        # Only colours closer to the hair than to the face's skin go back: hairlines, sideburn
+        # gaps and bald crowns are skin-coloured patches surrounded by hair and stay skin.
+        lab = to_lab(a[..., :3])
+        back &= nearest(lab, hair & ~back) < nearest(lab, face)
+        lightness = lab[..., 0]
         too_dark = ndimage.mean(lightness, labels, index) < np.median(lightness[face]) - HAIR_ZONE_DARKER
         dark = np.isin(labels, [i + 1 for i in range(n) if sizes[i] <= max_patch and too_dark[i]])
         skin = skin & ~dark
@@ -495,14 +668,33 @@ def find_eye_rows(a: np.ndarray) -> list[int]:
     return [top, top + 1] if top + 1 in strong and has_whites(top + 1) else [top]
 
 
-def ash_skin(a: np.ndarray, out: np.ndarray, skin: np.ndarray) -> None:
-    """Recolour skin in place onto the ash ramp; call after hair is toned (it checks against it)."""
+def ash_skin(a: np.ndarray, out: np.ndarray, skin: np.ndarray, darker: float = 0, soft_shadows: bool | float = False,
+             undertone: list[float] | None = None, contrast: float = 1.0, redness: float = 0.0) -> None:
+    """Recolour skin in place onto the ash ramp; call after hair is toned (it checks against it).
+
+    darker: L* to take off every skin pixel afterwards (the skin_darker override).
+    soft_shadows: keep the deepest shadows dark grey instead of near-black (the soft_shadows override:
+    true, or how far below the median skin, in L*, the softening starts).
+    undertone: [hue shift in degrees, chroma factor] for the ramp's colour (the skin_undertone override),
+    e.g. to set the skin apart from a grey accessory.
+    contrast: factor on each pixel's distance from the median skin lightness (the skin_contrast
+    override), for skin that comes out flat.
+    redness: L* to darken per unit of redness (CIELAB a*) above the skin's mean (the skin_redness
+    override), so blush, lips and pink shading in a pale, flat original become shadows."""
     if not skin.any():
         return
     src = to_lab(a[..., :3])[..., 0][skin]
     mean, spread = src.mean(), src.std() + 1e-6
     stretch = min(SKIN_MAX_STRETCH, max(1.0, SKIN_MIN_SPREAD / spread))
     light = min(mean, SKIN_L_CAP) + (src - mean) * stretch
+    if redness:
+        red = to_lab(a[..., :3])[..., 1][skin]
+        light = light - (red - red.mean()) * redness
+    if contrast != 1.0:
+        light = np.median(light) + (light - np.median(light)) * contrast
+    if soft_shadows:
+        knee = np.median(light) - (SKIN_SHADOW_KNEE if soft_shadows is True else soft_shadows)
+        light = np.where(light < knee, knee - (knee - light) * SKIN_SHADOW_SOFT, light)
 
     near = np.zeros_like(skin)
     for shift in ((1, 0), (-1, 0), (0, 1), (0, -1)):
@@ -520,9 +712,10 @@ def ash_skin(a: np.ndarray, out: np.ndarray, skin: np.ndarray) -> None:
 
     lo, hi = np.percentile(light, [5, 95])
     t = np.clip((light - lo) / max(hi - lo, 1e-6), 0, 1)
-    hue = np.radians(SKIN_SHADOW[0] + (SKIN_LIGHT[0] - SKIN_SHADOW[0]) * t)
-    chroma = SKIN_SHADOW[1] + (SKIN_LIGHT[1] - SKIN_SHADOW[1]) * t
-    lab = np.stack([np.clip(light, 0, 100), chroma * np.cos(hue), chroma * np.sin(hue)], -1)
+    hue_shift, chroma_f = undertone or (0, 1)
+    hue = np.radians(SKIN_SHADOW[0] + (SKIN_LIGHT[0] - SKIN_SHADOW[0]) * t + hue_shift)
+    chroma = (SKIN_SHADOW[1] + (SKIN_LIGHT[1] - SKIN_SHADOW[1]) * t) * chroma_f
+    lab = np.stack([np.clip(light - darker, SKIN_L_FLOOR, 100), chroma * np.cos(hue), chroma * np.sin(hue)], -1)
     out[..., :3][skin] = from_lab(lab)
 
 
@@ -542,9 +735,9 @@ def load_overrides() -> dict:
 
 
 def override_for(overrides: dict, name: str) -> dict:
-    """Entries for the outfit (e.g. "cookfemale1", all variants) combined with the skin's own."""
+    """Entries for every skin ("*"), the outfit (e.g. "cookfemale1", all variants) and the skin's own, combined."""
     merged: dict = {}
-    for entry in (overrides.get(name[:-2], {}), overrides.get(name, {})):
+    for entry in (overrides.get("*", {}), overrides.get(name[:-2], {}), overrides.get(name, {})):
         for key, value in entry.items():
             merged[key] = merged.get(key, []) + value if isinstance(value, list) else value
     return merged
@@ -650,18 +843,86 @@ def brow_area(a: np.ndarray) -> np.ndarray:
     return area
 
 
-def paint_brows(a: np.ndarray, out: np.ndarray, skin: np.ndarray) -> None:
-    """Darken and mute the eyebrows so they stand out from the grey face and the red eyes."""
-    brows = brow_area(a) & ~skin & (a[..., 3] > 0)
+def continues_from_above(a: np.ndarray, area: np.ndarray, skin: np.ndarray) -> np.ndarray:
+    """Pixels of `area` that carry on, row by row, from a matching non-skin pixel above the area."""
+    lab = to_lab(a[..., :3])
+    solid = (a[..., 3] > 0) & ~skin
+    same = np.zeros(TEX_SIZE, bool)
+    same[1:] = solid[1:] & solid[:-1] & (np.linalg.norm(lab[1:] - lab[:-1], axis=-1) < BROW_SAME_DIST)
+    carried = np.zeros(TEX_SIZE, bool)
+    for y in sorted(set(np.nonzero(area)[0])):
+        above = carried[y - 1] if area[y - 1].any() else np.ones(TEX_SIZE[1], bool)
+        carried[y] = area[y] & same[y] & above
+    return carried
+
+
+def mirrored_brows(a: np.ndarray, brows: np.ndarray) -> np.ndarray:
+    """Mirror images (across the face) of brow pixels, where they match the brow's colour.
+
+    Faces are drawn symmetric but hairlines often aren't, so one brow can look like fringe
+    carrying on from above while the other doesn't; both should be treated the same.
+    """
+    lab = to_lab(a[..., :3])
+    face, flipped = slice(8, 16), slice(15, 7, -1)
+    out = np.zeros(TEX_SIZE, bool)
+    out[:, face] = brows[:, flipped] & (np.linalg.norm(lab[:, face] - lab[:, flipped], axis=-1) < BROW_SAME_DIST)
+    return out
+
+
+def paint_brows(a: np.ndarray, out: np.ndarray, skin: np.ndarray, untouched: np.ndarray | None = None,
+                hair: np.ndarray | None = None, style: str | None = None) -> None:
+    """Darken and mute the eyebrows so they stand out from the grey face and the red eyes.
+
+    Pixels already dark enough are left alone, and so are fringes, hat brims and headbands that
+    carry on from above: those are toned with the hair or not at all.
+    """
+    area = brow_area(a) & ~skin & (a[..., 3] > 0)
+    if untouched is not None:
+        area &= ~untouched
     face = skin & face_middle(a)
-    if not brows.any() or not face.any():
+    if not area.any() or not face.any():
         return
     out_lab = to_lab(out[..., :3])
     limit = np.median(out_lab[..., 0][face]) - BROW_DARKER
+    orig_l = to_lab(a[..., :3])[..., 0]
+    area &= orig_l < np.median(orig_l[face]) - BROW_MIN_DARKER
+    brows = area & ~continues_from_above(a, area, skin)
+    brows |= area & mirrored_brows(a, brows)
+    brows &= out_lab[..., 0] > limit
+    if not brows.any():
+        return
+    if style == "hair" and hair is not None:
+        hair_brows(out, out_lab, brows, hair)
+        return
+    # Each brow drops by one amount (enough to bring its lightest pixel down to the limit, capped
+    # at BROW_MAX_DROP) so its light/dark shading survives instead of every pixel clamping to the
+    # same lightness.
+    labels, n = ndimage.label(brows, np.ones((3, 3)))
+    lightest = np.asarray(ndimage.maximum(out_lab[..., 0], labels, range(1, n + 1)))
+    drop = np.clip(lightest - limit, 0, BROW_MAX_DROP)
     lab = out_lab[brows]
-    lab[:, 0] = np.minimum(lab[:, 0], limit)
+    lab[:, 0] -= drop[labels[brows] - 1]
     lab[:, 1:] *= BROW_CHROMA
     out[..., :3][brows] = np.round(from_lab(lab))
+
+
+def hair_brows(out: np.ndarray, out_lab: np.ndarray, brows: np.ndarray, hair: np.ndarray) -> None:
+    """Brows in the toned head hair's colour (full strength), the outer pixel of each brow darker
+    than the inner ones. For blonde hair, where muting the brow's own colour turns it grey-khaki."""
+    head = hair.copy()
+    head[16:] = False
+    head[:, 32:] = False
+    if not head.any():
+        return
+    mean = out_lab[head].mean(0)
+    labels, n = ndimage.label(brows, np.ones((3, 3)))
+    for i in range(1, n + 1):
+        ys, xs = np.nonzero(labels == i)
+        side = np.abs(xs - 11.5)
+        for y, x, d in zip(ys, xs, side):
+            outer = d == side[ys == y].max() and (ys == y).sum() > 1
+            lab = np.array([mean[0] - (BROW_HAIR_OUTER if outer else BROW_HAIR_INNER), mean[1], mean[2]])
+            out[y, x, :3] = np.round(from_lab(lab[None]))[0]
 
 
 def hand_greyed(name: str, a: np.ndarray) -> np.ndarray | None:
@@ -677,24 +938,138 @@ def hand_greyed(name: str, a: np.ndarray) -> np.ndarray | None:
     return greyed if TRAIN_MIN_PIXELS <= greyed.sum() <= TRAIN_MAX_PIXELS else None
 
 
+def cube_faces(u: int, v: int, w: float, h: float, d: float) -> np.ndarray:
+    """Texture pixels a model cube's six faces use (vanilla box UV layout)."""
+    w, h, d = (int(np.ceil(n)) for n in (w, h, d))
+    mask = np.zeros(TEX_SIZE, bool)
+    mask[v : v + d, u + d : u + d + 2 * w] = True  # top, bottom
+    mask[v + d : v + d + h, u : u + 2 * d + 2 * w] = True  # sides
+    return mask
+
+
+@functools.cache
+def _citizen_models() -> dict:
+    return json.loads(CITIZEN_MODELS.read_text()) if CITIZEN_MODELS.exists() else {"types": {}, "models": {}}
+
+
+# Texture pixels the standard body (head, torso, arms, legs and their outer layers) uses. Model
+# pieces sometimes take their texture from the unused gaps between them, e.g. a hat tier at (58, 16).
+STANDARD_LAYOUT = np.zeros(TEX_SIZE, bool)
+for _u, _v, _w, _h, _d in ((0, 0, 8, 8, 8), (32, 0, 8, 8, 8), (16, 16, 8, 12, 4), (16, 32, 8, 12, 4),
+                           (40, 16, 4, 12, 4), (40, 32, 4, 12, 4), (0, 16, 4, 12, 4), (0, 32, 4, 12, 4),
+                           (16, 48, 4, 12, 4), (0, 48, 4, 12, 4), (32, 48, 4, 12, 4), (48, 48, 4, 12, 4)):
+    STANDARD_LAYOUT |= cube_faces(_u, _v, _w, _h, _d)
+
+
+@functools.cache
+def _accessory_mask(name: str) -> tuple[np.ndarray, np.ndarray]:
+    models = _citizen_models()
+    m = re.match(r"^(.*?)(female|male)\d+", name)
+    model = models["models"].get((models["types"].get(m.group(1)) or {}).get(m.group(2))) if m else None
+    props, body, hair = (np.zeros(TEX_SIZE, bool) for _ in range(3))
+    for part in model["parts"] if model else []:
+        for u, v, _, _, _, w, h, d, *_ in part["cubes"]:
+            (body if part["name"] in SKIN_PARTS else props)[:] |= cube_faces(u, v, w, h, d)
+            if HAIR_PARTS.search(part["name"]):
+                hair |= cube_faces(u, v, w, h, d)
+    props &= ~STANDARD_LAYOUT
+    return props & ~body, props & ~body & ~hair, hair & ~STANDARD_LAYOUT
+
+
+def accessory_mask(name: str | None) -> np.ndarray:
+    """Where the texture's citizen model draws its own pieces past the standard layout (capes,
+    lockets, potions, aprons, dresses, hats, tools...): never skin, whatever the colour."""
+    return _accessory_mask(name)[0] if name else np.zeros(TEX_SIZE, bool)
+
+
+def prop_mask(name: str | None) -> np.ndarray:
+    """The accessory pieces that aren't hair either (hats, potions, tools...): never changed."""
+    return _accessory_mask(name)[1] if name else np.zeros(TEX_SIZE, bool)
+
+
+HATS = Path(__file__).resolve().parent / "hats"  # hat templates: a hat-layer hat (x 32-63, y 0-15), transparent elsewhere
+HAT_MATCH = 2  # max RGB difference for a pixel to count as the same hat
+HAT_SHARE = 0.5  # share of a template that must match for the skin to be wearing that hat
+
+
+@functools.lru_cache(maxsize=None)
+def _hat_templates() -> tuple:
+    return tuple(frame(load_rgba(f)) for f in sorted(HATS.glob("*.png")))
+
+
+def known_hats(a: np.ndarray) -> np.ndarray:
+    """Pixels of hats shared between outfits (templates in hats/), matched pixel for pixel: a hat,
+    not hair, so never changed."""
+    out = np.zeros(TEX_SIZE, bool)
+    for hat in _hat_templates():
+        same = (hat[..., 3] > 0) & (a[..., 3] > 0) & (np.abs(a[..., :3] - hat[..., :3]).max(-1) <= HAT_MATCH)
+        if same.sum() >= HAT_SHARE * (hat[..., 3] > 0).sum():  # the hat itself, not a few colours that happen to match
+            out |= same
+    return out
+
+
+def hair_pieces(a: np.ndarray, hair: np.ndarray, name: str | None) -> np.ndarray:
+    """Pixels on the model's own hair pieces (braids, ponytails, hair extensions past the standard
+    layout) in the colours of the hair found on the head: the head's hair carries on there."""
+    if not name or not hair.any():
+        return np.zeros(TEX_SIZE, bool)
+    pieces = _accessory_mask(name)[2] & (a[..., 3] > 0) & ~hair
+    if not pieces.any():
+        return pieces
+    lab = to_lab(a[..., :3])
+    cols = np.unique(lab[hair], axis=0)
+    out = np.zeros(TEX_SIZE, bool)
+    out[pieces] = np.linalg.norm(lab[pieces][:, None] - cols[None], axis=-1).min(1) < HAIR_PIECE_DIST
+    return out
+
+
+def black_not_skin(a: np.ndarray, skin: np.ndarray) -> np.ndarray:
+    """Near-black pixels much darker than the face's darkest skin (see SKIN_BLACK_L)."""
+    light = to_lab(a[..., :3])[..., 0]
+    face = skin[8:16, 8:16]
+    if face.sum() < 6:
+        return np.zeros(TEX_SIZE, bool)
+    darkest = np.percentile(light[8:16, 8:16][face], 5)
+    return (light < SKIN_BLACK_L) & (light < darkest - SKIN_BLACK_GAP)
+
+
+def overlay_on_clothes(a: np.ndarray, skin: np.ndarray) -> np.ndarray:
+    """Outer-layer skin pixels that sit over clothing in the base layer and aren't the face's skin
+    colour: belt buckles, circlets, trims and boot details, not skin."""
+    lab = to_lab(a[..., :3])
+    face = lab[8:16, 8:16][skin[8:16, 8:16]]
+    out = np.zeros(TEX_SIZE, bool)
+    for (x, y, w, h), (bx, by) in OVERLAYS:
+        out[y : y + h, x : x + w] = skin[y : y + h, x : x + w] & ~skin[by : by + h, bx : bx + w]
+    for y, x in np.argwhere(out):
+        if len(face) and np.linalg.norm(face - lab[y, x], axis=1).min() <= OVERLAY_SKIN_DIST:
+            out[y, x] = False
+    return out
+
+
 def dunmerify(a: np.ndarray, model: SkinModel, hair_model: HairModel, override: dict | None = None,
-              by_hand: np.ndarray | None = None) -> np.ndarray:
-    return dunmerify_with_masks(a, model, hair_model, override, by_hand)[0]
+              by_hand: np.ndarray | None = None, name: str | None = None) -> np.ndarray:
+    return dunmerify_with_masks(a, model, hair_model, override, by_hand, name)[0]
 
 
 def dunmerify_with_masks(a: np.ndarray, model: SkinModel, hair_model: HairModel, override: dict | None = None,
-                         by_hand: np.ndarray | None = None):
+                         by_hand: np.ndarray | None = None, name: str | None = None):
     """Returns (recoloured texture, skin mask, hair mask).
 
     by_hand: your pass-1 greying (see hand_greyed). When given it decides what is skin instead of
     the model; overrides and the dark-clothing rule still apply on top.
+    name: the texture's name (e.g. alchemistmale1_w), to look up its citizen model so its props
+    and clothing pieces are never greyed (see accessory_mask).
     """
     override = override or {}
+    a, borrowed = borrow_areas(a, override.get("borrow_area", []))
     out = a.copy()
-    forced_grey = colour_mask(a, override.get("grey", []))
-    forced_hair = colour_mask(a, override.get("hair_colours", []))
+    forced_grey = colour_mask(a, override.get("grey", [])) | (area_mask(override.get("grey_area", [])) & (a[..., 3] > 0))
+    forced_grey |= borrowed & (a[..., 3] > 0)
+    forced_grey |= paint_mask(a, override.get("face_paint", []))
+    forced_hair = colour_mask(a, override.get("hair_colours", [])) | (area_mask(override.get("hair_area", [])) & (a[..., 3] > 0))
     keep = colour_mask(a, override.get("keep", []))
-    untouched = area_mask(override.get("keep_area", []))
+    untouched = area_mask(override.get("keep_area", [])) | colour_mask(a, override.get("untouched", [])) | known_hats(a)
     model_skin = model.skin_mask(a)
     if by_hand is not None and face_missed(a, by_hand):
         by_hand = None  # the hand edit missed the face; let the model decide this skin
@@ -703,21 +1078,269 @@ def dunmerify_with_masks(a: np.ndarray, model: SkinModel, hair_model: HairModel,
         found_skin = found_skin | missed_face_colours(a, found_skin, model.prior)
     if override.get("dark_hair_rule", True):
         found_skin = ungrey_dark_hair(a, found_skin, model.prior)
-    skin = (drop_dark_clothing(a, found_skin) | forced_grey) & ~keep & ~forced_hair
+    skin = (drop_dark_clothing(a, found_skin) | forced_grey) & ~keep & ~forced_hair & ~accessory_mask(name)
     hair = hair_model.hair_mask(a, skin) if override.get("hair", True) else np.zeros(TEX_SIZE, bool)
     found_hair = hair
     if by_hand is None:
         skin, hair = claim_skin(a, skin, hair, model.prior, fixed=forced_hair | keep | untouched)
     max_patch = HAIR_ZONE_MAX_PATCH if by_hand is None else HAIR_ZONE_MAX_PATCH_HAND
     skin, hair = reclaim_hair(a, skin, hair, model.prior, fixed=forced_grey | keep | untouched, max_patch=max_patch)
-    hair = grow_hair(a, skin, hair, fixed=forced_grey | keep | untouched) | forced_hair
-    skin &= ~untouched
-    hair &= ~untouched
-    tone_hair(out, hair, sample=found_hair)
-    ash_skin(a, out, skin)
-    paint_brows(a, out, skin)
+    hair = grow_hair(a, skin, hair, fixed=forced_grey | keep | untouched)
+    hair = keep_hair_palette(a, hair) & in_hue_range(a, override.get("hair_hue")) | forced_hair
+    skin &= ~untouched & ~overlay_on_clothes(a, skin) & ~black_not_skin(a, skin)
+    hooded = hood(a)
+    hair = hood_hair(a, hair, hooded) | forced_hair
+    hair |= hair_pieces(a, hair, name) & ~untouched & ~keep
+    if hooded is not None:
+        skin &= ~hooded | forced_grey
+    hair &= ~untouched & ~prop_mask(name)
+    if "hair_only_area" in override:
+        hair &= area_mask(override["hair_only_area"])
+    hair_kind = tone_hair(out, hair, sample=found_hair & hair, treatment=override.get("hair_tone"))
+    darken_mask(out, hair, override.get("hair_darker", 0))
+    if "hair_tint" in override:
+        # {colour, strength}: move the toned hair's colour that far towards the colour, keeping its lightness.
+        tint_mask(out, hair, override["hair_tint"]["colour"], override["hair_tint"].get("strength", 0.3))
+    ash_skin(a, out, skin, override.get("skin_darker", 0), override.get("soft_shadows", False),
+             override.get("skin_undertone"), override.get("skin_contrast", 1.0),
+             override.get("skin_redness", 0.0))
+    # Blonde brows take the hair's colour: muting their own turns them grey-khaki. "brow_style":
+    # "default" turns that off for a skin, "hair" turns it on.
+    brow_style = override.get("brow_style", "hair" if hair_kind == "blonde" else "default")
+    paint_brows(a, out, skin, untouched, hair, brow_style)
+    face_paint(a, out, override.get("face_paint", []))
     paint_eyes(a, out, find_eye_rows(a))
+    fill_pixels(out, override.get("fill", []))
+    desaturate(a, out, override.get("desat", {}))
+    ash_tint(a, out, override.get("ash", []))
+    tint(a, out, override.get("tint", {}))
+    tint_areas(out, override.get("tint_area", []))
+    darken_areas(out, override.get("darken_area", []))
+    if override.get("slim_arms", True):
+        slim_arms(a, out, name)
+    copy_areas(out, override.get("copy_area", []))
+    torso_bottom = override.get("torso_bottom", "legs")
+    if torso_bottom == "original":
+        for x, y in TORSO_BOTTOM:
+            out[y : y + 4, x : x + 8] = a[y : y + 4, x : x + 8]
+    elif torso_bottom != "keep":
+        torso_bottom_from_legs(out, torso_bottom if torso_bottom in ("left", "right") else None)
     return out, skin, hair
+
+
+def desaturate(a: np.ndarray, out: np.ndarray, colours: dict[str, float]) -> None:
+    """Scale the colourfulness (CIELAB chroma) of the finished pixels whose original colour is one of
+    `colours` by its factor: 0 makes them grey, 0.5 halves their colour."""
+    for colour, factor in colours.items():
+        mask = colour_mask(a, [colour])
+        if mask.any():
+            lab = to_lab(out[..., :3][mask])
+            lab[:, 1:] *= factor
+            out[..., :3][mask] = np.round(from_lab(lab))
+
+
+def ash_tint(a: np.ndarray, out: np.ndarray, colours: list[str]) -> None:
+    """Give pixels of these original colours the skin's blue-grey undertone, keeping their own
+    lightness: for skin-coloured trims that look odd next to grey skin but aren't skin."""
+    mask = colour_mask(a, colours)
+    if not mask.any():
+        return
+    lab = to_lab(a[..., :3][mask])
+    hue = np.radians(SKIN_LIGHT[0])
+    lab[:, 1], lab[:, 2] = SKIN_LIGHT[1] * np.cos(hue), SKIN_LIGHT[1] * np.sin(hue)
+    out[..., :3][mask] = np.round(from_lab(lab))
+
+
+def tint(a: np.ndarray, out: np.ndarray, tints: dict[str, list[str]]) -> None:
+    """Recolour pixels of the listed original colours to the key colour, keeping their shading:
+    each keeps its lightness offset from the group's median, around the key colour's lightness."""
+    for target, colours in tints.items():
+        mask = colour_mask(a, colours)
+        if not mask.any():
+            continue
+        lab = to_lab(a[..., :3][mask])
+        goal = to_lab(np.array([int(target.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)], float))
+        lab[:, 0] = np.clip(goal[0] + lab[:, 0] - np.median(lab[:, 0]), 0, 100)
+        lab[:, 1], lab[:, 2] = goal[1], goal[2]
+        out[..., :3][mask] = np.round(from_lab(lab))
+
+
+def tint_areas(out: np.ndarray, tints: list[dict]) -> None:
+    """Move the colour of each {colour, area: [[x0, y0, x1, y1]], strength} box's visible pixels
+    `strength` of the way to the colour, keeping their lightness (e.g. a slight purple on grey cloth)."""
+    for t in tints:
+        tint_mask(out, area_mask(t["area"]), t["colour"], t.get("strength", 0.3))
+
+
+def tint_mask(out: np.ndarray, mask: np.ndarray, colour: str, strength: float) -> None:
+    """Move the colour of the mask's visible pixels `strength` of the way to `colour`, keeping their lightness."""
+    mask = mask & (out[..., 3] > 0)
+    if not mask.any():
+        return
+    lab = to_lab(out[..., :3][mask])
+    goal = to_lab(np.array([int(colour.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)], float))
+    lab[:, 1:] += (goal[1:] - lab[:, 1:]) * strength
+    out[..., :3][mask] = np.round(from_lab(lab))
+
+
+def paint_mask(a: np.ndarray, paints: list[dict]) -> np.ndarray:
+    """Visible pixels in any face_paint area (they are greyed as skin before the paint goes on)."""
+    return area_mask([box for p in paints for box in p["area"]]) & (a[..., 3] > 0)
+
+
+def face_paint(a: np.ndarray, out: np.ndarray, paints: list[dict]) -> None:
+    """Lay face paint over the greyed skin: each pixel keeps its grey lightness (the shading) and
+    moves its colour `strength` of the way to the paint colour, so the paint sits on the ash
+    undertone instead of the original skin's."""
+    for p in paints:
+        mask = area_mask(p["area"]) & (a[..., 3] > 0)
+        if not mask.any():
+            continue
+        lab = to_lab(out[..., :3][mask])
+        goal = to_lab(np.array([int(p["colour"].lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)], float))
+        s = p.get("strength", 0.5)
+        lab[:, 1:] += (goal[1:] - lab[:, 1:]) * s
+        out[..., :3][mask] = np.round(from_lab(lab))
+
+
+def darken_mask(out: np.ndarray, mask: np.ndarray, amount: float) -> None:
+    """Lower the lightness (CIELAB L*) of the masked pixels by `amount` (negative lightens)."""
+    if not amount or not mask.any():
+        return
+    lab = to_lab(out[..., :3][mask])
+    lab[:, 0] = np.clip(lab[:, 0] - amount, 0, 100)
+    out[..., :3][mask] = np.round(from_lab(lab))
+
+
+def darken_areas(out: np.ndarray, boxes: list[list[int]]) -> None:
+    """Lower the lightness (CIELAB L*) of each [x0, y0, x1, y1, amount] box, e.g. to make brows stand out."""
+    for x0, y0, x1, y1, amount in boxes:
+        region = out[y0:y1 + 1, x0:x1 + 1]
+        visible = region[..., 3] > 0
+        lab = to_lab(region[..., :3][visible])
+        lab[:, 0] = np.maximum(lab[:, 0] - amount, 0)
+        region[..., :3][visible] = np.round(from_lab(lab))
+
+
+def tint_outside(full: np.ndarray, tints: list[dict]) -> None:
+    """Like tint_area, but on the whole texture after unframing, for parts outside the standard
+    128x64 layout (e.g. a noble's dress in the lower half of a 128x128 texture)."""
+    for t in tints:
+        mask = np.zeros(full.shape[:2], bool)
+        for x0, y0, x1, y1 in t["area"]:
+            mask[y0 : y1 + 1, x0 : x1 + 1] = True
+        mask &= full[..., 3] > 0
+        if not mask.any():
+            continue
+        lab = to_lab(full[..., :3][mask])
+        goal = to_lab(np.array([int(t["colour"].lstrip("#")[i:i + 2], 16) for i in (0, 2, 4)], float))
+        lab[:, 1:] += (goal[1:] - lab[:, 1:]) * t.get("strength", 0.3)
+        full[..., :3][mask] = np.round(from_lab(lab))
+
+
+def borrow_areas(a: np.ndarray, borrows: list[list]) -> tuple[np.ndarray, np.ndarray]:
+    """Paste [skin, src_x, src_y, w, h, dst_x, dst_y] blocks from another skin's original over this
+    one before recolouring, e.g. a bare hand's underside where this one only has a glove. Returns the
+    new texture and the pasted pixels, which are greyed as skin."""
+    pasted = np.zeros(TEX_SIZE, bool)
+    if not borrows:
+        return a, pasted
+    a = a.copy()
+    for skin, sx, sy, w, h, dx, dy in borrows:
+        donor = frame(load_rgba(ORIGINALS / f"{skin}.png"))
+        a[dy:dy + h, dx:dx + w] = donor[sy:sy + h, sx:sx + w]
+        pasted[dy:dy + h, dx:dx + w] = True
+    return a, pasted
+
+
+def copy_areas(out: np.ndarray, copies: list[list[int]]) -> None:
+    """Paint [src_x, src_y, w, h, dst_x, dst_y] blocks over other parts of the texture, e.g. a leg top
+    from the pants texture. Every block is read before any is written. Runs before the torso's
+    underside takes the leg tops' texture, so a copied leg top carries on up into the torso."""
+    blocks = [out[sy:sy + h, sx:sx + w].copy() for sx, sy, w, h, _, _ in copies]
+    for (_, _, w, h, dx, dy), block in zip(copies, blocks):
+        out[dy:dy + h, dx:dx + w] = block
+
+
+def fill_pixels(out: np.ndarray, pixels: list[list[int]]) -> None:
+    """Paint over stray pixels (e.g. a dot left in the original) with the median of their visible
+    neighbours that aren't being filled too. Transparent pixels (holes) become opaque."""
+    filled = np.zeros(TEX_SIZE, bool)
+    for x, y in pixels:
+        filled[y, x] = True
+    for x, y in pixels:
+        around = [out[ny, nx, :3] for ny, nx in ((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1))
+                  if 0 <= ny < TEX_SIZE[0] and 0 <= nx < TEX_SIZE[1] and out[ny, nx, 3] > 0 and not filled[ny, nx]]
+        if around:
+            out[y, x, :3] = np.median(around, 0).round()
+            out[y, x, 3] = 255
+
+
+# Standard layout UVs (x0, y0) of 4x4 / 8x4 faces seen from above or below: the torso's bottom
+# (base, overlay) and each leg's top (base, overlay). Top and bottom faces share the same
+# orientation (left column = the citizen's right side, top row = back), so they copy straight across.
+TORSO_BOTTOM = ((28, 16), (28, 32))
+RIGHT_LEG_TOP = ((4, 16), (4, 32))
+LEFT_LEG_TOP = ((20, 48), (4, 48))
+
+
+# Arm texture blocks (u, v): right arm base and outer layer, left arm base and outer layer.
+ARM_BLOCKS = ((40, 16), (40, 32), (32, 48), (48, 48))
+
+
+def slim_arms(a: np.ndarray, out: np.ndarray, name: str | None) -> None:
+    """Re-lay arms painted for 4px-wide arms onto the 3px layout their model uses (the forester men,
+    for one), so every face shows as painted instead of a column off: the hand's underside showing
+    a strip of sleeve, and so on. A texture is painted 4-wide if its right arm's back face reaches
+    the 16th column (a 3-wide layout leaves the last two columns empty). The faces that get
+    narrower lose their third column (the back face its second, so it mirrors the front)."""
+    if not name:
+        return
+    models = _citizen_models()
+    m = re.match(r"^(.*?)(female|male)\d+", name)
+    model = models["models"].get((models["types"].get(m.group(1)) or {}).get(m.group(2))) if m else None
+    arms = [p for p in (model or {}).get("parts", []) if p["name"] in ("right_arm", "left_arm")]
+    if not arms or any(p["cubes"][0][5] != 3 for p in arms):
+        return
+    if (a[20:32, 54:56, 3] > 0).mean() <= 0.5:
+        return
+    drop = lambda block, keep: np.delete(block, keep, axis=1)
+    for u, v in ARM_BLOCKS:
+        old = out[v:v + 16, u:u + 16].copy()
+        new = np.zeros_like(old)
+        new[0:4, 4:7] = drop(old[0:4, 4:8], 2)       # top
+        new[0:4, 7:10] = drop(old[0:4, 8:12], 2)     # bottom (the hand's underside)
+        new[4:16, 0:4] = old[4:16, 0:4]              # outer side
+        new[4:16, 4:7] = drop(old[4:16, 4:8], 2)     # front
+        new[4:16, 7:11] = old[4:16, 8:12]            # inner side
+        new[4:16, 11:14] = drop(old[4:16, 12:16], 1)  # back
+        out[v:v + 16, u:u + 16] = new
+
+
+def torso_bottom_from_legs(out: np.ndarray, only: str | None = None) -> None:
+    """Give the torso's underside the leg tops' texture, so it reads as the legs carrying on up.
+    With `only` ("left" or "right"), that leg's top is used for both halves, mirrored for the other
+    (for a leg top with stray colours on it).
+
+    The overlay layer is only copied where the leg overlays have something on top, and is left
+    see-through when it would be solid all over: a full outer-layer underside shows as an extra slab
+    hanging below the torso. Skins whose leg tops are see-through (the unused deliveryman textures)
+    keep their own underside."""
+    if any((out[y : y + 4, x : x + 4, 3] == 0).any() for x, y in (RIGHT_LEG_TOP[0], LEFT_LEG_TOP[0])):
+        return
+    for layer, ((tx, ty), (rx, ry), (lx, ly)) in enumerate(zip(TORSO_BOTTOM, RIGHT_LEG_TOP, LEFT_LEG_TOP)):
+        right, left = out[ry : ry + 4, rx : rx + 4].copy(), out[ly : ly + 4, lx : lx + 4].copy()
+        if only == "left":
+            right = left[:, ::-1]
+        elif only == "right":
+            left = right[:, ::-1]
+        if layer and not (right[..., 3] > 0).any() and not (left[..., 3] > 0).any():
+            continue
+        if layer and (right[..., 3] > 0).all() and (left[..., 3] > 0).all():
+            out[ty : ty + 4, tx : tx + 8] = 0
+            continue
+        out[ty : ty + 4, tx : tx + 4] = right
+        out[ty : ty + 4, tx + 4 : tx + 8] = left
 
 
 def paint_eyes(a: np.ndarray, out: np.ndarray, rows: list[int]) -> None:
@@ -839,6 +1462,9 @@ def main() -> None:
     ap.add_argument("--out", default="4.auto_poc", help="base name of the new output folder")
     ap.add_argument("--no-hand", action="store_true",
                     help="ignore your hand edits and let the model decide skin everywhere (for testing it)")
+    ap.add_argument("--train-all", action="store_true",
+                    help="with --examples, train on every hand-edited skin like --all does, so re-rendered "
+                         "examples match a full run")
     args = ap.parse_args()
 
     if args.all:
@@ -847,7 +1473,7 @@ def main() -> None:
     else:
         names = [f"{n}.png" for n in args.examples or []]
         # Hold the examples' whole outfit group out of training so the demo is honest.
-        holdout = {n[:-6] for n in names}
+        holdout = set() if args.train_all else {n[:-6] for n in names}
 
     overrides = load_overrides()
     model = SkinModel(holdout)
@@ -860,10 +1486,12 @@ def main() -> None:
         override = override_for(overrides, name[:-4])
         use_hand = not args.no_hand and override.get("hand", True)
         by_hand = hand_greyed(name, full) if use_hand else None
-        out, skin, _ = dunmerify_with_masks(a, model, hair_model, override, by_hand)
-        save(unframe(full, out), out_dir / name)
+        out, skin, _ = dunmerify_with_masks(a, model, hair_model, override, by_hand, name[:-4])
+        result = unframe(full, out)
+        tint_outside(result, override.get("outside_tint_area", []))
+        save(result, out_dir / name)
         used_hand += by_hand is not None
-        check = manual_check(name, full, unframe(full, out), skin)
+        check = manual_check(name, full, result, skin)
         if check:
             checked += 1
             missed, extra, manual = check
