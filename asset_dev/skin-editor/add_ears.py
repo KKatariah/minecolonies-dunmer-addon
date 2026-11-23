@@ -208,7 +208,7 @@ def head_masks(name, model, hair_model, overrides):
     override = ad.override_for(overrides, name)
     by_hand = ad.hand_greyed(f"{name}.png", full) if override.get("hand", True) else None
     a = ad.frame(full)
-    _, skin, hair = ad.dunmerify_with_masks(a, model, hair_model, override, by_hand)
+    _, skin, hair = ad.dunmerify_with_masks(a, model, hair_model, override, by_hand, name)
     # Near-white, colourless "hair" is a hood or veil (healer, beekeeper), not hair.
     rgb = a[..., :3]
     pale = (rgb.min(-1) > PALE_MIN) & (rgb.max(-1) - rgb.min(-1) < PALE_SPREAD)

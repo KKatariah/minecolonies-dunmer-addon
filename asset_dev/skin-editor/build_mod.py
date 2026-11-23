@@ -27,6 +27,9 @@ SKIN_DIR = f"assets/minecolonies/textures/entity/citizen/{STYLE}/"
 ICON_DIR = f"assets/minecolonies/textures/entity_icon/citizen/{STYLE}/"
 MOD_PARTS = ("META-INF", "pack.mcmeta", "data", "assets")
 SKIP_NAMES = (".DS_Store",)
+# Textures MineColonies still ships but no model uses: the deliveryman job wears the courier model,
+# whose textures are named courier*.
+UNUSED_SKINS = ("deliveryman",)
 
 
 def newest_run(pattern):
@@ -45,6 +48,11 @@ def newest_full_run():
 def newest_finished_run():
     """The newest skins with ears (6.ears*), else the newest full Dunmer run."""
     return newest_run("6.ears*") or newest_full_run()
+
+
+def skin_files(folder):
+    """The skins in a run folder, leaving out notes (_*.png) and textures no model uses."""
+    return sorted(p for p in folder.glob("*.png") if not p.name.startswith("_") and not p.name.startswith(UNUSED_SKINS))
 
 
 def mod_version():
@@ -73,7 +81,7 @@ def main():
     args = parser.parse_args()
 
     skins_dir = (args.skins or newest_finished_run()).resolve()
-    skins = sorted(p for p in skins_dir.glob("*.png") if not p.name.startswith("_"))
+    skins = skin_files(skins_dir)
     if not skins:
         raise SystemExit(f"no skins in {skins_dir}")
 
