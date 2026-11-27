@@ -1,6 +1,6 @@
 # MineColonies Dunmer Addon
 
-This is a resource-only Forge addon jar (Minecraft 1.20.1, MineColonies) that provides:
+This is a resource-only Forge addon jar (Minecraft 1.20.1 + 1.21.1, MineColonies) that provides:
 
 - Name style: `dunmer`
 - Citizen texture style: `dunmer`
